@@ -1,0 +1,115 @@
+<head>
+    <meta charset="utf-8">
+    <title>Bard's Gate Random Encounter Generator</title>
+    <style>
+    .top_button {
+        display:inline-block;
+        border-style:ridge;
+        border-width:thin;
+        margin:5px;
+    }
+    .stat_block {
+        display:block;
+        margin:15px;
+    }
+    .title {
+        font-style:x-large;
+    }
+    .subtitle {
+        font-style:italic;
+        font-size:small;
+    }
+    .count {
+	margin-bottom:2em;
+        font-style:italic;
+        font-size:x-small;
+    }
+    </style>
+
+</head>
+<body>
+<div>
+    <!---
+    <h1 class='title'>Welcome to the Bard's Gate Random Encounter Generator.</h1>
+    <h2 class='subtitle'>May Tsathogga infest with boils any Non-GMs who click below. In other words, beware spoilers!</h2>
+-->
+
+
+<div class="count">
+</div>
+<button class="top_button" id="OT_D">Old Temple District (Day)</button>
+<button class="top_button" id="OT_N">Old Temple District (Night)</button>
+<div class="enc">
+
+</div>
+</div>
+
+<script src="jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="encounters.js"></script>
+<script>
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function roll(amount, type) {
+    var count = 0;
+    console.log("amount is " + amount + " type is " + type);
+    for (var i=0; i<amount; i++) {
+        count += getRandomInt(1, type);
+        console.log("amount now " + count);
+    }
+    return count;
+}
+
+function replace_dice_marker(text) {
+    var matches = text.match(/!d\[.*?]/g);
+    for (var i=0; i<matches.length; i++) {
+        var split = matches[i].split('[')[1].split(/d/i);
+        var count = roll(split[0], parseInt(split[1]));
+        text = text.replace(matches[i], count);
+        console.log(split);
+    }
+    return text;
+}
+
+function select_item(entry) {
+    console.log(entry);
+    if (!entry.extra)
+        return [entry.text, entry.stats];
+    var choice = getRandomInt(1, entry.extra.total);
+    for (var i=0; i<entry.extra.chances.length; i++)
+        if (choice >= entry.extra.chances[i].min && choice <= entry.extra.chances[i].max)
+            return [entry.extra.chances[i].text, entry.extra.chances[i].stats];
+    return [entry.text, entry.stats];
+}
+
+function render_stat_blocks(block_list) {
+    var text = "";
+    for (var i=0; i<block_list.length; i++)
+        text += "<DIV class=stat_block>"+stat_blocks[block_list[i]]+"</DIV>";
+    return text;
+}
+
+function generate_encounter() {
+    var table = enc[$(this).attr('id')];
+    var which = getRandomInt(0, table.length -1);
+    var item = select_item(table[which]);
+
+    var text = replace_dice_marker(item[0]);
+    if (item[1]) {
+        text += render_stat_blocks(item[1]);
+    }
+    //var matches = text.match("/!d\\[/gi");
+    $('.enc').html(text);
+}
+    
+function onReady()
+{
+    $('.top_button').button().click(generate_encounter);
+
+};
+    $(document).ready(onReady);
+</script>
+</body>
+
