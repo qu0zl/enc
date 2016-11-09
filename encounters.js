@@ -13,11 +13,13 @@ var stat_blocks = {
     Burglar:"Burglar (Thf3): HP 8; AC 6[13]; Atk short sword (1d6) or dagger (1d4); Move 12; Save 12; AL C; CL/XP 3/60;<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 87%, Tasks/Traps 25%, Hear 4 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, short sword, dagger, thieves' tools, 1d10gp.",
     Cutpurse:"Cutpurse (Thf2): HP 5; AC 7[12]; Atk dagger (1d4); Move 12; Save 14; AL N; CL/XP 3/60; Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: leather armor, 3 daggers, thieves' tools, 2d4sp.",
     Robber:"Robber (Thf1): HP 3; AC 7[12]; Atk dagger (1d4); Move 12; Save 15; AL N; CL/XP 1/15; Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: leather armor, dagger, 1d4cp.",
+    Pickpocket:"Pickpocket (Thf3): HP 7; AC 7[12]; Atk club (1d4) or dagger (1d4); Move 12; Save 12; AL N; CL/XP 3/60;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 87%, Tasks/Traps 25%, Hear 4 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, club, dagger.",
     CaravanCaptain:"Caravan Captain (Ftr2): HP 10; AC 6[13]; Atk club (1d4) or sling (1d4); Move 12; Save 13; AL L; CL/XP 2/30.<br>Special: multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, club, sling, 10 bullets, 2d4sp",
     CaravanGuard:"Caravan Guard: HD 1; AC 7[12]; Atk longsword (1d8) or spear (1d6); Move 12; Save 17; AL N; CL/XP 1/15;<br>Special: none.<br>Equipment: leather armor, longsword, spear, 2d12cp.",
     Centaur:"Centaur: HD 4; AC 5[14] or 4[15] with shield; Atk 2 kicks (1d6) and weapon; Move 18; Save 13; AL N; CL/XP 4/120;<br>Special: none.",
     SilfusSharphoof:"Silfus Sharphoof, Male Centaur (Rgr2): HD 6; HP 31; AC 5[14]; Atk 2 kicks (1d6) and +1 lance (2d4+2) or longbow x2 (1d6); Move 18; Save 11; AL L; CL/XP 7/600;<br>Special: +2 to damage vs giants and goblinoids, alertness, tracking.<br>Equipment: +1 lance, longbow, 20 arrows.",
     GiantCentipede:"Giant Centipede (small, lethal): HD 1d2 hp; AC 9[10]; Atk bite (0 plus poison); Move 13; Save 18; AL N; CL/XP 1/15;<br>Special: poison bite (+4 save or die).",
+    GiantRat:"Giant Rat: HD 1d4hp; AC 7[12]; Atk bite (1d3); Move 12; Save 18; AL N; CL/XP A/5;<br>Special: 2 of the rats are diseased.",
     CentipedeSwarm:"Centipede Swarm: HD 3; AC 7 [12]; Atk bites (1hp plus non-lethal poison); Move 3; Save 14; AL N; CL/XP 4/120;<br>Special: immune to all but blunt weapons, non-lethal poison (2d6 points of damage).",
     Charlatan:"Charlatan (Thf1): HP 2; AC 9[10]; Atk club (1d4); Move 12; Save 15; AL N; CL/XP 1/15;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: club, 3d4cp.",
     Dandy:"Dandy, Male or Female (Ftr3): HP 15; AC 6[13]; Atk rapier (1d6); Move 12; Save 12; AL N; CL/XP 3/60.<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, multiple attacks (3) vs. creatures with 1 or fewer HD, parry (–2 to enemy's attacks).<br>Equipment: leather armor, rapier (short sword), dandy clothes.",
@@ -29,6 +31,8 @@ var stat_blocks = {
     WallWatcher:"Wall Watcher (Ftr1): HP 5; AC 4[15]; Atk battleaxe (1d8) or spear (1d6); Move 12; Save 14; AL L; CL/XP 1/15.<br>Special: none.<br>Equipment: chainmail, shield, battle axe, spear, signal horn.",
     WallWatchOfficer:"Wall Watch Officer (Ftr3): HP 15; AC 5[14]; Atk spear (1d6) or short sword (1d6); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, shield, spear, short sword.",
     Priest:"Priest (Clr3): HP 11; AC 4[15]; Atk warhammer (1d4+1) or sling (1d4); Move 12; Save 13; AL L; CL/XP 4/120;<br>Special: +2 save versus paralyzation and poison, spells (2), turn undead.<br>Spells: 1st—cure light wounds, protection from evil.<br>Equipment: chainmail, shield, clerical vestments, warhammer, sling, 10 bullets, holy symbol of appropriate god.",
+    FurTrader:"Fur Trader (Rgr3): HP 22; AC 7[12]; Atk short sword (1d6) or longbow x2 (1d6); Move 12; Save 12; AL L; CL/XP 2/30.<br>Special: +3 to damage vs. giants and goblinoids, alertness, tracking.<br>Equipment: leather armor, short sword, longbow, 20 arrows.",
+    NeutralRanger:"Ranger (Rgr1): HP 12; AC 7[12]; Atk short sword (1d6) or longbow x2 (1d6); Move 12; Save 14; AL N; CL/XP 1/15.<br>Special: +1 to damage vs. giants and goblinoids, alertness, tracking.<br>Equipment: leather armor, short sword, longbow, 20 arrows.",
     RedBladeInitiate:"Red Blade Initiate (Asn1): HP 4; AC 7[12]; Atk dagger (1d4); Move 12; Save 15; AL C; CL/XP 5/240;<br>Special: backstab (x2), disguise, poison, thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: leather armor, dagger, thieves' tools.",
     RedBlade:"Red Blade (Asn4): HP 19; AC 7[12]; Atk dagger (1d4 plus poi- son); Move 12; Save 12; AL C; CL/XP 5/240;<br>Special: backstab (x2), disguise, poison, thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: leather armor, poisoned dagger (save or die), thieves' tools.",
     ShadowMask:"Shadow Masks (Thf3): HP 8; AC 6[13]; Atk short sword (1d6) or dagger (1d4); Move 12; Save 13; AL C; CL/XP 3/60;<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 87%, Tasks/Traps 25%, Hear 4 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, short sword, dagger, thieves’ tools, 1d10gp.",
@@ -52,7 +56,22 @@ var stat_blocks = {
     BeggarApprentice_M1:"Beggar Apprentice (Mnk1): HP 3; AC 9[10]; Atk unnecessary crutch (1d4); Move 12; Save 15; AL N; CL/XP 1/15;<br>Special: +2 on saving throws vs. paralysis and poison, alertness, deadly strike, deflect missiles, thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: comfortable set of rags for clothing, unnecessary crutch (treat as club), pot of stink.",
     BeggarJourneyman:"Beggar Journeyman (Thf3): HP 7; AC 7[12]; Atk club (1d4) or dagger (1d4); Move 12; Save 13; AL N; CL/XP 3/60;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 87%, Tasks/Traps 25%, Hear 4 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, club, dagger.",
     ExperiencedStreetBeggar:"Experienced Street Beggar (Thf2): HP 5; AC 7[12]; Atk weighted crutch (1d4); Move 12; Save 14; AL N; CL/XP 3/60;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: heavy tunic, weighted crutch (treat as club).",
-    MasterBeggar:"Master Beggar (Thf5): HP 17; AC 6[13]; Atk sword cane (1d6); Move 12; Save 11; AL C; CL/XP 6/400;<br>Special: +2 on saving throws vs. devices, backstab (x3), read languages, thieving skills.<br>Thieving Skills: Climb 89%, Tasks/Traps 35%, Hear 4 in 6, Hide 30%, Silent 40%, Locks 30%.<br>Equipment: cloak of chain, sword cane (treat as short sword), 2 pots of stink."
+    MasterBeggar:"Master Beggar (Thf5): HP 17; AC 6[13]; Atk sword cane (1d6); Move 12; Save 11; AL C; CL/XP 6/400;<br>Special: +2 on saving throws vs. devices, backstab (x3), read languages, thieving skills.<br>Thieving Skills: Climb 89%, Tasks/Traps 35%, Hear 4 in 6, Hide 30%, Silent 40%, Locks 30%.<br>Equipment: cloak of chain, sword cane (treat as short sword), 2 pots of stink.",
+    ClayGolem:"Clay Golem: HD 10 (45hp); AC 7[12]; Atk fist (3d10); Move 8; Save 5; AL N; CL/XP; 14/2600;<br>Special: immune to slashing and piercing weapons, immune to most spells. (Monstrosities 218)",
+    FleshGolem:"Flesh Golem: HD 8 (40hp); AC 9[10]; Atk 2 fists (2d8); Move 8; Save 8; AL N; CL/XP 12/2000;<br>Special: healed by lightning, hit only by magic weapons, immune to most spells, slowed by  re and cold. (Monstrosities 219)",
+    AirElemental:"Air Elemental (12HD): HD 12; AC 2[17]; Atk strike (2d8); Move 0 (fly 36); Save 3; AL N; CL/XP 13/2300;<br>Special: Whirlwind, immune to non-magic weapons. (Monstrosities 154)",
+    EarthElemental_12HD:"Earth Elemental (12HD): HD 12; AC 2[17]; Atk strike (4d8); Move 6; Save 3; AL N; CL/XP 13/2300;<br>Special: immune to non-magic weapons, tear down stonework. (Monstrosities 155)",
+    EarthElemental:"Earth Elemental (8HD): HD 8; AC 2[17]; Atk strike (4d8); Move 6; Save 8; AL N; CL/XP 9/1100;<br>Special: immune to non-magic weapons, tear down stonework. (Monstrosities 155)",
+    FireElemental:"Fire Elemental (8HD): HD 8; AC 2[17]; Atk strike (3d8); Move 12; Save 8; AL N; CL/XP 9/1100;<br>Special: ignite materials, immune to non-magic weapons. (Monstrosities 156)",
+    Enforcer:"Enforcer (Ftr1): HP 6; AC 7[12]; Atk club (1d4) or dagger (1d4); Move 12; Save 14; AL L; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, club, dagger.",
+    Gargoyle:"Gargoyle: HD 4; AC 5[14]; Atk 2 claws (1d3), bite (1d4), horn (1d6); Move 9 (fly 15); Save 13; AL C; CL/XP 6/400;<br>Special: fly, magic weapon required to hit.",
+    GreenGuardianGargoyle:"Green Guardian Gargoyle: HD 4+1; AC 3[16]; Atk 2 claws (1d4), bite (1d6) and gore (1d6); Move 15 (Fly 24); Save 13; AL C; CL/XP 8/800;<br>Special: +1 or better weapon to hit, freeze, hold, reanimation. (The Tome of Horrors Complete 264)",
+    Ghast:"Ghast: HD 4; AC 4[15]; Atk 2 claws (1d3), bite (1d6); Move 15; Save 13; AL C; CL/XP 5/240;<br>Special: paralyzing touch, stench. (Monstrosities 189)",
+    Wraith:"Wraith: HD 4; AC 3[16]; Atk touch (1d6 plus level drain); Move 9 (fly 24); Save 13; AL C; CL/XP 8/800;<br>Special: drain 1 level with hit, magic or silver weapon to hit. (Monstrosities 518)",
+    Ghoul:"Ghoul: HD 2; AC 6[13]; Atk 2 claws (1d3), bite (1d4); Move 9; Save 16; AL C; CL/XP 3/60;<br>Special: immunities, paralyzing touch. (Monstrosities 191)",
+    Goblin:"Goblin: HD 1d6 hp; AC 6[13]; Atk weapon (1d6); Move 9; Save 18; AL C; CL/XP B/10;<br>Special: -1 to hit in sunlight.",
+
+
 };
 
 var t = {
@@ -312,6 +331,137 @@ var e = {
             ]
         }
     },
+    DwarfPolitician:
+    {
+        name:"Dwarf Politician",
+        text:"This is a local city councilmember (Neutral male dwarf aristocrat 4) from the surface city pushing a petition to get the Underhill a seat on the council. He offers the characters 1sp each to spend a day handing out fliers that he printed at Underhill News and Tobacco (UH7)."
+    },
+    DwarfTravelers:
+    {
+        name:"Dwarf Travelers/Prospectors",
+        text:"This is a band of !d[2d4] dwarves (Lawful male or female dwarf expert 3) from the Cretian Mountians who are passing through Bard’s Gate on their way to a rumored mining stake northwest of the Stoneheart Mountain Dungeon (see The Lost Lands: Stoneheart Valley for more information on the area). They are recruiting guards and guides for their expedition."
+    },
+    Elemental:
+    {
+        name:"Elemental/Golem",
+        text:"This encounter is with an elemental or golem that has lost contact with its summoner or creator. The creature is berserk and causes havoc throughout the neighborhood until it is defeated. The spellcaster who summoned or created it is nowhere to be found.",
+        extra:{
+            total:6,
+            chances:[
+                {min:1, max:1, stats:["ClayGolem"]},
+                {min:2, max:2, stats:["FleshGolem"]},
+                {min:3, max:3, stats:["AirElemental"]},
+                {min:4, max:4, stats:["EarthElemental_12HD"]},
+                {min:5, max:5, stats:["EarthElemental"]},
+                {min:6, max:6, stats:["FireElemental"]}
+            ]
+        }
+    },
+    Enforcer:
+    {
+        name:"Enforcer",
+        text:"A strongman or gang member employed in collection and harassment.",
+        extra:{
+            total:4,
+            chances:[
+                {min:1, max:1, append:true, text:"The enforcer is \"on the job\" when encountered."}
+            ]
+        }
+    },
+    Execution:
+    {
+        name:"Execution",
+        text:"Held near the gates of the Keep (K1) in broad daylight, executions take place for those convicted of only the most heinous crimes. Although Bard’s Gate is by and large a \"lawfully\" aligned city, the executions serve as a reminder to its more liberal population that true malevolent chaos does exist in the world. Most executions coincide with a protest led by followers of Zors."
+    },
+    Familiar:
+    {
+        name:"Familiar",
+        text:"This encounter is with a magic-user's familiar, who is out on some errand, possibly spying on the characters for its master. Referee's discretion on type and \"owner\" (see the various Tome of Horrors, Monstrosities, and other accessories for appropriate encounters)."
+    },
+    Fighter:
+    {
+        name:"Fighter",
+        text:"This encounter is with a fighting man who is currently between employers or adventuring parties.",
+        stats:["Fighter"]
+    },
+    Fisherman:
+    {
+        name:"Fisherman",
+        text:"This encounter is with !d[1d4] fishermen (Neutral male or female commoner 2). They may be hawking wares, bringing in a catch or making ready to hit the waterways."
+    },
+    FoodVendor:
+    {
+        name:"Food Vendor",
+        text:"This encounter is with a vendor's cart where a merchant (Neutral male or female commoner !d[1d2]) hawks prepared meals. The meals are of common quality and cost 3sp."
+    },
+    FoodVendorBlackMarket:
+    {
+        name:"Food Vendor",
+        text:"Food vendors in the Black Market sell various charcoal-roasted \"street meats\" to visitors in the dank quarter's underground. Some of the food is quite good, being a fusion of meal types from various lands. Others are potentially life threatening. Eating street food sold in the Black Market affords a 15% chance of contracting food poisoning (-2 to all rolls for 24 hours). These snacks cost an average of !d[1d4+1]sp each."
+    },
+    FurTrader:
+    {
+        name:"Fur Trader",
+        text:"This encounter is with a non-guild-affiliated fur trader who actively traps and sells furs in the Stoneheart Mountains, despite the threat of orcs and other dangerous monsters. Fur traders are generally solitary but may have 1–4 subordinates (Neutral male ranger 1). The traders winter in the mountains and are thus found at the Tent City only in summer months. If arriving this trader has !d[3d100+50] gp worth of valuable pelts. If leaving this trader has !d[1d100+20] gp worth of new materials, supplies and trade goods when they leave Tent City. It may be assumed that much of this discrepancy is due to heavy gambling losses and lavish expenditure during their stay.",
+        stats:["FurTrader","NeutralRanger"]
+    },
+    Gambler:
+    {
+        name:"Gambler",
+        text:"A random gambler (Neutral male or female thief 2) is trying to find a game of chance, and offers the characters a seat to try their luck at a toss of the dice or a hand of cards. The gambler tries to dupe the characters into playing his game for 1-10gp a hand. The characters must notice his tricks in order to win. Roll a secret doors check. If they spot the sleight of hand, they win the round. If they win more than three hands, he folds up shop and disappears into the crowd. The gambler can cover 50gp in wagers."
+    },
+    GameOfChance:
+    {
+        name:"Game of Chance",
+        text:"A vendor (Neutral male or female thief 2) has set up a stall with targets to throw a collection of darts, throwing knives, or throwing axes at wooden targets designed to look like rats, rust monsters, monstrous centipedes, and other creepy crawlies commonly found in dungeon and underground environments. The targets are AC 0[19], and characters may bet up to 5gp per target. If they miss the target, they lose their bet. Hit the target and they win. If the characters win more than 50gp, they wipe out the vendor, who closes up shop for the day. Winning 50gp is not without its pitfalls. The vendor hires a pickpocket to steal back his stake sometime within the next 24 hours.",
+        stats:["Pickpocket"]
+    },
+    Gargoyle:
+    {
+        name:"Gargoyle",
+        text:"This encounter is with !d[1d6+2] gargoyles.",
+        stats:["Gargoyle"],
+        extra:{
+            total:2,
+            chances:[
+            {min:1, max:1, append:true, text:"At least one is a green guardian gargoyle, part of the furthering curse of Rappan Athuk.", stats:["GreenGuardianGargoyle"]}
+            ]
+        }
+    },
+    Ghasts:
+    {
+        name:"Ghasts",
+        text:"The encounter is with !d[2d4] ghasts led by a wraith.",
+        stats:["Ghast","Wraith"]
+    },
+    Ghouls:
+    {
+        name:"Ghouls",
+        text:"A cleric or necromancer of Orcus created these fiends from the corpses of criminals and set the beasts loose within the city. The encounter is with !d[2d4] ghouls.",
+        stats:["Ghoul"]
+    },
+    GiantRats:
+    {
+        name:"Giant Rats",
+        text:"This encounter is with a pack of !d[2d4] giant rats flushed up from the sewer system by the pipe cleaners. The rats pour from a sewer grate or out of the lower story of an abandoned home.",
+        stats:["GiantRat"]
+    },
+    HalflingBand:
+    {
+        name:"Halfling Band",
+        text:"This is a quartet of halflings (Neutral male or female halfling commoner 2) consisting of a trumpet, tuba player, drummer, and accordion player wandering the central portion of the Underhill District. They surround a character or party and play until they are paid to leave. This typically costs !d[2d10]gp. Causing a ruckus and not paying the band gets one expelled from the Underhill."
+    },
+    Goblins:
+    {
+        name:"Goblin",
+        text:"A nest of goblin spies, disguised as halflings, have infiltrated the city and set up a base in an abandoned structure. These goblins report directly to their masters in Rappan Athuk about the troop strength and disposition of the forces located in the Stoneheart Valley and the City of Bard's Gate. The encounter is with !d[1d4+2] of these goblins out on the prowl for drunks and solitary wanderers. If discovered, the goblins seek to escape the city by any and all available means.",
+        stats:["Goblin"]
+    },
+    GraveRobbers:
+    {
+        name:"Grave Robbers",
+        text:"This is an encounter with a greedy mixed band of !d[2d3] adventurers bent on cracking open tombs or mausoleums and making off with what valuables they can get their hands on. They are \"in the middle of work\". They are of various classes ranging from levels 2–6. The Company of the Silver Spear (page 126) or The Accursed (page 231) serve as good examples of ready-made adventuring bands."
+    },
 	LyreguardPatrol:
 	{
         name:"Lyreguard Patrol",
@@ -328,7 +478,7 @@ var e = {
     }
 }
 var enc = {
-    "All": [ e.Aristocrat, e.Artist, e.Author, e.BanditGang, e.BarbarianEncampment, e.Bard, e.BatSwarm, e.BeerVendor, e.Beggar, e.BlackOrcs, e.BodyGuard, e.Butler, e.Burglar, e.Caravan, e.Carriage, e.CentaurBand, e.Centipede, e.Charlatan, e.CheeseVendor, e.CityWatch, e.CivicOfficial, e.Cleric, e.Courtesan, e.Dandy, e.Debutant, e.DogSoldiers, e.Druids, e.Drunk ],
+    "All": [ e.Aristocrat, e.Artist, e.Author, e.BanditGang, e.BarbarianEncampment, e.Bard, e.BatSwarm, e.BeerVendor, e.Beggar, e.BlackOrcs, e.BodyGuard, e.Butler, e.Burglar, e.Caravan, e.Carriage, e.CentaurBand, e.Centipede, e.Charlatan, e.CheeseVendor, e.CityWatch, e.CivicOfficial, e.Cleric, e.Courtesan, e.Dandy, e.Debutant, e.DogSoldiers, e.Druids, e.Drunk, e.DwarfPolitician, e.DwarfTravelers, e.Elemental, e.Enforcer, e.Execution, e.Familiar, e.Fighter, e.Fisherman, e.FoodVendor, e.FoodVendorBlackMarket, e.FurTrader, e.Gambler, e.GameOfChance, e.Gargoyle, e.Ghasts, e.Ghouls, e.GiantRats, e.HalflingBand, e.Goblins, e.GraveRobbers ],
     "OT_D": [ e.LyreguardPatrol, e.AdventuringBand ],
     "OT_N": [ e.Drunk ]
 };
