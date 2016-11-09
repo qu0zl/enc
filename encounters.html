@@ -108,8 +108,14 @@ function select_item(entry) {
                     console.log(stats);
                     return [entry.name+": " + entry.text + " " + entry.extra.chances[i].text, stats];
                 }
-                else
-                    return [entry.name+": "+entry.extra.chances[i].text, entry.extra.chances[i].stats];
+                else {
+                    var stats;
+                    if (entry.extra.chances[i].stats)
+                        stats = entry.extra.chances[i].stats;
+                    else
+                        stats = entry.stats;
+                    return [entry.name+": "+entry.extra.chances[i].text, stats];
+                }
             }
         }
     }

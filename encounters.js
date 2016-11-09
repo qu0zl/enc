@@ -2,8 +2,24 @@ var stat_blocks = {
     Bandit:"Bandit: HD 1; AC 7[12]; Atk longsword (1d8); Move 12; Save 17; AL N; CL/XP 1/15;<br>Special: none.<br>Equipment: leather armor, longsword, 2d6cp.",
     BanditLeader:"Bandit Leader: HD 3; AC 6[13]; Atk longsword (1d8) or dagger (1d4); Move 12; Save 15; AL C; CL/XP 3/60;<br>Special: none.<br>Equipment: leather armor, shield, longsword, dagger, 1d6sp, 3d6cp.",
     Barbarian:"Barbarian (Ftr1): HP 7; AC 6[13]; Atk spear (1d6+1) or shortbow x2 (1d6); Move 12; Save 14; AL N; CL/XP 1/15.<br>Special: +1 to hit and damage due to high strength, +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +1 hp per die due to high constitution.<br>Equipment: leather armor, spear, shortbow, 20 arrows.",
+    Bat:"Bat: HD 1–2hp; AC 8[11]; Atk bite (1); Move 1 (fly 24); Save 18; AL N; CL/XP A/5;<br>Special: sonar flight in total darkness, swarm (causes spells to fail 50% of time).",
+    BlackOrc:"Black Orcs: HD 2; AC 5[14]; Atk two-handed sword (1d10); Move 12; Save 16; AL C; CL/XP 2/30;<br>Special: none. (The Tome of Horrors Complete 418).",
+    BodyGuard:"Bodyguard (Ftr2): HP 13; AC 6[13]; Atk club (1d4)); Move 12; Save 13; AL N; CL/XP 2/30.<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +1 hp per die due to high constitution, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, club, 2d4sp.",
+    BodyGuard_F1:"Bodyguard (Ftr1): HP 6; AC 7[12]; Atk club (1d4); Move 12; Save 14; AL L; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, club, 1d4sp.",
     Shaman:"Shaman: HD 2; HP 9; AC 9[10]; Atk club (1d4); Move 12; Save 15; AL N; CL/XP 3/60; Special: spells (2).<br>Spells: 1st—cure light wounds, protection from evil. Equipment: robes, bone-totem staff.",
     Bouncer:"Bouncer: HP 6; AC 7[12]; Atk club (1d4); Move 12; Save 14; AL C; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, club, 1d4cp.",
+    Burglar:"Burglar (Thf3): HP 8; AC 6[13]; Atk short sword (1d6) or dagger (1d4); Move 12; Save 12; AL C; CL/XP 3/60;<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 87%, Tasks/Traps 25%, Hear 4 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, short sword, dagger, thieves’ tools, 1d10gp.",
+    Cutpurse:"Cutpurse (Thf2): HP 5; AC 7[12]; Atk dagger (1d4); Move 12; Save 14; AL N; CL/XP 3/60; Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: leather armor, 3 daggers, thieves’ tools, 2d4sp.",
+    Robber:"Robber (Thf1): HP 3; AC 7[12]; Atk dagger (1d4); Move 12; Save 15; AL N; CL/XP 1/15; Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: leather armor, dagger, 1d4cp.",
+    CaravanCaptain:"Caravan Captain (Ftr2): HP 10; AC 6[13]; Atk club (1d4) or sling (1d4); Move 12; Save 13; AL L; CL/XP 2/30.<br>Special: multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, club, sling, 10 bullets, 2d4sp",
+    CaravanGuard:"Caravan Guard: HD 1; AC 7[12]; Atk longsword (1d8) or spear (1d6); Move 12; Save 17; AL N; CL/XP 1/15;<br>Special: none.<br>Equipment: leather armor, longsword, spear, 2d12cp.",
+    Centaur:"Centaur: HD 4; AC 5[14] or 4[15] with shield; Atk 2 kicks (1d6) and weapon; Move 18; Save 13; AL N; CL/XP 4/120;<br>Special: none.",
+    SilfusSharphoof:"Silfus Sharphoof, Male Centaur (Rgr2): HD 6; HP 31; AC 5[14]; Atk 2 kicks (1d6) and +1 lance (2d4+2) or longbow x2 (1d6); Move 18; Save 11; AL L; CL/XP 7/600;<br>Special: +2 to damage vs giants and goblinoids, alertness, tracking.<br>Equipment: +1 lance, longbow, 20 arrows.",
+    GiantCentipede:"Giant Centipede (small, lethal): HD 1d2 hp; AC 9[10]; Atk bite (0 plus poison); Move 13; Save 18; AL N; CL/XP 1/15;<br>Special: poison bite (+4 save or die).",
+    CentipedeSwarm:"Centipede Swarm: HD 3; AC 7 [12]; Atk bites (1hp plus non-lethal poison); Move 3; Save 14; AL N; CL/XP 4/120;<br>Special: immune to all but blunt weapons, non-lethal poison (2d6 points of damage).",
+    Charlatan:"Charlatan (Thf1): HP 2; AC 9[10]; Atk club (1d4); Move 12; Save 15; AL N; CL/XP 1/15;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: club, 3d4cp.",
+    WallWatcher:"Wall Watcher (Ftr1): HP 5; AC 4[15]; Atk battleaxe (1d8) or spear (1d6); Move 12; Save 14; AL L; CL/XP 1/15.<br>Special: none.<br>Equipment: chainmail, shield, battle axe, spear, signal horn.",
+    WallWatchOfficer:"Wall Watch Officer (Ftr3): HP 15; AC 5[14]; Atk spear (1d6) or short sword (1d6); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, shield, spear, short sword.",
     Lyreguardsmen: "Lyreguard (Ftr3): HP 22; AC 4[15]; Atk +1 longsword (1d8+1); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: chain mail, shield, +1 longsword, holy symbol of Muir or Mitra.",
     LyreguardHonorGuard:"Lyreguard Honor Guard (Pal4): HP 25; AC 2[17]; Atk +1 longsword (1d8+2); Move 12; Save 9; AL L; CL/XP 5/240;<br>Special: +1 to hit and damage due to high strength, immune to disease, lay on hands (8hp), warhorse mount.<br>Equipment: plate mail, shield, tabard bearing the symbol of Bard’s Gate, +1 longsword, holy symbol of Muir.",
     GriffonRider:"Lyreguard Captain, Griffon Rider (Pal6): HP 30; AC 3[16]; Atk +1 lance (2d4+2) or +1 longsword (1d8+2) or +1 longbow x2 (1d6+1); Move 12; Save 7; AL L; CL/XP 7/600;<br>Special: +1 to hit and damage strength bonus, lay on hands (12hp), immune to disease, warhorse.",
@@ -72,6 +88,122 @@ var e = {
             ]
         }
     },
+    Bard:
+    {
+        name:"Bard",
+        text:"Most typically encountered are students or teachers. The bard (Neutral male or female commoner 3)",
+        extra:{
+            total:2,
+            chances:[
+                {min:1, max:1, append:true, text:"recognizes the characters and begins recounting their deeds to passers-by."},
+                {min:2, max:2, append:true, text:"has suffered a case of mistaken identity and regales the party with untrue stories of their heinous and foul deeds, calls them all by different names, and generally sets out to murder their reputation. For !d[1d12] days after this encounter, the characters are called by different names by common folk and generally shunned."}
+            ]
+        }
+    },
+    BatSwarm:
+    {
+        name:"Bat Swarm",
+        text:"This encounter is with a swarm of !d[10d6] frightened bats that swoops down from an attic or high-raftered temple.",
+        stats:["Bat"]
+    },
+    BeerVendor:
+    {
+        name:"Beer Vendor",
+        text:"Popular in this district, the beer vendor (Neutral male or female commoner 2) is a rickshaw-like cart hauling a huge keg of home-brewed ale or beer. The beer may be dwarven, halfing, or human in blend, is of fair to excellent quality, and costs 3cp a cup ... bring your own mug."
+    },
+    Beggar:
+    {
+        name:"Beggar",
+        text:"a beggar or other lowly panhandler (Neutral male or female commoner 1).",
+        extra:{
+            total:10,
+            chances:[
+                {min:1, max:1, append:true, text:"They were once a hero or other member of a character class (Referee’s discretion)."}
+            ]
+        }
+    },
+    BlackOrcs:
+    {
+        name:"Black Orcs of Orcus",
+        text:"This rare encounter is with !d[1d6+2] black orcs in the service of the Cult of Orcus hidden near the environs of the Claws of Orcus. The Black Orcs typically remain hidden from large bands and soldiers, but see that snoopy individuals (such as paladins and rangers) never return to Bard’s Gate to report on the things they may have discovered.",
+        stats:["BlackOrc"]
+    },
+    BodyGuard:
+    {
+        name:"Bodyguard",
+        text:"An off-duty bodyguard for a noble or aristocratic household. The Harlots' Guild also employs bodyguards to protect their members when they are on assignment. The bodyguard may be of any character class (Referee’s discretion on bodyguard, see Appendix A for examples or sample Fighter below).",
+        stats:["BodyGuard"]
+    },
+    Butler:
+    {
+        name:"Butler",
+        text: "This encounter is with the chief servant and confidant of a noble or aristocratic household. The butler (Neutral male human expert 4) is on a specific, important mission."
+    },
+    Burglar:
+    {
+        name:"Burglar",
+        text:"Characters must make a successful check against the thief’s Hide score to notice him coming from or heading to a bit of burglary. These criminals may be burglers, cutpurses, or robbers (Referee's discretion).",
+        stats:["Burglar","Cutpurse","Robber"]
+    },
+    Caravan:
+    {
+        name:"Caravan",
+        text:"A caravan of !d[2d6] wagons is encountered. The caravan hauls !d[2d20+20] gp worth of materials per wagon. The caravan has 1 drover (Neutral male human commoner 2) per wagon, and 1 guard per two wagons. A captain and one merchant (Neutral male or female expert 2) manage the guards. Several small caravans may combine under powerful merchants to form larger caravans.",
+        stats:["CaravanCaptain","CaravanGuard"],
+        extra:{
+            total:2,
+            chances:[
+            {min:1, max:1, text:"A caravan of !d[2d8] pack animals is encountered. The caravan hauls !d[1d20+10] gp worth of materials per pack animal. The caravan has 1 drover (Neutral male human commoner 2) per pack animal, and 1 guard per two animals. A captain and one merchant (Neutral male or female expert 2) manage the guards. Several small caravans may combine under powerful merchants to form larger caravans."}
+            ]
+        }
+    },
+    Carriage:
+    {
+        name:"Carriage",
+        text:"This encounter is with a low-level aristocrat (Neutral male or female aristocrat 3), their valet (Neutral male expert 3), bodyguard and servant (Neutral male or female commoner 2). The carriage may stop if the characters have developed a reputation as heroes or due to a case of mistaken identity. The characters are invited to a party hosted by the aristocrat as a showcase and talking point. Likewise, the carriage may be empty except for a driver or valet, and is awaiting the master’s return outside of an estate.",
+        stats:["BodyGuard_F1"]
+    },
+    CentaurBand:
+    {
+        name:"Centaur Band",
+        text:"A group of !d[1d4+4] centaurs has come up from the wood-lands and the southern plains. They may be fur traders or are seeking bounties on slain monsters from the Lyreguard and have come to the tent city, lured by wine and weapons.",
+        stats:["Centaur"],
+        extra:{
+            total:100,
+            chances:[
+            {min:1, max:1, text:"Silfus Sharphoof (M16, pg. 129) is encountered on a day off.", stats:["SilfusSharphoof"]}
+            ]
+        }
+    },
+    Centipede:
+    {
+        name:"Centipede",
+        text:"This encounter is with a giant centipede that has fled the sewers into the streets or back alleyways.",
+        stats:["GiantCentipede"],
+        extra:{
+            total:10,
+            chances:[
+            {min:1, max:3, text:"This encounter is with a centipede swarm that has fled the sewers into the streets or back alleyways.", stats:["CentipedeSwarm"]}
+            ]
+        }
+    },
+    Charlatan:
+    {
+        name:"Charlatan",
+        text:"This encounter is with a scoundrel hawking fake potions, a false prophecy or similar con. False potions (snake oil) typically sell for 1–10gp and are nothing more than whiskey mixed with mineral water, seasoned with hot peppers, herbs and flower petals. If exposed as a fraud, the charlatan flees the scene to escape prosecution. The fraud later keeps tabs on the characters in order to spring some complex revenge or smear campaign against them.",
+        stats:["Charlatan"]
+    },
+    CheeseVendor:
+    {
+        name:"Cheese Vendor",
+        text:"Cheese vendors (Neutral male or female commoner 1) often work in tandem. This is a small cart selling cured meats, cheeses, crackers, bread, and pickled goods."
+    },
+    CityWatch:
+    {
+        name:"City Watch",
+        text:"This patrol is on official city business and consists of !d[2d4] individuals and one officer.",
+        stats:["WallWatcher","WallWatchOfficer"]
+    },
 	LyreguardPatrol:
 	{
         name:"Lyreguard Patrol",
@@ -93,7 +225,7 @@ var e = {
         }
 }
 var enc = {
-    "All": [ e.Aristocrat, e.Artist, e.Author, e.BanditGang, e.BarbarianEncampment ],
+    "All": [ e.Aristocrat, e.Artist, e.Author, e.BanditGang, e.BarbarianEncampment, e.Bard, e.BatSwarm, e.BeerVendor, e.Beggar, e.BlackOrcs, e.BodyGuard, e.Butler, e.Burglar, e.Caravan, e.Carriage, e.CentaurBand, e.Centipede, e.Charlatan, e.CheeseVendor, e.CityWatch ],
     "OT_D": [ e.LyreguardPatrol, e.AdventuringBand ],
     "OT_N": [ e.SherrifsPatrol ]
 };
