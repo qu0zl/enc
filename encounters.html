@@ -2,6 +2,7 @@
     <meta charset="utf-8">
     <title>Bard's Gate Random Encounter Generator</title>
     <link href="jquery-ui.min.css" rel="stylesheet">
+    <link href="jquery-ui.theme.min.css" rel="stylesheet">
     <style>
     .ui-button {
     }
@@ -37,7 +38,7 @@
 
 <button class="top_button" id="All">All</button>
 <button class="top_button" id="OT_D">Old Temple District (Day)</button>
-<button class="top_button" id="OT_N">Old Temple District (Night)</button>
+<button class="top_button" id="OT_N">Drunk Encounter demo</button>
 <div class="enc">
 
 </div>
@@ -59,8 +60,13 @@ function roll(amount, type) {
     return count;
 }
 
-function replace_dice_marker(text) {
-    var matches = text.match(/!d\[.*?]/g);
+function table_roll(table) {
+    var which = getRandomInt(0, table.length -1);
+    return table[which];
+}
+
+function replace_markers(text) {
+    var matches = text.match(/!d\[.*?]/gi);
     if (matches) {
         for (var i=0; i<matches.length; i++) {
             var split = matches[i].split('[')[1].split(/d/i);
@@ -83,6 +89,13 @@ function replace_dice_marker(text) {
             text = text.replace(matches[i], count);
         }
     }
+    matches = text.match(/!t\[.*?]/g);
+    if (matches) {
+        for (var i=0; i<matches.length; i++) {
+            var table_name = matches[i].split('[')[1].split(']')[0];
+            text = text.replace(matches[i], table_roll(t[table_name]));
+        }
+    }
     return text;
 }
 
@@ -102,8 +115,6 @@ function select_item(entry) {
                     } else {
                         stats = entry.extra.chances[i].stats;
                     }
-
-                    console.log(stats);
                     return [entry.name+": " + entry.text + " " + entry.extra.chances[i].text, stats];
                 }
                 else {
@@ -136,10 +147,17 @@ function generate_encounter() {
     if (debug == true) {
         console.log("forcing to use latest entry for debugging purposes. remove this!!!");
         which = table.length - 1;
+        }
+        which = 26; //greg testing
+    if (table[which] == undefined) {
+    console.log("error!");
+    console.log(which);
+    console.log(table);
+    alert("WTF!");
     }
     var item = select_item(table[which]);
 
-    var text = replace_dice_marker(item[0]);
+    var text = replace_markers(item[0]);
     if (item[1]) {
         text += render_stat_blocks(item[1]);
     }
