@@ -18,8 +18,13 @@ var stat_blocks = {
     GiantCentipede:"Giant Centipede (small, lethal): HD 1d2 hp; AC 9[10]; Atk bite (0 plus poison); Move 13; Save 18; AL N; CL/XP 1/15;<br>Special: poison bite (+4 save or die).",
     CentipedeSwarm:"Centipede Swarm: HD 3; AC 7 [12]; Atk bites (1hp plus non-lethal poison); Move 3; Save 14; AL N; CL/XP 4/120;<br>Special: immune to all but blunt weapons, non-lethal poison (2d6 points of damage).",
     Charlatan:"Charlatan (Thf1): HP 2; AC 9[10]; Atk club (1d4); Move 12; Save 15; AL N; CL/XP 1/15;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: club, 3d4cp.",
+    Dandy:"Dandy, Male or Female (Ftr3): HP 15; AC 6[13]; Atk rapier (1d6); Move 12; Save 12; AL N; CL/XP 3/60.<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, multiple attacks (3) vs. creatures with 1 or fewer HD, parry (–2 to enemy’s attacks).<br>Equipment: leather armor, rapier (short sword), dandy clothes.",
+    DogSoldierSneak:"Dog Soldier Sneak (Thf3): HP 7; AC 7[12]; Atk club (1d4) or dagger (1d4); Move 12; Save 12; AL N; CL/XP 3/60;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 87%, Tasks/Traps 25%, Hear 4 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, club, dagger.",
+    DogSoldierWarrior:"Dog Soldier Warrior (Ftr2): HP 13; AC 6[13]; Atk club (1d4) or sling (1d4); Move 12; Save 13; AL N; CL/XP 2/30.<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +1 hp per die due to high constitution, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, club, sling, 10 bullets, 2d4sp.",
+    DogSoldierMU:"Dog Soldier Magic-User’s Apprentice (MU1): HP 3; AC 8[11]; Atk staff (1d6); Move 12; Save 15; AL N; CL/XP 2/30;<br>Special: +2 on saves vs. spells, spells (1).<br> Spells: 1st—sleep.<br>Equipment: staff, spellbook.",
     WallWatcher:"Wall Watcher (Ftr1): HP 5; AC 4[15]; Atk battleaxe (1d8) or spear (1d6); Move 12; Save 14; AL L; CL/XP 1/15.<br>Special: none.<br>Equipment: chainmail, shield, battle axe, spear, signal horn.",
     WallWatchOfficer:"Wall Watch Officer (Ftr3): HP 15; AC 5[14]; Atk spear (1d6) or short sword (1d6); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, shield, spear, short sword.",
+    Priest:"Priest (Clr3): HP 11; AC 4[15]; Atk warhammer (1d4+1) or sling (1d4); Move 12; Save 13; AL L; CL/XP 4/120;<br>Special: +2 save versus paralyzation and poison, spells (2), turn undead.<br>Spells: 1st—cure light wounds, protection from evil.<br>Equipment: chainmail, shield, clerical vestments, warhammer, sling, 10 bullets, holy symbol of appropriate god.",
     Lyreguardsmen: "Lyreguard (Ftr3): HP 22; AC 4[15]; Atk +1 longsword (1d8+1); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: chain mail, shield, +1 longsword, holy symbol of Muir or Mitra.",
     LyreguardHonorGuard:"Lyreguard Honor Guard (Pal4): HP 25; AC 2[17]; Atk +1 longsword (1d8+2); Move 12; Save 9; AL L; CL/XP 5/240;<br>Special: +1 to hit and damage due to high strength, immune to disease, lay on hands (8hp), warhorse mount.<br>Equipment: plate mail, shield, tabard bearing the symbol of Bard’s Gate, +1 longsword, holy symbol of Muir.",
     GriffonRider:"Lyreguard Captain, Griffon Rider (Pal6): HP 30; AC 3[16]; Atk +1 lance (2d4+2) or +1 longsword (1d8+2) or +1 longbow x2 (1d6+1); Move 12; Save 7; AL L; CL/XP 7/600;<br>Special: +1 to hit and damage strength bonus, lay on hands (12hp), immune to disease, warhorse.",
@@ -204,6 +209,45 @@ var e = {
         text:"This patrol is on official city business and consists of !d[2d4] individuals and one officer.",
         stats:["WallWatcher","WallWatchOfficer"]
     },
+    CivicOfficial:
+    {
+        name:"Civic Official",
+        text:"This encounter is with a lesser aristocrat (Lawful male or female aristocrat 2) and a pair of City Watchmen who serve as bodyguards. The official is typically an inspector, tax collector, census taker or other such civil servant of the city’s bureaucracy. The civic official is typically a pretender with tenuous ties to the noble families that allowed for their appointment.",
+        stats:["WallWatcher"]
+    },
+    Cleric:
+    {
+        name:"Cleric",
+        text:"A cleric encounter is with a cleric of one of the gods worshipped in Bard’s Gate. The cleric is either performing civic duty, preaching, or on a special mission from the temple.",
+        stats:["Priest"]
+    },
+    Courtesan:
+    {
+        name:"Courtesan",
+        text:"A high priced lady-of-the-evening (Neutral female expert 4) escorted by a bodyguard or carriage to an evening interlude with a customer.",
+        stats:["BodyGuard"]
+    },
+    Dandy:
+    {
+        name:"Dandy",
+        text:"This encounter is with a foppish pretty lad or girlie girl, who also happens to be skilled with a rapier. The dandy plays the role in order to lure ruffians to attack him, then soundly mops the floor with his adversaries.",
+        stats:["Dandy"]
+    },
+    Debutant:
+    {
+        name:"Debutant",
+        text:"This encounter is with the spoiled child (Neutral female aristocrat 3) of an aristocrat or noble. The debutant may be slumming in a bad part of town, or shopping on her parent’s dime."
+    },
+    DogSoldiers:
+    {
+        name:"Dog Soldiers",
+        text:"!d[1d4] dog soldiers examine the characters closely and watch them for trouble.",
+        stats:["DogSoldierSneak","DogSoldierWarrior","DogSoldierMU"]
+    },
+    Druids:
+    {
+        name:"Druid",
+        text:"Druids (Neutral male or female druid 3–6) are typically encountered outside the city walls, as their many animal companions may cause the citizens special discomfort. A druid encounter may or may not include an animal (Referee’s discretion).
 	LyreguardPatrol:
 	{
         name:"Lyreguard Patrol",
@@ -225,7 +269,7 @@ var e = {
         }
 }
 var enc = {
-    "All": [ e.Aristocrat, e.Artist, e.Author, e.BanditGang, e.BarbarianEncampment, e.Bard, e.BatSwarm, e.BeerVendor, e.Beggar, e.BlackOrcs, e.BodyGuard, e.Butler, e.Burglar, e.Caravan, e.Carriage, e.CentaurBand, e.Centipede, e.Charlatan, e.CheeseVendor, e.CityWatch ],
+    "All": [ e.Aristocrat, e.Artist, e.Author, e.BanditGang, e.BarbarianEncampment, e.Bard, e.BatSwarm, e.BeerVendor, e.Beggar, e.BlackOrcs, e.BodyGuard, e.Butler, e.Burglar, e.Caravan, e.Carriage, e.CentaurBand, e.Centipede, e.Charlatan, e.CheeseVendor, e.CityWatch, e.CivicOfficial, e.Cleric, e.Courtesan, e.Dandy, e.Debutant, e.DogSoldiers ],
     "OT_D": [ e.LyreguardPatrol, e.AdventuringBand ],
     "OT_N": [ e.SherrifsPatrol ]
 };
