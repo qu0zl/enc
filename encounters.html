@@ -37,6 +37,7 @@
 
 <div class="count">
 </div>
+<button class="top_button" id="All">All</button>
 <button class="top_button" id="OT_D">Old Temple District (Day)</button>
 <button class="top_button" id="OT_N">Old Temple District (Night)</button>
 <div class="enc">
@@ -54,34 +55,66 @@ function getRandomInt(min, max) {
 
 function roll(amount, type) {
     var count = 0;
-    console.log("amount is " + amount + " type is " + type);
     for (var i=0; i<amount; i++) {
         count += getRandomInt(1, type);
-        console.log("amount now " + count);
     }
     return count;
 }
 
 function replace_dice_marker(text) {
     var matches = text.match(/!d\[.*?]/g);
-    for (var i=0; i<matches.length; i++) {
-        var split = matches[i].split('[')[1].split(/d/i);
-        var count = roll(split[0], parseInt(split[1]));
-        text = text.replace(matches[i], count);
-        console.log(split);
+    if (matches) {
+        for (var i=0; i<matches.length; i++) {
+            var split = matches[i].split('[')[1].split(/d/i);
+            var dice_type = split[1];
+            var minus = dice_type.indexOf('-');
+            var plus = dice_type.indexOf('+');
+            if (minus != -1)
+                minus = parseInt(dice_type.substring(minus+1));
+            else
+                minus = 0;
+            if (plus != -1) {
+                plus = parseInt(dice_type.substring(plus+1));
+            }
+            else
+                plus = 0;
+
+            var count = roll(split[0], parseInt(dice_type));
+            count += plus;
+            count -= minus;
+            text = text.replace(matches[i], count);
+        }
     }
     return text;
 }
 
 function select_item(entry) {
-    console.log(entry);
-    if (!entry.extra)
-        return [entry.text, entry.stats];
-    var choice = getRandomInt(1, entry.extra.total);
-    for (var i=0; i<entry.extra.chances.length; i++)
-        if (choice >= entry.extra.chances[i].min && choice <= entry.extra.chances[i].max)
-            return [entry.extra.chances[i].text, entry.extra.chances[i].stats];
-    return [entry.text, entry.stats];
+    if (entry.extra) {
+        var choice = getRandomInt(1, entry.extra.total);
+        // choice = 1; //greg remove, only here for testing
+        for (var i=0; i<entry.extra.chances.length; i++) {
+            if (choice >= entry.extra.chances[i].min && choice <= entry.extra.chances[i].max) {
+                if (entry.extra.chances[i].append) {
+                    var stats;
+                    if (entry.stats) {
+                        if (entry.extra.chances[i].stats)
+                            stats = entry.stats.concat(entry.extra.chances[i].stats);
+                        else
+                            stats = entry.stats
+                    } else {
+                        stats = entry.extra.chances[i].stats;
+                    }
+
+                    console.log(stats);
+                    return [entry.name+": " + entry.text + " " + entry.extra.chances[i].text, stats];
+                }
+                else
+                    return [entry.name+": "+entry.extra.chances[i].text, entry.extra.chances[i].stats];
+            }
+        }
+    }
+
+    return [entry.name+": "+entry.text, entry.stats];
 }
 
 function render_stat_blocks(block_list) {
@@ -92,15 +125,20 @@ function render_stat_blocks(block_list) {
 }
 
 function generate_encounter() {
+    var debug = false; // force to use last entry in table for debugging purposes.
     var table = enc[$(this).attr('id')];
     var which = getRandomInt(0, table.length -1);
+    //debug = true; // only for debugging, breaks normal usage. Do not commit with this uncommented.
+    if (debug == true) {
+        console.log("forcing to use latest entry for debugging purposes. remove this!!!");
+        which = table.length - 1;
+    }
     var item = select_item(table[which]);
 
     var text = replace_dice_marker(item[0]);
     if (item[1]) {
         text += render_stat_blocks(item[1]);
     }
-    //var matches = text.match("/!d\\[/gi");
     $('.enc').html(text);
 }
     
