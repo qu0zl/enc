@@ -477,8 +477,9 @@ var e = {
         }
     }
 }
+
 var enc = {
-    "All": [ e.Aristocrat, e.Artist, e.Author, e.BanditGang, e.BarbarianEncampment, e.Bard, e.BatSwarm, e.BeerVendor, e.Beggar, e.BlackOrcs, e.BodyGuard, e.Butler, e.Burglar, e.Caravan, e.Carriage, e.CentaurBand, e.Centipede, e.Charlatan, e.CheeseVendor, e.CityWatch, e.CivicOfficial, e.Cleric, e.Courtesan, e.Dandy, e.Debutant, e.DogSoldiers, e.Druids, e.Drunk, e.DwarfPolitician, e.DwarfTravelers, e.Elemental, e.Enforcer, e.Execution, e.Familiar, e.Fighter, e.Fisherman, e.FoodVendor, e.FoodVendorBlackMarket, e.FurTrader, e.Gambler, e.GameOfChance, e.Gargoyle, e.Ghasts, e.Ghouls, e.GiantRats, e.HalflingBand, e.Goblins, e.GraveRobbers ],
-    "OT_D": [ e.LyreguardPatrol, e.AdventuringBand ],
+    "All": [],
+    "OT_D": [ e.LyreguardPatrol, e.Cleric, e.Charlatan, e.FoodVendor, e.Beggar, e.CivicOfficial ],
     "OT_N": [ e.Drunk ]
 };

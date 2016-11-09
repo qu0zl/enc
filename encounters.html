@@ -166,9 +166,11 @@ function generate_encounter() {
 function onReady()
 {
     $('.top_button').button().click(generate_encounter);
-
+    // create enc.all list that includes all encounters
+    for (var key in e)
+        enc.All.push(e[key]);
 };
-    $(document).ready(onReady);
+$(document).ready(onReady);
 </script>
 </body>
 
