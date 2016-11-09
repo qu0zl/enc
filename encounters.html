@@ -147,14 +147,13 @@ function generate_encounter() {
     if (debug == true) {
         console.log("forcing to use latest entry for debugging purposes. remove this!!!");
         which = table.length - 1;
-        }
-        which = 26; //greg testing
-    if (table[which] == undefined) {
-    console.log("error!");
-    console.log(which);
-    console.log(table);
-    alert("WTF!");
     }
+    /* for debugging if tables have undefined entries...
+    for (var i=0; i<table.length-1; i++) {
+        if (table[i] == undefined)
+            console.log("error at " +i);
+    }
+    */
     var item = select_item(table[which]);
 
     var text = replace_markers(item[0]);

@@ -325,15 +325,10 @@ var e = {
                 {min:100, max:100, text:"Imril, accompanied by !d[2d2] griffon riders, !d[1d6] Lyreguard honor guard, and !d[2d4] Lyreguardsmen pass through the area.", stats:["Imril","GriffonRider","Lyreguardsmen","LyreguardHonorGuard"]}
             ]
         }
-    },
-	SherrifsPatrol:
-        {
-            name:"Sheriff's Patrol",
-            text:"!d[1d6] greg"
-        }
+    }
 }
 var enc = {
-    "All": [ e.Aristocrat, e.Artist, e.Author, e.BanditGang, e.BarbarianEncampment, e.Bard, e.BatSwarm, e.BeerVendor, e.Beggar, e.BlackOrcs, e.BodyGuard, e.Butler, e.Burglar, e.Caravan, e.Carriage, e.CentaurBand, e.Centipede, e.Charlatan, e.CheeseVendor, e.CityWatch, e.CivicOfficial, e.Cleric, e.Courtesan, e.Dandy, e.Debutant, e.DogSoldiers, e.Druid, e.Drunk ],
+    "All": [ e.Aristocrat, e.Artist, e.Author, e.BanditGang, e.BarbarianEncampment, e.Bard, e.BatSwarm, e.BeerVendor, e.Beggar, e.BlackOrcs, e.BodyGuard, e.Butler, e.Burglar, e.Caravan, e.Carriage, e.CentaurBand, e.Centipede, e.Charlatan, e.CheeseVendor, e.CityWatch, e.CivicOfficial, e.Cleric, e.Courtesan, e.Dandy, e.Debutant, e.DogSoldiers, e.Druids, e.Drunk ],
     "OT_D": [ e.LyreguardPatrol, e.AdventuringBand ],
     "OT_N": [ e.Drunk ]
 };
