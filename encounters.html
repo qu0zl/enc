@@ -107,6 +107,7 @@ function select_item(entry) {
             if (choice >= entry.extra.chances[i].min && choice <= entry.extra.chances[i].max) {
                 if (entry.extra.chances[i].append) {
                     var stats;
+                    var text = entry.name +": ";
                     if (entry.stats) {
                         if (entry.extra.chances[i].stats)
                             stats = entry.stats.concat(entry.extra.chances[i].stats);
@@ -115,7 +116,15 @@ function select_item(entry) {
                     } else {
                         stats = entry.extra.chances[i].stats;
                     }
-                    return [entry.name+": " + entry.text + " " + entry.extra.chances[i].text, stats];
+                    if (entry.text) {
+                        text = text+entry.text;
+                    }
+                    if (entry.extra.chances[i].text) {
+                        if (entry.text)
+                            text +=" ";
+                        text = text+entry.extra.chances[i].text;
+                    }
+                    return [text, stats];
                 }
                 else {
                     var stats;

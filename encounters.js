@@ -8,12 +8,13 @@ var stat_blocks = {
     BlackOrc:"Black Orcs: HD 2; AC 5[14]; Atk two-handed sword (1d10); Move 12; Save 16; AL C; CL/XP 2/30;<br>Special: none. (The Tome of Horrors Complete 418).",
     BodyGuard:"Bodyguard (Ftr2): HP 13; AC 6[13]; Atk club (1d4)); Move 12; Save 13; AL N; CL/XP 2/30.<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +1 hp per die due to high constitution, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, club, 2d4sp.",
     BodyGuard_F1:"Bodyguard (Ftr1): HP 6; AC 7[12]; Atk club (1d4); Move 12; Save 14; AL L; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, club, 1d4sp.",
-    Shaman:"Shaman: HD 2; HP 9; AC 9[10]; Atk club (1d4); Move 12; Save 15; AL N; CL/XP 3/60; Special: spells (2).<br>Spells: 1st—cure light wounds, protection from evil. Equipment: robes, bone-totem staff.",
+    Shaman:"Shaman: HD 2; HP 9; AC 9[10]; Atk club (1d4); Move 12; Save 15; AL N; CL/XP 3/60;<br>Special: spells (2).<br>Spells: 1st—cure light wounds, protection from evil. Equipment: robes, bone-totem staff.",
     Bouncer:"Bouncer: HP 6; AC 7[12]; Atk club (1d4); Move 12; Save 14; AL C; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, club, 1d4cp.",
     Burglar:"Burglar (Thf3): HP 8; AC 6[13]; Atk short sword (1d6) or dagger (1d4); Move 12; Save 12; AL C; CL/XP 3/60;<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 87%, Tasks/Traps 25%, Hear 4 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, short sword, dagger, thieves' tools, 1d10gp.",
-    Cutpurse:"Cutpurse (Thf2): HP 5; AC 7[12]; Atk dagger (1d4); Move 12; Save 14; AL N; CL/XP 3/60; Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: leather armor, 3 daggers, thieves' tools, 2d4sp.",
-    Robber:"Robber (Thf1): HP 3; AC 7[12]; Atk dagger (1d4); Move 12; Save 15; AL N; CL/XP 1/15; Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: leather armor, dagger, 1d4cp.",
+    Cutpurse:"Cutpurse (Thf2): HP 5; AC 7[12]; Atk dagger (1d4); Move 12; Save 14; AL N; CL/XP 3/60;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: leather armor, 3 daggers, thieves' tools, 2d4sp.",
+    Robber:"Robber (Thf1): HP 3; AC 7[12]; Atk dagger (1d4); Move 12; Save 15; AL N; CL/XP 1/15;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: leather armor, dagger, 1d4cp.",
     Pickpocket:"Pickpocket (Thf3): HP 7; AC 7[12]; Atk club (1d4) or dagger (1d4); Move 12; Save 12; AL N; CL/XP 3/60;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 87%, Tasks/Traps 25%, Hear 4 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, club, dagger.",
+    WheelwrightTough:"Wheelwright Tough (Ftr1,Thf1): HP 5; AC 7[12]; Atk club (1d4) or dagger (1d4); Move 12; Save 14; AL C; CL/XP 2/30.<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: leather armor, club, dagger.",
     CaravanCaptain:"Caravan Captain (Ftr2): HP 10; AC 6[13]; Atk club (1d4) or sling (1d4); Move 12; Save 13; AL L; CL/XP 2/30.<br>Special: multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, club, sling, 10 bullets, 2d4sp",
     CaravanGuard:"Caravan Guard: HD 1; AC 7[12]; Atk longsword (1d8) or spear (1d6); Move 12; Save 17; AL N; CL/XP 1/15;<br>Special: none.<br>Equipment: leather armor, longsword, spear, 2d12cp.",
     Centaur:"Centaur: HD 4; AC 5[14] or 4[15] with shield; Atk 2 kicks (1d6) and weapon; Move 18; Save 13; AL N; CL/XP 4/120;<br>Special: none.",
@@ -28,23 +29,32 @@ var stat_blocks = {
     DogSoldierMU:"Dog Soldier Magic-User's Apprentice (MU1): HP 3; AC 8[11]; Atk staff (1d6); Move 12; Save 15; AL N; CL/XP 2/30;<br>Special: +2 on saves vs. spells, spells (1).<br> Spells: 1st—sleep.<br>Equipment: staff, spellbook.",
     Druid:"Druid (Drd4): HP 16; AC 7[12]; Atk +1 sickle sword (1d6+1); Move 12; Save 12; AL N; CL/XP 8/800;<br>Special: +2 bonus to saving throws against fire, druid language, immune to fey charms, shape change, spells (3/1/1).<br>Spells: 1st—faerie fire, locate animals, predict weather; 2nd—cure light wounds; 3rd—call lightning.<br>Equipment: leather armor, +1 sickle sword (treat as short sword), holly berries and mistletoe.",
     Fighter:"Hero (Ftr3): HP 22; AC 6[13]; Atk longsword (1d8+1) or dagger (1d4+1); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: +1 to hit and damage due to high strength, multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, longsword, dagger.",
+    Fighter_F5:"Fighter (Ftr5): HP 26; AC 2[17]; Atk +1 longsword (1d8+2); Move 12; Save 10; AL N; CL/XP 4/120.<br>Special: +1 to hit and damage due to high strength, multiple attacks (4) vs. creatures with 1 or fewer HD.<br>Equipment: plate mail, shield, +1 longsword.",
+    HaflingPickpocket:"Halfling Pickpocket (Thf2): HP 6; AC 6[13]; Atk dagger (1d4)); Move 12; Save 14; AL C; CL/XP 3/60;<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +1 with thrown weapons, +2 on saving throws vs. devices, +4 on saving throws vs. magic, backstab (x2), halfling racial abilities, thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 25%, Hear 3 in 6, Hide 25%, Silent 35%, Locks 25%.<br>Equipment: leather armor, 3 daggers, thieves’ tools.",
+    Halforc:"Wanderer, Male Half-Orc (Ftr1): HP 7; AC 7[12]; Atk club (1d4+1); Move 12; Save 14; AL N; CL/XP 2/30.<br>Special: +1 to hit and damage due to high strength, +1 hit point per die due to high constitution, darkvision 60ft, half-orc racial abilities.<br>Equipment: leather armor, club.",
+    HereticPriest:"Heretic Priest (Clr2): HP 6; AC 9[10]; Atk fist (1); Move 12; Save 14; AL C; CL/XP 3/60;<br>Special: +2 save versus paralyzation and poison.<br>Equipment: clerical vestments, defiled holy symbol of denounced god.",
+    HereticPaladin:"Heretic Paladin (Pal2): HP 12; AC 6[13]; Atk longsword (1d8); Move 12; Save 11; AL L; CL/XP 3/60;<br>Special: immune to disease, lay on hands (4hp), warhorse mount.<br>Equipment: dirty ring mail, longsword, defiled holy symbol.",
+    Knotaloke:"Knotaloke, Female Human (Rgr4): HP 21; AC 4[15]; Atk longsword (1d8) or +1 longbow (1d6+1) x2; Move 12; Save 11; AL L; CL/XP 5/240;<br>Special: +4 to damage vs giants and goblinoids, alertness, tracking.<br>Equipment: +1 chainmail, longsword, +1 longbow, 20 arrows.",
     WallWatcher:"Wall Watcher (Ftr1): HP 5; AC 4[15]; Atk battleaxe (1d8) or spear (1d6); Move 12; Save 14; AL L; CL/XP 1/15.<br>Special: none.<br>Equipment: chainmail, shield, battle axe, spear, signal horn.",
     WallWatchOfficer:"Wall Watch Officer (Ftr3): HP 15; AC 5[14]; Atk spear (1d6) or short sword (1d6); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, shield, spear, short sword.",
     Priest:"Priest (Clr3): HP 11; AC 4[15]; Atk warhammer (1d4+1) or sling (1d4); Move 12; Save 13; AL L; CL/XP 4/120;<br>Special: +2 save versus paralyzation and poison, spells (2), turn undead.<br>Spells: 1st—cure light wounds, protection from evil.<br>Equipment: chainmail, shield, clerical vestments, warhammer, sling, 10 bullets, holy symbol of appropriate god.",
     FurTrader:"Fur Trader (Rgr3): HP 22; AC 7[12]; Atk short sword (1d6) or longbow x2 (1d6); Move 12; Save 12; AL L; CL/XP 2/30.<br>Special: +3 to damage vs. giants and goblinoids, alertness, tracking.<br>Equipment: leather armor, short sword, longbow, 20 arrows.",
     NeutralRanger:"Ranger (Rgr1): HP 12; AC 7[12]; Atk short sword (1d6) or longbow x2 (1d6); Move 12; Save 14; AL N; CL/XP 1/15.<br>Special: +1 to damage vs. giants and goblinoids, alertness, tracking.<br>Equipment: leather armor, short sword, longbow, 20 arrows.",
     RedBladeInitiate:"Red Blade Initiate (Asn1): HP 4; AC 7[12]; Atk dagger (1d4); Move 12; Save 15; AL C; CL/XP 5/240;<br>Special: backstab (x2), disguise, poison, thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: leather armor, dagger, thieves' tools.",
-    RedBlade:"Red Blade (Asn4): HP 19; AC 7[12]; Atk dagger (1d4 plus poi- son); Move 12; Save 12; AL C; CL/XP 5/240;<br>Special: backstab (x2), disguise, poison, thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: leather armor, poisoned dagger (save or die), thieves' tools.",
+    RedBlade:"Red Blade (Asn4): HP 19; AC 7[12]; Atk dagger (1d4 plus poison); Move 12; Save 12; AL C; CL/XP 5/240;<br>Special: backstab (x2), disguise, poison, thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: leather armor, poisoned dagger (save or die), thieves' tools.",
     ShadowMask:"Shadow Masks (Thf3): HP 8; AC 6[13]; Atk short sword (1d6) or dagger (1d4); Move 12; Save 13; AL C; CL/XP 3/60;<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 87%, Tasks/Traps 25%, Hear 4 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, short sword, dagger, thieves’ tools, 1d10gp.",
     SeniorShadowMask:"Senior Shadow Mask (Thf6): HP 17; AC 5[14]; Atk +1 dagger (1d4+1) or dagger (1d4); Move 12; Save 10; AL C; CL/XP 6/400;<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +2 on saving throws vs. devices, backstab (x3), read languages, thieving skills.<br>Thieving Skills: Climb 90%, Tasks/Traps 40%, Hear 4 in 6, Hide 35%, Silent 45%, Locks 35%.<br>Equipment: +1 leather armor, +1 dagger, 4 throwing daggers, 2d6gp, 2d10sp.",
     Mercenary:"Mercenary (Ftr2): HP 12; AC 5[14]; Atk longsword (1d8); Move 12; Save 13; AL N; CL/XP 2/30;<br>Special: multiple at- tacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, shield, longsword, 10+2d10sp.",
     SellSword:"Sell-Sword (Ftr1): HP 7; AC 7[12]; Atk longsword (1d8) or dagger (1d4); Move 12; Save 14; AL L; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, longsword, dagger, 1d6sp, 2d4cp.",
     Veteran:"Veteran (Ftr3): HP 20; AC 6[13]; Atk longsword (1d8+1) or dagger (1d4+1); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: +1 to hit and damage due to high strength, multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, longsword, dagger.",
+    Kobold:"Kobold: HD 1d4hp; AC 7 [12]; Atk weapon (1d6); Move 6; Save 18; AL C; CL/XP A/15;<br>Special: none.",
     Longhunter:"Longhunter (Rgr2): HP 17; AC 7[12]; Atk short sword (1d6) or longbow x2 (1d6); Move 12; Save 13; AL L; CL/XP 2/30.<br>Special: +2 to damage vs. giants and goblinoids, alertness, tracking.<br>Equipment: leather armor, short sword, longbow, 20 arrows.",
     LonghunterLeader:"Longhunter Leader (Rgr3): HP 26; AC 6[13]; Atk +1 short sword (1d6+1) or longbow x2 (1d6+1 w/+1 arrows); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +3 to damage vs. giants and goblinoids, alertness, tracking.<br>Equipment: leather armor, +1 short sword, longbow, 20 +1 arrows.",
     LonghunterScout:"Longhunter Scout (Thf2): HP 9; AC 7[12]; Atk short sword (1d6) or shortbow x2 (1d6); Move 12; Save 14; AL N; CL/XP 2/30;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: leather armor, short sword, shortbow, 20 arrows.",
+    Rankir:"Rankir (Rgr8): HP 54; AC 2[17]; Atk +1 longsword (1d8+2) or +1 longbow x2 (1d6+2 w/+1 arrows); Move 12; Save 7; AL L; CL/XP 3/60.<br>Special: +1 to hit and damage due to high strength, +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +1 hp per die due to high constitution, +8 to damage vs. giants and goblinoids, alertness, scholar of healing magic, tracking.<br>Equipment: +2 leather armor, +1 buckler (small shield), +1 longsword, +1 longbow, 20 +1 arrows, horn of warning (Appendix C), 2 scrolls of cure light wounds.",
     Farseeker:"Farseeker, Male or Female Elf or Half-Elf (MU1/Rgr1): HP 9; AC 8[11]; Atk longsword (1d8) or spear (1d6) or shortbow x2 (1d6); Move 12; Save 14; AL L; CL/XP 3/60.<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +2 on saves vs. spells, +1 to damage vs. giants and goblinoids, alertness, darkvision 60ft, elf or half-elf racial abilities, tracking, spells (1).<br>Spells: 1st—sleep.<br>Equipment: leather clothes, longsword or spear, shortbow, 20 arrows, spellbook.",
     FarseekerLeader:"Farseeker Leader, Male or Female Elf or Half-Elf (MU2/Rgr2): HP 15; AC 5[14]; Atk longsword (1d8) or shortbow x2 (1d6); Move 12; Save 13; AL L; CL/XP 3/60.<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +2 on saves vs. spells, +2 to damage vs. giants and goblinoids, alertness, darkvision 60ft, elf or half-elf racial abilities, tracking, spells (2).<br>Spells: 1st—magic missile, shield.<br>Equipment: +1 leather armor, longsword, shortbow, 20 arrows, wand of sleep (6 charges), spellbook.",
+    OberonThanalaus:"Oberon Thanalaus, Male Elf (MU4/Rgr4): HP 25; AC 4[15]; Atk +2 longsword (1d8+2) or +2 longbow x2 (1d6+2); Move 12; Save 11; AL L; CL/XP 3/60.<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +2 on saves vs. spells, +4 to damage vs. giants and goblinoids, alertness, darkvision 60ft, elf racial abilities, tracking, spells (3/2).<br>Spells: 1st—magic missile, shield, sleep; 2nd—invisibility, phantasmal force.<br>Equipment: +2 leather armor, +2 longsword, +2 longbow, 40 arrows, bag of holding, wand of paralyzing (10 charges), spellbook.",
     Lyreguardsmen: "Lyreguard (Ftr3): HP 22; AC 4[15]; Atk +1 longsword (1d8+1); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: chain mail, shield, +1 longsword, holy symbol of Muir or Mitra.",
     LyreguardHonorGuard:"Lyreguard Honor Guard (Pal4): HP 25; AC 2[17]; Atk +1 longsword (1d8+2); Move 12; Save 9; AL L; CL/XP 5/240;<br>Special: +1 to hit and damage due to high strength, immune to disease, lay on hands (8hp), warhorse mount.<br>Equipment: plate mail, shield, tabard bearing the symbol of Bard's Gate, +1 longsword, holy symbol of Muir.",
     GriffonRider:"Lyreguard Captain, Griffon Rider (Pal6): HP 30; AC 3[16]; Atk +1 lance (2d4+2) or +1 longsword (1d8+2) or +1 longbow x2 (1d6+1); Move 12; Save 7; AL L; CL/XP 7/600;<br>Special: +1 to hit and damage strength bonus, lay on hands (12hp), immune to disease, warhorse.",
@@ -70,13 +80,40 @@ var stat_blocks = {
     Wraith:"Wraith: HD 4; AC 3[16]; Atk touch (1d6 plus level drain); Move 9 (fly 24); Save 13; AL C; CL/XP 8/800;<br>Special: drain 1 level with hit, magic or silver weapon to hit. (Monstrosities 518)",
     Ghoul:"Ghoul: HD 2; AC 6[13]; Atk 2 claws (1d3), bite (1d4); Move 9; Save 16; AL C; CL/XP 3/60;<br>Special: immunities, paralyzing touch. (Monstrosities 191)",
     Goblin:"Goblin: HD 1d6 hp; AC 6[13]; Atk weapon (1d6); Move 9; Save 18; AL C; CL/XP B/10;<br>Special: -1 to hit in sunlight.",
-
+    Werebear:"Werebear: HD 7+3; AC 2[17]; Atk 2 claws (1d3), bite (2d4); Move 9; Save 9; AL N or C; CL/XP 8/800;<br>Special: lycanthropy.",
+    Wereboar:"Wereboar: HD 5+2; AC 4[15]; Atk bite (2d6); Move 12; Save 12; AL N or C; CL/XP 6/400;<br>Special: hit only by magic or silver weapons, lycanthropy.",
+    Wererat:"Wererat: HD 3; AC 6[13]; Atk bite (1d3), weapon (1d6); Move 12; Save 14; AL C; CL/XP 4/120;<br>Special: control rats, hit only by magic or silver weapons, surprise, lycanthropy.",
+    Weretiger:"Weretiger: HD 6; AC 3[16]; Atk 2 claws (1d4), bite (1d10); Move 12; Save 11; AL N or C; CL/XP 7/600;<br>Special: hit only by magic or silver weapons, lycanthropy.",
+    WereWeasel:"Were-weasel: HD 3+2; AC 4[15]; Atk bite (1d6) and weapon (1d8); Move 15; Save 14; AL C; CL/XP 5/240;<br>Special: +1 initiative, drain blood, hit only by magic or silver weapons, lycanthropy.",
+    Werewolf:"Werewolf: HD 4+4; AC 5[14]; Atk bite (1d6+1); Move 12; Save 13; AL C; CL/XP 5/240;<br>Special: hit only by magic or silver weapons, lycanthropy.",
+    DenninBlackfinger:"Dennin Blackfinger (MU6): HP 20; AC 7[12]; Atk +2 dagger (1d4+2) or darts x3 (1d3); Move 12; Save 9; AL N; CL/XP 7/600;<br>Special: +2 save bonus vs. magic, spells (4/2/2).<br>Spells: 1st—charm person, magic missile x2, shield; 2nd—darkness 15 ft. radius, mirror image; 3rd—fireball x2.<br> Equipment: +2 dagger, 20 darts, wand of hold person (27 charges), ring of protection +1, spellbook.",
+    AshTheClever:"Ash the Clever (Thf4): HP 11; AC 6[13]; Atk +1 short sword (1d6+1) or light crossbow (1d4+1); Move 12; Save 12; AL N; CL/XP 4/120;<br>Special: +2 on saving throws vs. devices, backstab (x2), read languages, thieving skills.<br>Thieving Skills: Climb 88%, Tasks/Traps 30%, Hear 4 in 6, Hide 25%, Silent 35%, Locks 25%.<br>Equipment: +1 leather armor, +1 short sword, light crossbow, 20 bolts, thieves’ tools.",
+    DanteTheBaleful:"Dante the Baleful, Cleric of Vanitthu (Clr4): HP 21; AC 1[18]; Atk +1 warhammer (1d4+2); Move 12; Save 12; AL L; CL/XP 5/240;<br>Special: +2 save versus paralyzation and poison, spells (2/1), turn undead.<br>Spells: 1st—protection from evil, purify food and drink; 2nd—bless.<br>Equipment: plate mail, +1 shield, +1 warhammer, wand of cure light wounds (10 charges), holy symbol of Vanitthu.",
+    Mimic:"Mimic: HD 7; AC 6[13]; Atk smash (2d6); Move 2; Save 9; AL N; CL/XP 8/800; Special: glue, mimicry. (Monstrosities 329)",
+    BlackPudding:"Black Pudding: HD 10; AC 6[13]; Atk attack (3d8); Move 6; Save 5; AL N; CL/XP 12/2000;<br>Special: acidic surface, divides when hit with lightning, immune to cold.",
+    Andrigor:"Andrigor (MU12): HP 32; AC 2[17]; Atk +1 dagger (1d4+1); Move 12; Save 3; AL L; CL/XP 14/2600.<br>Special: +2 on saves vs. spells, spells (4/4/4/4/4/1).<br>Spells: 1st—charm person, read magic, shield, sleep;<br>2nd—detect evil, ESP, mirror image, phantasmal force;<br>3rd—clairvoyance, dispel magic, fly, hold person;<br>4th—charm monster, confusion, polymorph self, wizard eye;<br>5th—feeblemind, hold monster, teleport (x2);<br>6th—repulsion.<br> Equipment: bracers of defense AC 4[15], +1 dagger, wand of magic missiles (6 charges), wand of enemy detection, ring of protection +2, crystal ball with clairaudience, 1d4 random potions, 1d4 random scrolls, spellbook.",
+    EbonOoze:"Ebon Ooze: HD 8; AC 6[13]; Atk slam (2d6 plus 2d6 acid); Move 9; Save 5; AL C; CL/XP 10/1400;<br>Special: acid, immune to acid and disease. (Tome of Horrors 4 162)",
+    Ectoplasm:"Ectoplasm: HD 7; AC 10[9]; Atk pseudopod (1d8 plus weakness); Move 0 (fly 6); Save 9; AL C; CL/XP 10/1400;<br>Special: +1 or better weapon to hit, weakness (cumulative –1 to hit and damage penalty with each strike). (Tome of Horrors 4 162)",
+    GelatinousCube:"Gelatinous Cube: HD 4; AC 8[11]; Atk slam (2d4); Move 6; Save 13; AL N; CL/XP 5/240;<br>Special: immune to lightning and cold, paralysis.",
+    GreyOoze:"Grey Ooze: HD 3; AC 8[11]; Atk strike (2d6); Move 1; Save 14; AL N; CL/XP 5/240;<br>Special: acid, immune to spells, heat, cold, and blunt weapons.",
+    JollyJelly:"Jolly Jelly: HD 6; AC 7[12]; Atk 3 strikes (1d6); Move 6; Save 11; AL N; CL/XP 8/800;<br>Special: aura of gloom, immune to fire, pheromones. (Tome of Horrors 4 125)",
+    LightningBladder:"Lightning Bladder: HD 4; AC 9 [10]; Atk pseudopod (1d6 plus 1d6 acid); Move 6 (swim 12); Save 13; AL N; CL/XP 7/600;<br>Special: acid, electrical discharge, immune to cold, electricity and fire.",
+    Livestone:"Livestone: HD 5; AC 10[9]; Atk slam (1d8); Move 9; Save 9; AL N; CL/XP 7/600;<br>Special: engulf, immunity to petrification, solidify, surprise on 1–4 on 1d6. (The Tome of Horrors Complete 361)",
+    StunJelly:"Stunjelly: HD 4; AC 5[14]; Atk slam (1d6 plus 1d6 acid plus paralysis); Move 6; Save 13; AL N; CL/XP 6/400;<br>Special: acid, camouflage, engulf, immunity to eletricity, paralysis, surprise on 1-3 on 1d6. (The Tome of Horrors Complete 341)",
+    Otyugh:"Otyugh: HD 7; AC 3[16]; Atk 2 tentacles (1d8), bite (1d4+1); Move 6; Save 9; AL N; CL/XP 8/800;<br>Special: disease.",
+    PaladinKnightErrant:"Knight Errant (Pal4): HP 25; AC 2[17]; Atk longsword (1d8+1); Move 12; Save 9; AL L; CL/XP 5/240;<br>Special: +1 to hit and damage due to high strength, immune to disease, lay on hands (8hp), warhorse mount.<br>Equipment: plate mail, shield, tabard bearing the symbol of Muir, longsword, holy symbol of Muir.",
+    Constable:"Constable (Ftr1): HP 6; AC 6[13]; Atk longsword (1d8) or light crossbow (1d4+1); Move 12; Save 14; AL N; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, shield, longsword, light crossbow, 10 bolts.",
+    Ratling:"Ratling: HD 1; AC 9[10]; Atk bite (1d6 plus disease) or weapon; Save 17; Move 12; AL C; CL/XP 2/30; Special: diseased bite.",
+    RivermenFighter:"Rivermen Fighters (Ftr1): HP 6; AC 6[13]; Atk longsword (1d8) or spear (1d6) or light crossbow (1d4+1); Move 12; Save 14; AL N; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, shield, longsword, light crossbow, 10 bolts.",
+    RivermenSneak:"Rivermen Sneaks (Thf2): HP 6; AC 7[12]; Atk dagger (1d4) or club (1d4) or net (see below); Move 12; Save 14; AL N; CL/XP 3/60;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: leather armor, dagger, club, net (if attack is successful, target is immobilized until released), thieves’ tools.",
+    Shadow:"Shadow: HD 2+2; AC 7[12]; Atk touch (1d4 plus strength drain); Move 12; Save 16; AL C; CL/XP 4/120;<br>Special: drain 1 point str with hit, hit only by magic weapons.",
 
 };
 
 var t = {
     DrunkAttitude:["Their attitude is currently friendly","Their attitude is currently unfriendly","Their attitude is currently  helpful","Their attitude is currently indifferent","Their attitude is currently hostile","They are exhibiting a different random attitude every 2 minutes (table pg. 281)"],
-    GuildType:["Gem Cutters'","Scribes'","Stone Cutters'","Glassblowers'","Wheelwrights'","Rivermans'","Brewers'","Weavers'","Harlots'","Caretakers'","Beggars'","Herbalists'","Innkeepers'","Tavernkeepers'"]
+    GuildType:["Gem Cutters'","Scribes'","Stone Cutters'","Glassblowers'","Wheelwrights'","Rivermans'","Brewers'","Weavers'","Harlots'","Caretakers'","Beggars'","Herbalists'","Innkeepers'","Tavernkeepers'"],
+    RivermenType:["fishmongers.","liquor bootleggers.","selling live game (giant frogs, rare swamp birds, etc.)","selling a treasure map. They have a map leading to the Necromancer's Swamp [see Sword of Air].","belligerents. These rivermen are boozed up and looking to start a fight with landlubbers.","operating a floating pleasure barge."]
 };
 
 
@@ -361,6 +398,7 @@ var e = {
     {
         name:"Enforcer",
         text:"A strongman or gang member employed in collection and harassment.",
+        stats:["Enforcer"],
         extra:{
             total:4,
             chances:[
@@ -462,6 +500,120 @@ var e = {
         name:"Grave Robbers",
         text:"This is an encounter with a greedy mixed band of !d[2d3] adventurers bent on cracking open tombs or mausoleums and making off with what valuables they can get their hands on. They are \"in the middle of work\". They are of various classes ranging from levels 2–6. The Company of the Silver Spear (page 126) or The Accursed (page 231) serve as good examples of ready-made adventuring bands."
     },
+    Grocer:
+    {
+        name:"Grocer",
+        text:"Operated by a farmer or low-level merchant (Neutral male or female commoner 2) selling fresh vegetables and produce."
+    },
+    Guildsman:
+    {
+        name:"Guildsman",
+        text:"This encounter is with a member (Neutral male or female expert 2) of the !t[GuildType] Guild who is on official guild business. This may be a paid professional of some skill."
+    },
+    Halforc:
+    {
+        name:"Half-orc",
+        text:"This encounter is with a half-orc member of Mama Bobo's Wanderers. They are surly and intimidating, but generally harmless.",
+        stats:["Halforc"]
+    },
+    HaflingPickpocket:
+    {
+        name:"Halfling Pickpocket",
+        text:"This is an encounter with a halfling thief who attempts to snatch a piece of equipment off of one of the characters and sneak back to the Cellar Bar (UH11) to pay off the owner",
+        stats:["HaflingPickpocket"]
+    },
+    Harlot:
+    {
+        name:"Harlot",
+        text:"This encounter is off the main streets even during nighttime hours and is with !d[1d2] harlot(s) (Neutral female expert 1) and their bodyguard.",
+        stats:["BodyGuard"]
+    },
+    BlackMarketHarlots:
+    {
+        name:"Black Market Harlots",
+        text:"In the Black Market, 1d4 members of the Harlots Guild ply their trade in roving \"packs.\" This pack consists of !d[1d4] Harlot(s). Typically, they simply work their job, but there is a 25% chance that they rob their client blind, especially if said client happens to be rough, rude, or otherwise despicable.",
+        extra:{
+            total:2,
+            chances:[
+            {min:1, max:1, append:true, text:"The encounter includes a run-in from !d[1d6] bodyguard(s) as well.", stats:["BodyGuard"]}
+            ]
+        }
+    },
+    Herald:
+    {
+        name:"Herald",
+        text:"An encounter with a herald (Neutral male or female expert 1–4) may be with the chief historian and spokesperson of a noble or aristocrat. In this fashion, heralds are employed as a matter of good public relations to go about the city speaking of the civic works and good deeds of their employer. Likewise, heralds may serve in the guard to remind the folk of any new laws, warnings or ordinances. Furthermore, some heralds are employed as \"town criers\" giving news and information to the populace directly from the city council and mayor’s office."
+    },
+    Heretic:
+    {
+        name:"Heretic",
+        text:"This encounter is with a cleric or paladin who has fallen from favor with their deity. The heretic stands forth and denounces the faith and the religion. 10–30% of the gathering crowd agrees with the heretic or practices a different faith. The rest of the crowd is hostile toward the heretic. If trouble breaks out, guards arrive in !d[1d6] rounds to disperse the crowd. The heretic is a paladin or cleric with no spells or divine abilities.",
+        stats:["HereticPriest","HereticPaladin"]
+    },
+    HorseRace:
+    {
+        name:"Horse Race",
+        text:"A horse race is about to begin. !d[2d4] contestants (Neutral male commoner 1–2) vie for a 200gp prize."
+    },
+    HorseTrader:
+    {
+        name:"Horse Trader",
+        text:"Encounters are with a horse trader (Neutral male or female expert 2–5) who has !d[1d4] fine horse(s) to sell.",
+        extra:{
+            total:100,
+            chances:[
+                {min:1, max:1, text:"Knotaloke is encountered. She is willing to hire characters to help her move wild horses to her stables.", stats:["Knotaloke"]}
+            ]
+        }
+    },
+    Kobolds:
+    {
+        name:"Kobolds",
+        text:"A warren of kobolds has snuck into the city and established a lair in the sub-basement of an abandoned building. The kobolds have murdered several missing residents, whose bones line the floor of their lair. The encounter is with !d[1d6+4] of these kobolds.",
+        stats:["Kobold"]
+    },
+    Laborers:
+    {
+        name:"Laborers",
+        text:"!d[2d4] workmen (Neutral male or female commoner 2) led by a guildsman (Neutral male or female expert 3) on their way to or from a worksite."
+    },
+    Lawyer:
+    {
+        name:"Lawyer",
+        text:"This encounter is with a legal professional. The lawyer (Any alignment male or female expert 4) may be on his way to court, or headed to speak with an incarcerated client. Likewise, the lawyer could be advertising his services in the \"unfortunate event\" that such services are needed."
+    },
+    LocalBully:
+    {
+        name:"Local Bully/Thug",
+        text:"The biggest meanest bully on the street tries to pick a fight with the smallest and most fragile looking character. Stats for various thugs are located in Appendix A. Some are repeated below.",
+        stats:["Enforcer", "BodyGuard","BarbarianLeader","SeniorShadowMask"]
+    },
+    LocalWatch:
+    {
+        name:"Local Watch",
+        text:"This encounter is with a patrol of a district’s own privately funded and appointed guard. For example, dog soldiers are the local guard for Tent City, and the Market Guard is the local guard for the Market District. There are !d[1d4+2] local guards in the patrol. See district chapters and Appendix A for further details."
+        // TODO - greg you should do a district specific one of this for each district and include the relevant stats, that would be useful
+    },
+    Lovers:
+    {
+        name:"Lovers",
+        text:"This encounter is with a young couple, obviously in love, sharing an intimate and discreet moment by lantern light. Referee's discretion on class, race, or if a special NPC couple."
+    },
+    Lycanthrope:
+    {
+        name:"Lycanthrope",
+        extra:{
+            total:6,
+            chances:[
+                {min:1, max:1, text:"The encounter is with a Wererat. The wererat does its best to hide their identity. Wererats have been known to account for a vast number of missing persons cases throughout the years.", stats:["Wererat"]},
+                {min:2, max:2, text:"The encounter is with a Weretiger. The weretiger does its best to hide their identity.", stats:["Weretiger"]},
+                {min:3, max:3, text:"The encounter is with a Werebear. The werebear does its best to hide their identity.", stats:["Werebear"]},
+                {min:4, max:4, text:"The encounter is with a Wereboar. The wereboar does its best to hide their identity.", stats:["Wereboar"]},
+                {min:5, max:5, text:"The encounter is with a Werewolf. The werewolf does its best to hide their identity. Werewolves have been known to account for a vast number of missing persons cases throughout the years.", stats:["Werewolf"]},
+                {min:6, max:6, text:"The encounter is with a Were-weasel. The were-weasel does its best to hide their identity.", stats:["WereWeasel"]},
+            ]
+        }
+    },
 	LyreguardPatrol:
 	{
         name:"Lyreguard Patrol",
@@ -475,6 +627,260 @@ var e = {
                 {min:100, max:100, text:"Imril, accompanied by !d[2d2] griffon riders, !d[1d6] Lyreguard honor guard, and !d[2d4] Lyreguardsmen pass through the area.", stats:["Imril","GriffonRider","Lyreguardsmen","LyreguardHonorGuard"]}
             ]
         }
+    },
+	LyreguardPatrolTentCity:
+	{
+        name:"Lyreguard Patrol",
+        text:"!d[2d4] Lyreguardsmen pass through the area.",
+        stats:["Lyreguardsmen"],
+        extra:{
+            total:100,
+            chances:[
+                {min:50, max:84, append:true, text:"The guardsmen are on a sweep through the tent city accompanied by dog soldiers as they seek out a bandit or well-known criminal", stats:["DogSoldierSneak","DogSoldierWarrior"]},
+                {min:85, max:94, text:"!d[2d4] Lyreguardsmen pass through the area, led by a Lyreguard honor guard.", stats:["Lyreguardsmen","LyreguardHonorGuard"]},
+                {min:95, max:99, text:"!d[2d2] Lyreguard griffon riders pass through the area.", stats:["GriffonRider"]},
+                {min:100, max:100, text:"Imril, accompanied by !d[2d2] griffon riders, !d[1d6] Lyreguard honor guard, and !d[2d4] Lyreguardsmen pass through the area.", stats:["Imril","GriffonRider","Lyreguardsmen","LyreguardHonorGuard"]}
+            ]
+        }
+    },
+    MercenaryBand:
+    {
+        name:"Mercenary Band",
+        text:"This encounter is with a mercenary band of !d[1d4+1] members. The mercenaries may be escorting a VIP, guarding a special caravan, or undergoing training and martial exercises. The band is composed of sell-swords led by a mercenary.",
+        stats:["SellSword","Mercenary"],
+        extra:{
+            total:100,
+            chances:[
+                {min:100, max:100, text:"The encounter is with Dennin Blackfinger (TC1, pg. 112) or one of his lieutenants.", stats:["DenninBlackfinger","AshTheClever","DanteTheBaleful"]}
+            ]
+        }
+    },
+    MercenaryEncampment:
+    {
+        name:"Mercenary Encampment",
+        text:"A random band of mercenaries and their captain have set up camp. There are !d[2d6] sell-swords, !d[1d6] mercenaries, and one veteran in the encampment.",
+        stats:["SellSword","Mercenary","Veteran"]
+    },
+    Merchant:
+    {
+        name:"Merchant",
+        text:"This encounter is with a merchant (Neutral male or female human expert 2) peddling common wares such as tables, chairs, mirrors, combs, and the like.",
+        extra:{
+            total:100,
+            chances:[
+            {min:1, max:1, append:true, text:"<b>The merchant is unwittingly selling a valuable magic item.</b>"}
+            ]
+        }
+    },
+    MerchantEncampment:
+    {
+        name:"Merchant Encampment",
+        text:"This encounter is with a circle of merchant wagons, camped for the night with some guards set as sentries. There are !d[2d6] wagons and the caravan hauls !d[2d20+20] gp worth of materials per wagon. The caravan has 1 drover (Neutral male human commoner 2) per wagon, and 1 guard per two wagons. A captain and one merchant (Neutral male or female expert 2) manage the guards.",
+        stats:["CaravanCaptain","CaravanGuard"],
+    },
+    Mimic:
+    {
+        name:"Mimic",
+        text:"A mimic has taken on the appearance of a refuse bin or public privy.",
+        stats:["Mimic"]
+    },
+    Minstrel:
+    {
+        name:"Minstrel/Storyteller",
+        text:"A minstrel or storyteller (Neutral male or female expert 3) has gathered a crowd of folk who are listening to his or her performance or oratory. Roll a save to gauge the audience reaction to the tale spinner. Positive reactions mean the performer is tipped for his services. Negative reactions may involve baskets of rotten vegetables and fruits being hurled at the performer."
+    },
+    WanderingMonk:
+    {
+        name:"Monk",
+        text:"A wandering monk with no name is taking challenges to all comers in unarmed non-lethal combat in the center of the encampment. Betting is running high and a large crowd has gathered, fascinated by his unique fighting style.",
+        stats:["WanderingMonk"]
+    },
+    Mourner:
+    {
+        name:"Mourner",
+        text:"This encounter is with !d[1d6] family member(s) or friend(s) of a recently deceased individual. The mourner may be of any race or class."
+    },
+    Mugger:
+    {
+        name:"Mugger",
+        text:"This is an encounter with an individual or gang that threatens a character that is separated from the party, or attacks them outright without the intent to kill. The mugger switches to lethal assaults if the characters reply in kind. The encounter is with !d[1d4] robbers led by an enforcer or with 1 enforcer on their own.",
+        stats:["Enforcer","Robber"]
+    },
+    Pickpocket:
+    {
+        name:"Pickpockets",
+        text:"A thief attempts to lift a small valuable item from a party member.",
+        stats:["Robber"],
+        extra:{
+            total:4,
+            chances:[
+                {min:1, max:1, text:"1 thief and a cutpurse leader attempt to lift a small valuable from a party member.", stats:["Robber","Cutpurse"]},
+                {min:2, max:2, text:"2 thieves and a cutpurse leader attempt to lift a small valuable from a party member.", stats:["Robber","Cutpurse"]},
+                {min:3, max:3, text:"3 thieves and a cutpurse leader attempt to lift a small valuable from a party member.", stats:["Robber","Cutpurse"]}
+            ]
+        }
+    },
+    BlackMarketPickpocket:
+    {
+        name:"Black Market Pickpocket",
+        text:"This is a pickpocket working for either the Wheelwrights or the Shadowmasks. He moves through the character party, lifting items for his crew that are then turned over to one of the stalls where they can be swiftly sold. If caught, he attempts to flee. If \"manhandled,\" he is aided by 4 Wheelwright toughs.",
+        stats:["Pickpocket","WheelwrightTough"]
+    },
+    Pilgrims:
+    {
+        name:"Pilgrims",
+        text:"This encounter is with !d[3d10] recent converts to a faith that is practiced in Bard's Gate (such as worship of Zors). Pilgrims (Any alignment male or female commoner 1–3) are typically dressed in the garb of a worshipper of the chosen deity. They offer prayers and penance, and spout the dogma of their faith as their processional passes toward their deity's shrine or temple."
+    },
+    Ooze:
+    {
+        name:"Ooze",
+        text:"An ooze has found its way out of the sewers or a magician's laboratory.",
+        extra:{
+            total:8,
+            chances:[
+                {min:1, max:1, append:true, text:"A Lightning Bladder lurks near the water.", stats:["LightningBladder"]},
+                {min:2, max:2, text:"Ectoplasm has found its way out of the sewers or a magician's laboratory.", stats:["Ectoplasm"]},
+                {min:3, max:3, append:true, stats:["GelatinousCube"]},
+                {min:4, max:4, append:true, stats:["Livestone"]},
+                {min:5, max:5, append:true, text:"An Ebon ooze if near sewers, or a stun jelly otherwise.", stats:["EbonOoze","StunJelly"]},
+                {min:6, max:6, append:true, stats:["Gray Ooze"]},
+                {min:7, max:7, text:"A Black pudding has found its way out of the sewer. The city watch arrives in 1d6 x 4 rounds; Andrigor (pg. 262) arrives in !d[1d3] rounds.", stats:["BlackPudding","Andrigor"]},
+                {min:8, max:8, text:"A Jolly Jelly has found its way out of the sewers.", stats:["JollyJelly"]},
+            ]
+        }
+    },
+    Otyugh:
+    {
+        name:"Otyugh",
+        text:"This beast was likely once the pet of a local wizard or crime lord that has escaped and now resides in a trash heap off the main roads.",
+        stats:["Otyugh"]
+    },
+    Paladin:
+    {
+        name:"Paladin",
+        text:"An encounter with a knight errant come to worship and pay penance at the Temple of Muir.",
+        stats:["PaladinKnightErrant"],
+        extra:{
+            total:100,
+            chances:[
+                {min:1, max:1, append:true, text:"The paladin is pursued by some unknown devil, demon, or undead (Referee to determine) that manifests within two rounds of the paladin’s encounter. If the characters assist, and survive, they are introduced to Bofred (OT2). See S&W SRD for suitable <a href='http://www.d20swsrd.com/swords-and-wizardry-srd/for-the-referee/monsters/all-monsters/monster-details-d#TOC-Demons'>demons</a> and <a href='http://www.d20swsrd.com/swords-and-wizardry-srd/for-the-referee/monsters/all-monsters/monster-details-d#TOC-Devils'>devils</a>."}
+            ]
+        }
+    },
+    PrisonerWagon:
+    {
+        name:"Prisoner Wagon",
+        text:"Several times per day, district constable and guard stations haul prisoners charged with serious crimes to the Keep. This prisoner wagon holds !d[1d6+2] prisoners (any) cramped into a wagon affixed with wooden bars and an excellent quality lock. The prison wagon is driven by 2 City Watchmen, and guarded by an additional !d[2d4+2] watchmen or constables.",
+        stats:["Constable","WallWatcher"]
+    },
+    Rake:
+    {
+        name:"Rake",
+        text:"This encounter is with a fighter of appropriate level to challenge a single character. The Rake (Referee to determine appropriate level/challenge) looks for an excuse to pick a fight and demands satisfaction from some perceived sleight. The rake demands a duel out by the old oak tree outside of town. If the character avoids the duel, the Rake pursues them, even hiring a bard to pen a song about their cowardice that quickly becomes popular throughout the city. If the character wins and shows mercy to the Rake, he becomes a valuable ally.",
+        stats:["BodyGuard_F1","BodyGuard","Fighter","Fighter_F5"]
+    },
+    Farseeker:
+    {
+        name:"Ranger/Farseeker",
+        text:"Rarely encountered within sight of the city walls, these rangers typically visit the city to fix broken equipment, purchase new weapons, or pass along vital information. Rarely, they are seen around the temple of Darach-Albith.",
+        stats:["Farseeker","FarseekerLeader"],
+        extra:{
+            total:100,
+            chances:[
+            {min:1, max:1, append:true, text:"<b>Oberon Thanalaus, master of the Farseekers of Twilight is encountered.</b>", stats:["OberonThanalaus"]}
+            ]
+        }
+    },
+    Longhunter:
+    {
+        name:"Ranger/Longhunter",
+        text:"Like Farseekers, Longhunters rarely enter the city proper, but may be encountered outside its walls, trading information and equipment or collecting bounties.",
+        stats:["Longhunter","LonghunterLeader", "LonghunterScout"],
+        extra:{
+            total:100,
+            chances:[
+            {min:1, max:1, append:true, text:"<b>Rankir, Master of the Longhunters is encountered.</b>", stats:["Rankir"]}
+            ]
+        }
+    },
+    Ratmen:
+    {
+        name:"Ratmen",
+        text:"This encounter is with !d[2d4] ratlings who have come up from a canal, dock, or sewer grate. The ratlings are scavenging for food and valuables, and attempt to flee back to the sewers if spotted. They dress in raggedy cloaks to disguise their appearance. It is possible that the ratlings are seeking sacrificial victims for their god.",
+        stats:["Ratling"]
+    },
+    RedBladeInitiate:
+    {
+        name:"Red Blade Initiate",
+        text:"Passing through, they have business other than with the characters.",
+        stats:["RedBlade","RedBladeInitiate"],
+        extra:{
+            total:2,
+            chances:[
+                {min:1, max:1, text:"The initiate mistakes one of the characters for his mark and attempts to assassinate them. On his body is a crude drawing that loosely resembles the character, but the dossier indicates a different person who is currently staying at the Wizard's Familiar (TW32). The assassin tails the characters, waiting to strike the mistaken target when they are alone and away from the Black Market."}
+            ]
+        }
+    },
+    Rivermen:
+    {
+        name:"Rivermen",
+        text:"This is an encounter with !d[2d6] rivermen. The rivermen have brought a supply of goods that they are shilling from their flatboats to folk along the docks, bridge, or canals of the city. These rivermen are !t[RivermenType]",
+        stats:["RivermenFighter","RivermenSneak"]
+    },
+    Sailor:
+    {
+        name:"Sailor",
+        text:"This encounter is with a sailor (Neutral male human expert 3) who is experienced in negotiating oceans, rivers and great lakes. The sailor is spending his earnings on a wild fortnight in the city. The sailor is a wealth of information and misinformation about the world beyond the Stoneheart Valley, even claiming to have ventured to the Razor Coast (see Razor Coast) and beyond."
+    },
+    Scribe:
+    {
+        name:"Scribe",
+        text:"The scribe (Neutral male or female human expert 3) makes detailed records of conversations, facts, and court records, and is thus a wealth of knowledge in local history and politics.",
+        extra:{
+            total:10,
+            chances:[
+                   {min:1, max:1, append:true, text:" The scribe is also decent at forgery and may forge legal documents for the right price."}
+            ]
+        }
+    },
+    ScribeOfTheScroll:
+    {
+        name:"Scribe of the Scroll",
+        text:"This encounter is with a scribe (Lawful male or female human expert 4) who works for the High Sanctum of the Scroll. The scribe may have a treasure map, a scroll with a new spell on it, or some other data or information. The scribe may be in the process of being pickpocketed or mugged on the way to the sanctum, or the mark that characters are supposed to rob. Either way, the scribe's scroll leads to untold adventure!"
+    },
+    SculleryMaid:
+    {
+        name:"Scullery Maid",
+        text:"This encounter is with a maid or housekeeper for a neighborhood shopkeeper or merchant. The maid (Neutral female human commoner 2) is carrying supplies or clean laundry to her master's home.",
+        extra:{
+            total:10,
+            chances:[
+                   {min:1, max:1, append:true, text:" The maid is being accosted by a neighborhood gang, ruffian, or other dastardly cur.", stats:["Robber","Cutpurse","Pickpocket"]}
+            ]
+        }
+    },
+    SewerCleaner:
+    {
+        name:"Sewer Cleaner",
+        text:"This encounter is with !d[2d4] members of the Pipe Cleaners Guild. They are Neutral male or female dwarf, halfling, or half-orc expert 1."
+    },
+    Shadow:
+    {
+        name:"Shadow",
+        text:"This encounter is with !d[1d4+1] shadows that haunt a darkened alley or the home where a murder/suicide took place.",
+        stats:["Shadow"]
+    },
+    Shadowmasks:
+    {
+        name:"Shadowmasks",
+        text:"Members of the notorious Shadow Masks make their presence felt in this neighborhood. Lookouts are posted to avoid capture by any nearby guard patrols. They demand a little \"street tax\" from the characters for passing through their territory.",
+        stats:["ShadowMask"]
+    },
+    BlackMarketShadowmaskBand:
+    {
+        name:"Black Market Shadowmask Band:",
+        text:"This encounter is typically in the area of Glitter Haul (BM8) and Satin Tunnel (BM15). These gang members look after the interests of their gang and their secret masters in the Brotherhood in groups of 1d4 Shadowmasks (!d[1d4] in this group) plus one senior Shadowmask. They avoid causing trouble in the Black Market, though they may follow small groups or folk who have entered the market alone with the intent of skullduggery.",
+        stats:["ShadowMask","SeniorShadowMask"]
     }
 }
 
