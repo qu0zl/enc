@@ -11,6 +11,9 @@
         min-width:8em !important;
         margin:.3em .5em !important;
     }
+    .legal {
+        font-size:x-small;
+    }
     .stat_block {
         display:block;
         margin:15px;
@@ -34,29 +37,13 @@
 <div>
     <h1 class='title'>Welcome to the Bard's Gate Random Encounter Generator.</h1>
     <h2 class='subtitle'>May Tsathogga infest with boils any Non-GMs who click below. In other words, beware spoilers!</h2>
-
-<button class="top_button" id="All">All</button>
-<button class="top_button" id="TC_D">Tent City (Day)</button>
-<button class="top_button" id="TC_N">Tent City (Night)</button>
-<button class="top_button" id="M_D">Market District (Day)</button>
-<button class="top_button" id="M_N">Market District (Night)</button>
-<button class="top_button" id="BM">Black Market</button>
-<button class="top_button" id="G_D">Guild District (Day)</button>
-<button class="top_button" id="OT_D">Old Temple District (Day)</button>
-<button class="top_button" id="OT_N">Old Temple District (Night)</button>
-<button class="top_button" id="D_D">Docks (East & West, Day)</button>
-<button class="top_button" id="D_N">Docks ( East & West, Night)</button>
-<button class="top_button" id="C_D">Canal District (Day)</button>
-<button class="top_button" id="C_N">Canal District (Night)</button>
-<button class="top_button" id="TH_D">The Hill (Day)</button>
-<button class="top_button" id="TH_N">The Hill (Night)</button>
-<button class="top_button" id="UH">UnderHill</button>
-
-<button class="top_button" id="OT_N">Drunk Encounter demo</button>
+    <div id="button_list">
+</div>
 <div class="enc">
 
 </div>
 </div>
+<div class='legal'>The Bard's Gate Random Encounter generator uses material from the 2016 commercial release of Bard's Gate by Frog God Games. The Bard's Gate Random Encounter generator operates under the terms and conditions of the Open Gaming License. Permission for use of product identity as expressly granted by Frog God Games for use in Bard's Gate Random Encounter generator and may not be reused for any other purpose without express written consent. Bard's Gate, Swords & Wizardry and the Frog God Games logo are all copyright © 2016 Frog God Games. All rights reserved.</div>
 
 <script src="jquery.min.js"></script>
 <script src="jquery-ui.min.js"></script>
@@ -167,40 +154,33 @@ function render_stat_blocks(block_list) {
     return text;
 }
 
-function generate_encounter() {
+function get_table_entry(table) {
     var debug = false; // force to use last entry in table for debugging purposes.
-    var table = enc[$(this).attr('id')];
-    var which = getRandomInt(0, table.length -1);
+    var found = false;
+    var which;
     //debug = true; // only for debugging, breaks normal usage. Do not commit with this uncommented.
-    if (debug == true) {
-        console.log("forcing to use latest entry for debugging purposes. remove this!!!");
-        which = table.length - 1;
-        
-        for (var i=0; i<table.length-1; i++) {
-            if (table[i] == undefined)
-                console.log("error at " +i);
+    while (!found) {
+        which = getRandomInt(0, table.items.length -1);
+        if (debug == true) {
+            console.log("forcing to use latest entry for debugging purposes. remove this!!!");
+            which = table.items.length - 1;
         }
-        for (var eKey in e) {
-            var found = false;
-            //console.log("testing " + e[eKey].name);
-            for (var encKey in enc) {
-                if (found)
-                    break;
-                //console.log("against list " + encKey);
-                if (encKey != 'All') {
-                    for (var j=0; j<enc[encKey].length && !found; j++) {
-                        if (enc[encKey][j] == e[eKey]) {
-                            console.log("Found");
-                            found = true;
-                        }
-                    }
-                }
-            }
-            if (!found)
-                console.log("Encounter " + eKey + " is not used in any lists. Fix this.");
+        console.log(which);
+        console.log(table);
+        if (table.items[which].sublist != undefined) {
+            console.log("Sub table found");
+            table = table.items[which].list; // now search the new sub-table
+        } else {
+            found = true;
         }
     }
-    var item = select_item(table[which]);
+
+    return table.items[which];
+}
+function generate_encounter() {
+    var table = enc[$(this).attr('id')];
+    var entry = get_table_entry(table);
+    var item = select_item(entry);
 
     var text = replace_markers(item[0]);
     if (item[1]) {
@@ -211,10 +191,45 @@ function generate_encounter() {
     
 function onReady()
 {
-    $('.top_button').button().click(generate_encounter);
+    var debug = false;
     // create enc.all list that includes all encounters
+
+    var buttons = $('#button_list');
     for (var key in e)
-        enc.All.push(e[key]);
+        enc.All.items.push(e[key]);
+        for (var key in enc) {
+    if (enc[key].hide != true)
+        buttons.append('<button class="top_button" id="'+key+'">' + enc[key].name+'</button>');
+    }
+    $('.top_button').button().click(generate_encounter);
+    //debug = true;
+    if (debug == true) {
+        for (var key in enc) {
+            var table = enc[key].items;
+            for (var i=0; i<table.length-1; i++) {
+                if (table[i] == undefined)
+                    console.log("Undefined entry at " +i + " in " + key);
+            }
+        }
+        for (var eKey in e) {
+            var found = false;
+            //console.log("testing " + e[eKey].name);
+            for (var encKey in enc) {
+                if (found)
+                    break;
+                //console.log("against list " + encKey);
+                if (encKey != 'All') {
+                    for (var j=0; j<enc[encKey].items.length && !found; j++) {
+                        if (enc[encKey].items[j] == e[eKey]) {
+                            found = true;
+                        }
+                    }
+                }
+            }
+            if (!found)
+                console.log("Encounter " + eKey + " is not used in any lists. Fix this.");
+        }
+    }
 };
 $(document).ready(onReady);
 </script>
