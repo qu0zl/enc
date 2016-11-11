@@ -15,6 +15,7 @@ var stat_blocks = {
     Robber:"Robber (Thf1): HP 3; AC 7[12]; Atk dagger (1d4); Move 12; Save 15; AL N; CL/XP 1/15;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: leather armor, dagger, 1d4cp.",
     Pickpocket:"Pickpocket (Thf3): HP 7; AC 7[12]; Atk club (1d4) or dagger (1d4); Move 12; Save 12; AL N; CL/XP 3/60;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 87%, Tasks/Traps 25%, Hear 4 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, club, dagger.",
     WheelwrightTough:"Wheelwright Tough (Ftr1,Thf1): HP 5; AC 7[12]; Atk club (1d4) or dagger (1d4); Move 12; Save 14; AL C; CL/XP 2/30.<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: leather armor, club, dagger.",
+    WheelwrightCollector:"Wheelwright Collector (Thf3): HP 8; AC 6[13]; Atk short sword (1d6) or dagger (1d4); Move 12; Save 12; AL C; CL/XP 3/60;<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 87%, Tasks/Traps 25%, Hear 4 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, short sword, dagger, thieves' tools, 1d10gp.",
     CaravanCaptain:"Caravan Captain (Ftr2): HP 10; AC 6[13]; Atk club (1d4) or sling (1d4); Move 12; Save 13; AL L; CL/XP 2/30.<br>Special: multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, club, sling, 10 bullets, 2d4sp",
     CaravanGuard:"Caravan Guard: HD 1; AC 7[12]; Atk longsword (1d8) or spear (1d6); Move 12; Save 17; AL N; CL/XP 1/15;<br>Special: none.<br>Equipment: leather armor, longsword, spear, 2d12cp.",
     Centaur:"Centaur: HD 4; AC 5[14] or 4[15] with shield; Atk 2 kicks (1d6) and weapon; Move 18; Save 13; AL N; CL/XP 4/120;<br>Special: none.",
@@ -28,6 +29,11 @@ var stat_blocks = {
     DogSoldierWarrior:"Dog Soldier Warrior (Ftr2): HP 13; AC 6[13]; Atk club (1d4) or sling (1d4); Move 12; Save 13; AL N; CL/XP 2/30.<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +1 hp per die due to high constitution, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, club, sling, 10 bullets, 2d4sp.",
     DogSoldierMU:"Dog Soldier Magic-User's Apprentice (MU1): HP 3; AC 8[11]; Atk staff (1d6); Move 12; Save 15; AL N; CL/XP 2/30;<br>Special: +2 on saves vs. spells, spells (1).<br> Spells: 1st—sleep.<br>Equipment: staff, spellbook.",
     Druid:"Druid (Drd4): HP 16; AC 7[12]; Atk +1 sickle sword (1d6+1); Move 12; Save 12; AL N; CL/XP 8/800;<br>Special: +2 bonus to saving throws against fire, druid language, immune to fey charms, shape change, spells (3/1/1).<br>Spells: 1st—faerie fire, locate animals, predict weather; 2nd—cure light wounds; 3rd—call lightning.<br>Equipment: leather armor, +1 sickle sword (treat as short sword), holly berries and mistletoe.",
+    MerchantGuard_F2:"Merchant Guard Veteran (Ftr2): HP 10; AC 7[12]; Atk short-sword (1d6); Move 12; Save 13; AL N; CL/XP 2/30.<br>Special: multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, shortsword, 2d4sp",
+    MerchantGuard_F1:"Merchant Guard (Ftr1): HP 5; AC 7[12]; Atk shortsword (1d6); Move 12; Save 17; AL N; CL/XP 1/15;<br>Special: none.<br>Equipment: leather armor, shortsword, 2d12cp.",
+    MerchantGuard_T2:"Merchant Guard (Thf2): HP 5; AC 7[12]; Atk shortsword (1d6); Move 12; Save 14; AL N; CL/XP 3/60;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: leather armor, shortsword, 2d4sp",
+    MarketGuard_F2:"Guard Veteran (Ftr2): HP 10; AC 6[13]; Atk club (1d4) or sling (1d4); Move 12; Save 13; AL L; CL/XP 2/30.<br>Special: multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, club, sling, 10 bullets, whistle, 2d4sp",
+    MarketGuard_F1:"Guard: HP 5; AC 7[12]; Atk club (1d4) or sling (1d4); Move 12; Save 17; AL L; CL/XP 1/15;<br>Special: none.<br>Equipment: leather armor, club, sling, 10 bullets, whistle, 2d12cp.",
     Fighter:"Hero (Ftr3): HP 22; AC 6[13]; Atk longsword (1d8+1) or dagger (1d4+1); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: +1 to hit and damage due to high strength, multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, longsword, dagger.",
     Fighter_F5:"Fighter (Ftr5): HP 26; AC 2[17]; Atk +1 longsword (1d8+2); Move 12; Save 10; AL N; CL/XP 4/120.<br>Special: +1 to hit and damage due to high strength, multiple attacks (4) vs. creatures with 1 or fewer HD.<br>Equipment: plate mail, shield, +1 longsword.",
     HaflingPickpocket:"Halfling Pickpocket (Thf2): HP 6; AC 6[13]; Atk dagger (1d4)); Move 12; Save 14; AL C; CL/XP 3/60;<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +1 with thrown weapons, +2 on saving throws vs. devices, +4 on saving throws vs. magic, backstab (x2), halfling racial abilities, thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 25%, Hear 3 in 6, Hide 25%, Silent 35%, Locks 25%.<br>Equipment: leather armor, 3 daggers, thieves’ tools.",
@@ -82,6 +88,8 @@ var stat_blocks = {
     Goblin:"Goblin: HD 1d6 hp; AC 6[13]; Atk weapon (1d6); Move 9; Save 18; AL C; CL/XP B/10;<br>Special: -1 to hit in sunlight.",
     Werebear:"Werebear: HD 7+3; AC 2[17]; Atk 2 claws (1d3), bite (2d4); Move 9; Save 9; AL N or C; CL/XP 8/800;<br>Special: lycanthropy.",
     Wereboar:"Wereboar: HD 5+2; AC 4[15]; Atk bite (2d6); Move 12; Save 12; AL N or C; CL/XP 6/400;<br>Special: hit only by magic or silver weapons, lycanthropy.",
+    RatSwarm:"Rat Swarms: HD 3; AC 6[13]; Atk swarm (1d6 plus disease); Move 12; Save 14; AL N; CL/XP 4/120;<br>Special: plague (–2 to hit and damage, save avoids).",
+    PipersGuildWererat:"Wererat: HD 3; AC 4[15]; Atk bite (1d3), short sword (1d6); Move 12; Save 14; AL C; CL/XP 4/120;<br>Special: control rats, hit only by magic or silver weapons, lycanthropy, surprise.<br>Equipment: leather, short sword, pickaxe, 2d10sp.",
     Wererat:"Wererat: HD 3; AC 6[13]; Atk bite (1d3), weapon (1d6); Move 12; Save 14; AL C; CL/XP 4/120;<br>Special: control rats, hit only by magic or silver weapons, surprise, lycanthropy.",
     Weretiger:"Weretiger: HD 6; AC 3[16]; Atk 2 claws (1d4), bite (1d10); Move 12; Save 11; AL N or C; CL/XP 7/600;<br>Special: hit only by magic or silver weapons, lycanthropy.",
     WereWeasel:"Were-weasel: HD 3+2; AC 4[15]; Atk bite (1d6) and weapon (1d8); Move 15; Save 14; AL C; CL/XP 5/240;<br>Special: +1 initiative, drain blood, hit only by magic or silver weapons, lycanthropy.",
@@ -103,11 +111,28 @@ var stat_blocks = {
     Otyugh:"Otyugh: HD 7; AC 3[16]; Atk 2 tentacles (1d8), bite (1d4+1); Move 6; Save 9; AL N; CL/XP 8/800;<br>Special: disease.",
     PaladinKnightErrant:"Knight Errant (Pal4): HP 25; AC 2[17]; Atk longsword (1d8+1); Move 12; Save 9; AL L; CL/XP 5/240;<br>Special: +1 to hit and damage due to high strength, immune to disease, lay on hands (8hp), warhorse mount.<br>Equipment: plate mail, shield, tabard bearing the symbol of Muir, longsword, holy symbol of Muir.",
     Constable:"Constable (Ftr1): HP 6; AC 6[13]; Atk longsword (1d8) or light crossbow (1d4+1); Move 12; Save 14; AL N; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, shield, longsword, light crossbow, 10 bolts.",
+    SheriffsDeputy:"Sheriff's Deputy (Ftr1): HP 6; AC 6[13]; Atk club (1d4+1); Move 12; Save 14; AL N; CL/XP 1/15.<br>Special: +1 to hit and damage due to high strength.<br>Equipment: leather armor, shield, club.",
     Ratling:"Ratling: HD 1; AC 9[10]; Atk bite (1d6 plus disease) or weapon; Save 17; Move 12; AL C; CL/XP 2/30; Special: diseased bite.",
     RivermenFighter:"Rivermen Fighters (Ftr1): HP 6; AC 6[13]; Atk longsword (1d8) or spear (1d6) or light crossbow (1d4+1); Move 12; Save 14; AL N; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, shield, longsword, light crossbow, 10 bolts.",
     RivermenSneak:"Rivermen Sneaks (Thf2): HP 6; AC 7[12]; Atk dagger (1d4) or club (1d4) or net (see below); Move 12; Save 14; AL N; CL/XP 3/60;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 20%, Hear 3 in 6, Hide 15%, Silent 25%, Locks 15%.<br>Equipment: leather armor, dagger, club, net (if attack is successful, target is immobilized until released), thieves’ tools.",
     Shadow:"Shadow: HD 2+2; AC 7[12]; Atk touch (1d4 plus strength drain); Move 12; Save 16; AL C; CL/XP 4/120;<br>Special: drain 1 point str with hit, hit only by magic weapons.",
-
+    Shyster:"Shyster (Thf1): HP 3; AC 7[12]; Atk dagger (1d4); Move 12; Save 15; AL C; CL/XP 1/15;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: fine clothes, dagger, 4d4cp.",
+    Skeleton:"Skeleton: HD 1; AC 8[11] or 7[12] with shield; Atk weapon or strike (1d6) or (1d6+1 two-handed); Move 12; Save 17; AL N; CL/XP 1/15;<br>Special: immune to sleep and charm spells.",
+    SlaverBoss:"Slaver Boss (Thf5): HP 17; AC 6[13]; Atk short sword (1d6); Move 12; Save 9; AL C; CL/XP 6/400;<br>Special: +2 on saving throws vs. devices, backstab (x3), read languages, thieving skills.<br>Thieving Skills: Climb 89%, Tasks/Traps 35%, Hear 4 in 6, Hide 30%, Silent 40%, Locks 30%.<br>Equipment: leather armor, 2 daggers, whip, ring of protection +1.",
+    Slaver:"Slavers (Ftr1,Thf1): HP 5; AC 7[12]; Atk club (1d4) or whip (1d3); Move 12; Save 14; AL C; CL/XP 2/30.<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: leather armor, club, whip.",
+    Spectre:"Spectre: HD 6; AC 2[17]; Atk spectral weapon or touch (1d8 plus level drain); Move 15 (fly 30); Save 11; AL C; CL/XP 9/1100;<br>Special: drain 2 levels with hit, immune to nonmagical weapons.",
+    GiantSpider_4ft:"Giant Spider (4ft diameter): HD 2+2; AC 6[13]; Atk bite (1d6 plus poison); Move 18; Save 16; AL N; CL/XP 5/240;<br>Special: lethal poison, 5 in 6 chance to surprise prey.",
+    GiantSpider_6ft:"Giant Spider (6ft diameter): HD 4+2; AC 4[15]; Atk bite (1d6+2 plus poison); Move 4; Save 13; AL C; CL/XP 7/600;<br>Special: lethal poison, webs.",
+    StreetUrchin:"Street Urchins: HP 1d4; AC 9[10]; Atk fist (1); Move 12; Save 18; AL N; CL/XP A/5;<br>Special: thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: rags for clothes.",
+    TempleGuardLawful:"Temple Guard 'Lawful Temple': HD 1; AC 7[12]; Atk longsword (1d8) or spear (1d6); Move 12; Save 17; AL L; CL/XP 1/15;<br>Special: none.<br>Equipment: leather armor, longsword, spear.",
+    TempleGuardOther:"Temple Guard 'More Open Minded' (Ftr1): HP 6; AC 6[13]; Atk longsword (1d8) or light crossbow (1d4+1); Move 12; Save 14; AL N (or C); CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, shield, longsword, light crossbow, 10 bolts.",
+    DrugPeddler:"Drug Peddler (Thf1): HP 3; AC 9[10]; Atk dagger (1d4); Move 12; Save 15; AL N; CL/XP 1/15;<br>Special: +2 on saving throws vs. devices, backstab (x2), thieving skills.<br>Thieving Skills: Climb 85%, Tasks/Traps 15%, Hear 3 in 6, Hide 10%, Silent 20%, Locks 10%.<br>Equipment: dagger, 3 doses each of tresh, Movollo's leaf, opium, 2d4sp.",
+    Acolyte:"Acolytes (Clr1): HP 6; AC 9[10]; Atk staff (1d6) or sling (1d4); Move 12; Save 15; AL L; CL/XP 2/30;<br>Special: +2 save versus paralyzation and poison, turn undead.<br>Equipment: clerical vestments, staff, sling, 10 bullets, holy symbol.",
+    WanderingCleric:"Wandering Cleric (Clr6): HP 22; AC 9[10]; Atk +1 staff (1d6+2); Move 12; Save 10; AL L; CL/XP 7/600;<br>Special: +1 to hit using weapon two handed, +2 save versus paralyzation and poison, spells (2/2/1/1), turn undead.<br>Spells: 1st—cure light wounds, protection from evil; 2nd—bless, hold person; 3rd—cure disease; 4th—cure serious wounds.<br>Equipment: clerical vestments, +1 staff, scroll of raise dead, solid gold holy symbol (50gp value).",
+    VampireSpawn:"Vampire Spawn: HD 3; AC 5[14]; Atk claw (1hp plus level drain); Move 9; Save 14; AL C; CL/XP 6/400;<br>Special: drain 1 level with hit, hit only by magic or silver weapons.",
+    WillOTheWisp:"Will-o'-the-wisp: HD 9; AC –8[27]; Atk shock (2d6); Move 18; Save 6; AL C; CL/XP 10/1400;<br>Special: lights.",
+    Wizard:"Wizard (MU5): HP 12; AC 2[17]; Atk +1 dagger (1d4+1); Move 12; Save 11; AL N; CL/XP 6/400.<br>Special: +2 on saves vs. spells, spells (4/2/1).<br>Spells: 1st—charm person, detect magic, sleep; 2nd—ESP, phantasmal force; 3rd—dispel magic.<br>Equipment: bracers of defense AC 4[15], +1 dagger, ring of protection +2, wand of magic missiles (5 charges), spellbook.",
+    WizardsApprentice:"Wizard's Apprentice (MU2): HP 4; AC 9[10]; Atk staff (1d6) or darts x3 (1d3); Move 12; Save 14; AL N; CL/XP 3/60;<br>Special: +2 on saves vs. spells, spells (2).<br>Spells: 1st—charm person, shield.<br>Equipment: robes, staff, 6 darts, spellbook.",
 };
 
 var t = {
@@ -122,6 +147,18 @@ var e = {
 	{
         name:"Adventuring Band",
         text: "A mixed band of !d[2d3] adventurers is encountered. The adventurers are of various classes ranging from levels 2–6. The Company of the Silver Spear (page 126) or The Accursed (page 231) serve as good examples of ready-made adventuring bands. If the characters have recently been successful, there is a good chance that the adventuring band is jealous. Likewise, if the characters have had several recent setbacks, it is likely that the adventuring band may make fun of them.",
+        extra:{
+            total:100,
+            chances:[
+                {min:1, max:50, append:true, text:"They are mostly lawfully aligned."},
+                {min:51, max:100, append:true, text:"They are mostly chaotically aligned."}
+            ]
+        }
+    },
+	AdventuringBandWithDead:
+	{
+        name:"Adventuring Band with Dead",
+        text: "A mixed band of !d[2d3] adventurers is encountered, they are bringing !d[1d3] dead associates to be raised from the dead. The adventurers are of various classes ranging from levels 2–6. The Company of the Silver Spear (page 126) or The Accursed (page 231) serve as good examples of ready-made adventuring bands. If the characters have recently been successful, there is a good chance that the adventuring band is jealous. Likewise, if the characters have had several recent setbacks, it is likely that the adventuring band may make fun of them.",
         extra:{
             total:100,
             chances:[
@@ -170,7 +207,7 @@ var e = {
     },
     BarbarianEncampment:
     {
-        name:"Barbarian Encampment",
+        name:"Barbarian Encampment (Grass Warrior)",
         text:"Only encountered outside the city walls, a barbarian encampment consists of !d[1d10+10] adults and half that number of children. The barbarians are here for trade, horses and weapons.",
         stats:["Barbarian"],
         extra:{
@@ -225,6 +262,11 @@ var e = {
         name:"Bodyguard",
         text:"An off-duty bodyguard for a noble or aristocratic household. The Harlots' Guild also employs bodyguards to protect their members when they are on assignment. The bodyguard may be of any character class (Referee's discretion on bodyguard, see Appendix A for examples or sample Fighter below).",
         stats:["BodyGuard"]
+    },
+    BountyHunter:
+    {
+        name:"Bounty Hunter",
+        text:"A bounty hunter either hunting their prey, or relaxing during down-time.",
     },
     Butler:
     {
@@ -486,7 +528,7 @@ var e = {
     },
     HalflingBand:
     {
-        name:"Halfling Band",
+        name:"Halfling Oompah Band",
         text:"This is a quartet of halflings (Neutral male or female halfling commoner 2) consisting of a trumpet, tuba player, drummer, and accordion player wandering the central portion of the Underhill District. They surround a character or party and play until they are paid to leave. This typically costs !d[2d10]gp. Causing a ruckus and not paying the band gets one expelled from the Underhill."
     },
     Goblins:
@@ -588,11 +630,31 @@ var e = {
         text:"The biggest meanest bully on the street tries to pick a fight with the smallest and most fragile looking character. Stats for various thugs are located in Appendix A. Some are repeated below.",
         stats:["Enforcer", "BodyGuard","BarbarianLeader","SeniorShadowMask"]
     },
+    /* delete me
     LocalWatch:
     {
         name:"Local Watch",
         text:"This encounter is with a patrol of a district’s own privately funded and appointed guard. For example, dog soldiers are the local guard for Tent City, and the Market Guard is the local guard for the Market District. There are !d[1d4+2] local guards in the patrol. See district chapters and Appendix A for further details."
         // TODO - greg you should do a district specific one of this for each district and include the relevant stats, that would be useful
+    }, */
+    LocalWatchTC:
+    {
+        name:"Tent City Local Watch",
+        text:"This encounter is with a patrol of Tent City's own privately funded and appointed guard - the Dog Soldiers. There are !d[1d4+2] local guards in the patrol.",
+        stats:["DogSoldiers","DogSoldierWarrior","DogSoldierMU"]
+    },
+    LocalWatchM:
+    {
+        name:"Market District Local Watch",
+        text:"This encounter is with a patrol of the Market District's own privately funded and appointed guard - the Market Guard. There are !d[1d4+2] guards led by a veteran guard. The Market Watch is generally friendly to newcomers and freely offers directions if asked. Although not a challenge to dangerous foes, the Market Watch are more than adequate to break up squabbles between local merchants. If they are ever seriously threatened, they know that the Lyreguard or Gatesmen are only a whistle away from coming to their aid.",
+        stats:["MarketGuard_F1","MarketGuard_F2"]
+    },
+    LocalWatchG:
+    {
+        name:"Guild District Local Watch",
+        text:"This encounter is with a patrol of the Guild District's own privately funded and appointed guard - the Merchant Guard. There are !d[1d4+2] guards. It is generally known that the Merchant Guard are susceptible to bribes, and can easily be persuaded to look the other way as needed.",
+        stats:["MerchantGuard_F1","MerchantGuard_F2","MerchantGuard_T2"],
+        stats:["MerchantGuard_F1","MerchantGuard_F2","MerchantGuard_T2"],
     },
     Lovers:
     {
@@ -657,7 +719,7 @@ var e = {
     },
     MercenaryEncampment:
     {
-        name:"Mercenary Encampment",
+        name:"Mercenary Encampment (not Blackfinger's Devils)",
         text:"A random band of mercenaries and their captain have set up camp. There are !d[2d6] sell-swords, !d[1d6] mercenaries, and one veteran in the encampment.",
         stats:["SellSword","Mercenary","Veteran"]
     },
@@ -688,6 +750,11 @@ var e = {
     {
         name:"Minstrel/Storyteller",
         text:"A minstrel or storyteller (Neutral male or female expert 3) has gathered a crowd of folk who are listening to his or her performance or oratory. Roll a save to gauge the audience reaction to the tale spinner. Positive reactions mean the performer is tipped for his services. Negative reactions may involve baskets of rotten vegetables and fruits being hurled at the performer."
+    },
+    NurseMary:
+    {
+        name:"Nurse Mary",
+        text:"C13-11a, pg. 184 Assistant and bodyguard to Doctor Karisk."
     },
     WanderingMonk:
     {
@@ -766,6 +833,12 @@ var e = {
                 {min:1, max:1, append:true, text:"The paladin is pursued by some unknown devil, demon, or undead (Referee to determine) that manifests within two rounds of the paladin’s encounter. If the characters assist, and survive, they are introduced to Bofred (OT2). See S&W SRD for suitable <a href='http://www.d20swsrd.com/swords-and-wizardry-srd/for-the-referee/monsters/all-monsters/monster-details-d#TOC-Demons'>demons</a> and <a href='http://www.d20swsrd.com/swords-and-wizardry-srd/for-the-referee/monsters/all-monsters/monster-details-d#TOC-Devils'>devils</a>."}
             ]
         }
+    },
+    PipersGuild:
+    {
+        name:"Pipers' Guild",
+        text:"!d[1d4] Pipers' Guild wererats are encountered. They may be disguised as Pipe Cleaners, be devouring a victim, or be stalking the characters. They may be followed by !d[1d4] Rat Swarms.",
+        stats:["RatSwarm","PipersGuildWererat"]
     },
     PrisonerWagon:
     {
@@ -864,6 +937,11 @@ var e = {
         name:"Sewer Cleaner",
         text:"This encounter is with !d[2d4] members of the Pipe Cleaners Guild. They are Neutral male or female dwarf, halfling, or half-orc expert 1."
     },
+    CanalWorker:
+    {
+        name:"Canal Worker",
+        text:"This encounter is with !d[2d4] Canal Workers. They are Neutral male or female dwarf, halfling, or half-orc expert 1."
+    },
     Shadow:
     {
         name:"Shadow",
@@ -881,11 +959,228 @@ var e = {
         name:"Black Market Shadowmask Band:",
         text:"This encounter is typically in the area of Glitter Haul (BM8) and Satin Tunnel (BM15). These gang members look after the interests of their gang and their secret masters in the Brotherhood in groups of 1d4 Shadowmasks (!d[1d4] in this group) plus one senior Shadowmask. They avoid causing trouble in the Black Market, though they may follow small groups or folk who have entered the market alone with the intent of skullduggery.",
         stats:["ShadowMask","SeniorShadowMask"]
+    },
+    SheriffsPatrol:
+    {
+        name:"Sheriff's Patrol",
+        text:"A sheriff and !d[1d4+2] constables. The patrol is on its way to pick up a criminal or drop one off at the Keep.",
+        stats:["Constable","SheriffsDeputy"]
+    },
+    Shyster:
+    {
+        name:"Shyster",
+        text:"This encounter may be with a pimp, peddler of contraband, or other unsavory character displaying his wares. There is a 50% chance that the hustler intends to rip off the characters in some way.",
+        stats:["Shyster"]
+    },
+    Skeletons:
+    {
+        name:"Skeletons",
+        text:"A cleric or necromancer of Orcus created these animated corpses of criminals and set them loose within the city to watch the chaos. The encounter is with !d[2d4] skeletons.",
+        stats:["Skeleton"]
+    },
+    Slavers:
+    {
+        name:"Slave Trader",
+        text:"This is an encounter with a group of !d[1d4] cloaked and masked figure(s) driving !d[1d4] chained victim(s) (any) toward Slaver’s Way. The slaves are made up of foreign visitors to Bard's Gate who had the unfortunate circumstance of being kidnapped while visiting the city.",
+        stats:["Slaver","SlaverBoss"]
+    },
+    Spectre:
+    {
+        name:"Spectre",
+        text:"This encounter is with the spectre of a cruel old resident of the neighborhood or one of its victims. The original spectre is likely the mean old man from up the street, or the creepy cat lady.",
+        stats:["Spectre"]
+    },
+    Spellcaster:
+    {
+        name:"Spellcaster",
+        text:"This encounter is with a cleric or magic-user 3–4 who is on a mission for their master to find a particularly difficult-to-get spell component, or religious item that may have been recently stolen from their temple. Depending on the reaction of the characters, the spellcaster may enlist the aid of the party in finding their missing item, or ask for a loan to help pay off the cost of the spell component."
+    },
+    Spider:
+    {
+        name:"Spider",
+        text:"This encounter is with a 4ft giant spider within the area of an abandoned structure.",
+        stats:["GiantSpider_4ft"],
+        extra:{
+            total:10,
+            chances:[
+                   {min:1, max:2, text:"This encounter is with a 6ft giant spider within the area of an abandoned structure.", stats:["GiantSpider_6ft"]}
+            ]
+        }
+    },
+    StreetUrchin:
+    {
+        name:"Street Urchin",
+        text:"This encounter is with !d[1d4] street urchin(s) who are looking to pinch food and coin from unsuspecting travelers or shoplift from the stalls and shops.",
+        stats:["StreetUrchin"]
+    },
+    Streetwalker:
+    {
+        name:"Streetwalker",
+        text:"These territorial members (Neutral male or female expert 1) of the Harlots Guild command entire streets after the sun goes down as they prowl for potential customers."
+    },
+    TempleGuard:
+    {
+        name:"Temple Guard",
+        text:"Encounters with temple guards involve warriors trained to protect the temple by serving as a bodyguard to one of the temple's high priests or visiting dignitaries.",
+        stats:["TempleGuardLawful","TempleGuardOther"]
+    },
+    TemporaryBlackMarketStall:
+    {
+        name:"Temporary Black Market Stall",
+        extra:{
+            total:6,
+            chances:[
+                {min:1, max:1, name:"Drug Peddler", text:"The street-corner pharmacist is dealing tresh (BM11), Movollo's leaf, opium, and other substances that are considered \"bad for you.\" He has at least 3 doses of each item, and has about 150 gp in cash.", stats:["DrugPeddler"]},
+                {min:2, max:2, name:"Stolen Clothes", text:"These booths are generally found in the Satin Tunnel region (BM15) of the Black Market. Outfits can be had for half their actual price, but there is a 10% chance upon wearing stolen clothes that their owners may recognize them, and a 5% chance of contracting lice or fleas."},
+
+                {min:3, max:3, name:"Stolen Artwork", text:"Artwork of varying quality from very good to amateurish student work from the Bard's College can be had here for 50% or less of its actual value. Foreign collectors pick up most stolen artwork and whisk it away from the city before it can be recognized. No quality artwork over 1000gp can be found among the Black Market vendors."},
+                {min:4, max:4, name:"Stolen Weapons", text:"Non-magical weapons of various sorts can be found here. Typically, they are of poorer quality than that found in OK Discount Arms and Pawn (BM14). Weapons here are sold for 50% below value, but have a 25% chance of breakage on any use."},
+                {min:5, max:5, name:"Stolen Jewelery", text:"Most jewelry stolen in the city ends up on one of these tables in the Black Market first. The jewelry can be had for 25% below value, though scrying magic has an opportunity to detect the location of stolen merchandise. For this reason, most stolen jewelry and precious items are re-cut and melted down by disreputable jewelers. No jewelry of more than 200gp value can be found among the stalls."},
+                {min:6, max:6, name:"Stolen Holy Artifacts", text:"Items such as holy symbols, censers, candelabras, and such are found here, after they were stolen from private residences or lifted from shrines and temples. They can be purchased for 75% of actual value, though no item worth more than 500gp is typically found among the stalls. As with jewelry and other \"fixed\" items, the artifacts can often be detected through scrying magic; therefore, they are sold to be smelted, or quickly moved to foreign cities."}
+            ]
+        }
+    },
+    TentRevival:
+    {
+        name:"Tent Revival",
+        text:"A wandering cleric and retinue set up a grand pavilion and preach the teachings of their deity. !d[1d100+50] persons are in attendance. The cleric may be of any random non-chaotic deity. The revival lasts for !d[1d4] day(s).",
+        stats:["WanderingCleric","Acolyte"]
+    },
+    TrashCollector:
+    {
+        name:"Trash Collector",
+        text:"!d[2d4] trash collectors (Neutral male or female commoner 1) go about sweeping the streets and cleaning up refuse. There is one trash wagon and two mules for every two trash collectors."
+    },
+    TroupOfPerformers:
+    {
+        name:"Troupe of Performers",
+        text:"A troupe of !d[1d6] acrobats, clowns, jugglers, fire-eaters, singers and dancers perform for a gathering crowd. Characters' reactions to the event may lead to new contacts or new enemies in the city. The troupe is led by a Neutral male or female expert 5, but may be made up of experts, monks, and thieves of level 1–2."
+    },
+    Undertaker:
+    {
+        name:"Undertaker",
+        text:"An encounter with an undertaker (Neutral male human expert 2) may be with anyone in the profession of death, from a groundskeeper, embalmer or gravedigger."
+    },
+    Valet:
+    {
+        name:"Valet",
+        text:"This encounter is with a personal porter (Neutral male human expert 2) of a noble or aristocrat. The valet is on an errand for their master."
+    },
+    VampireSpawn:
+    {
+        name:"Vampire Spawn",
+        text:"!d[1d4] vampire spawn stalk(s) the benighted streets in search of prey. Felicity (CAT3) created these unfortunate beings recently, so they have not matured fully yet.",
+        stats:["VampireSpawn"]
+    },
+    WallWatcher:
+    {
+        name:"Wall Watcher",
+        text:"This encounter is with a patrol of !d[2d4] wall watchers. If the encounter is near a city wall, the wall watchers call down to the characters to ask what they are doing or if they have seen a suspicious character. If encountered away from the wall, it is with off duty wall watchers on their way home from a shift. There is one officer (included in the number encountered) with the regulars.",
+        stats:["WallWatcher","WallWatchOfficer"]
+    },
+    Wheelwright:
+    {
+        name:"Wheelwright",
+        text:"This encounter is with !d[1d4] member(s) of the Wheelwrights' Guild. These thuggish brutes are the eyes and ears of Duloth and operate his black market. There is a 50% chance that the wheelwrights have set up a back alley shop, selling stolen or smuggled goods and contraband. Wheelwrights may serve as a moving \"fence\" for stolen property, able to purchase up to 500 gp worth of illicit property or materials. In either event, they have employed a pair of Shadowmasks to act as lookouts. When suspicion arises, they depart and blend in with other carriage and wagon traffic, one of the faceless crowd. Wheelwrights typically have 1d4 types of contraband (!d[1d4] this time) for sale at any given time.<br><b>Contraband details on pg. 290-291.</b>",
+
+        stats:["WheelwrightTough","ShadowMask"]
+    },
+    BlackMarketWheelwrightThugBand:
+    {
+        name:"Black Market Wheelwright Thug Band",
+        text:"This is an encounter with !d[1d4] Wheelwright thug(s) and a collector who patrol the area keeping a lookout for sheriffs or other watchmen who may have attempted to infiltrate the Black Market. They may ask the characters what they are looking for, and attempt to direct them to the right stall or shop. If the characters are asking the wrong kinds of questions, they may draw their weapons and attempt to beat the characters bloody and dump them in the canal, or sell them to Grilli (BM25) for some fast coin. Collectors gather tax from the various vendors of the underworld to fill the coffers of the guild.",
+        stats:["WheelwrightCollector","WheelwrightTough"]
+    },
+    WillOTheWisp:
+    {
+        name:"Will-o'-the-wisp",
+        text:"These creatures occasionally prey on folk living near the banks of the river on foggy evenings. There are !d[1d4] will-o'-the-wisps.",
+        stats:["WillOTheWisp"]
+    },
+    WinePeddler:
+    {
+        name:"Wine Peddler",
+        text:"This is an encounter with a wine peddler (Neutral male commoner 2). The commoner has several pots of wine to sell. The wine (terrible vintage) costs 1sp per earthenware crock."
+    },
+    Wizard:
+    {
+        name:"Wizard",
+        text:"A Wizard's Apprentice has been sent out on an appointment to collect magical ingredients or seek out the owner of a scroll that possesses a new spell for them to learn.",
+        stats:["WizardsApprentice"],
+        extra:{
+            total:10,
+            chances:[
+                   {min:1, max:1, text:"A master Wizard has gone out to collect magical ingredients or seek out the owner of a scroll that possesses a new spell for them to learn. They did not send an apprentice as they wish to stretch their legs.", stats:["Wizard"]}
+            ]
+        }
+    },
+    Wraith:
+    {
+        name:"Wraith",
+        text:"This encounter is with a wraith. The wraith is the unkind spirit of a convicted murderer now out to get revenge upon the sheriffs who caught him in the act of his crime.",
+        stats:["Wraith"]
+    },
+    Gondolier:
+    {
+        name:"Gondolier",
+        text:"an encounter with a gondolier (Neutral male or female expert 1-3). The gondolier may offer the characters a ride, may want the party to get of his way, may be friendly, rude or funny."
+    },
+    Monster:
+    {
+        name:"Monster",
+        text:"an encounter with a monster suitable for this location. See S&W <a href='http://www.d20swsrd.com/swords-and-wizardry-srd/for-the-referee/monsters/all-monsters'>SRD</a> for suitable monsters."
+    },
+    SpecialTC:
+    {
+        name:"Special",
+        extra:{
+            total:19, // TODO add support for entry 14, reroll on daytime chart
+            // TODO add page references
+            chances:[
+                   {min:1, max:1, name:"Ash the Clever", text:"Ash the Clever (TC1, pg. 112), Lieutenant of Dennin Blackfinger is encountered", stats:["AshTheClever"]},
+                   {min:2, max:2, name:"Dante the Baleful", text:"Dante the Baleful (TC1, pg. 112), Lieutenant of Dennin Blackfinger is encountered", stats:["DanteTheBaleful"]},
+                   {min:3, max:3, name:"Kal Kammon", text:"Kal Kammon (TC3, pg. 114) is encountered."},
+                   {min:4, max:4, name:"Watenga", text:"Watenga (TC2, pg. 113) is encountered. "},
+                   {min:5, max:5, name:"Okil", text:"Okil (TC4, pg. 114) is encountered."},
+                   {min:6, max:6, name:"Sayid", text:"Sayid (TC5, pg. 114) is encountered."},
+                   {min:7, max:7, name:"Jotolf", text:"Jotolf (TC6, pg. 114) is encountered."},
+                   {min:8, max:8, name:"Bjorn Casteran", text:"Bjorn Casteran (TC8, pg. 115) is encountered."},
+                   {min:9, max:9, name:"Big Horn", text:"Big Horn (TC17, pg. 117) is encountered."},
+                   {min:10, max:10, name:"Jillian", text:"Jillian (TC10, pg. 114) is encountered."},
+                   {min:11, max:11, name:"Haiweth", text:"Haiweth (TC11, pg. 114) is encountered."},
+                   {min:12, max:12, name:"Asleif", text:"Asleif (TC12, pg. 114) is encountered."},
+                   {min:13, max:13, name:"Belonda", text:"Belonda (TC13, pg. 114) is encountered."},
+                   {min:14, max:14, name:"Lolly", text:"Lolly (TC13, pg. 114) is encountered."},
+                   {min:15, max:15, name:"Mama Bobo and Sons", text:"Mama Bobo and Sons (TC13, pg. 114) are encountered."},
+                   {min:16, max:16, name:"Colonel Portland or York", text:"Colonel Portland or York (TC14, pg. 116) are encountered."},
+                   {min:17, max:17, name:"Rini Rohavi", text:"Rini Rohavi (TC15, pg. 117) is encountered."},
+                   {min:18, max:18, name:"Wassan", text:"Wassan (TC15, pg. 117) is encountered."},
+                   {min:19, max:19, name:"Filini", text:"Filini (TC16, pg. 117) is encountered."}
+            ]
+        }
     }
 }
 
 var enc = {
     "All": [],
-    "OT_D": [ e.LyreguardPatrol, e.Cleric, e.Charlatan, e.FoodVendor, e.Beggar, e.CivicOfficial ],
-    "OT_N": [ e.Drunk ]
+    "TC_D": [ e.LocalWatchTC, e.Druids, e.Farseeker, e.HorseTrader, e.HorseRace, e.WinePeddler, e.LyreguardPatrolTentCity, e.Caravan, e.CentaurBand, e.FurTrader, e.WanderingMonk, e.Halforc, e.Pickpocket, e.MercenaryBand, e.Longhunter, e.Pilgrims, e.FoodVendor, e.Charlatan, e.Shyster, e.TroupOfPerformers, e.SpecialTC ],
+    // TODO support re-roll on daytime chart item 12 in TC_N
+    "TC_N": [ e.Drunk, e.MerchantEncampment, e.BarbarianEncampment, e.MercenaryEncampment, e.Minstrel, e.Mugger, e.BanditGang, e.TentRevival, e.Gambler, e.Shyster, e.AleTent, e.LyreguardPatrolTentCity, e.Lycanthrope, e.VampireSpawn, e.Druids, e.Goblins, e.AdventuringBand, e.WillOTheWisp, e.SpecialTC ],
+    "M_D":[ e.SheriffsPatrol, e.WallWatcher, e.LyreguardPatrol, e.LocalWatchM, e.WanderingMonk, e.FoodVendor, e.Grocer, e.WinePeddler, e.Pickpocket, e.TroupOfPerformers, e.Paladin, e.Fighter, e.ArcaneStudent, e.Merchant, e.SculleryMaid, e.CivicOfficial, e.Pilgrims, e.Laborers, e.TrashCollector], // TODO add e.specialMD ],
+    "M_N":[ e.SheriffsPatrol, e.LocalWatchM, e.Streetwalker, e.Drunk, e.MercenaryBand, e.AdventuringBand, e.Mugger, e.Shyster, e.Gambler, e.Shadowmasks, e.RedBladeInitiate, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Harlot, e.Pickpocket ], // TODO add e.specialMD ],
+    "BM":[ e.Spellcaster, e.BlackMarketWheelwrightThugBand, e.BlackMarketShadowmaskBand, e.Slavers, e.RedBladeInitiate, e.TemporaryBlackMarketStall, e.TemporaryBlackMarketStall, e.FoodVendorBlackMarket, e.Gambler, e.BlackMarketHarlots, e.BlackMarketPickpocket, e.WinePeddler],
+    "G_D":[ e.SheriffsPatrol, e.LocalWatchG, e.LyreguardPatrol, e.Guildsman, e.Laborers, e.TrashCollector, e.CivicOfficial, e.Merchant, e.ArcaneStudent, e.Wizard, e.Fighter, e.Pickpocket, e.Aristocrat, e.Paladin, e.Cleric, e.SculleryMaid, e.Pilgrims, e.Bard, e.TroupOfPerformers ], // TODO add e.SpecialG
+    "G_N":[ e.AdventuringBand, e.LocalWatchG, e.Drunk, e.Harlot, e.Streetwalker, e.Shadowmasks, e.Aristocrat, e.Rake, e.Guildsman, e.Dandy, e.MercenaryBand, e.ArcaneStudent, e.Wizard, e.Cleric, e.Laborers, e.RedBladeInitiate, e.CivicOfficial, e.SheriffsPatrol, e.Pickpocket ], // TODO add e.SpecialG
+    "OT_D": [ e.LyreguardPatrol, e.SheriffsPatrol, e.Cleric, e.Pilgrims,e.Paladin, e.WinePeddler, e.FoodVendor, e.Charlatan, e.Beggar, e.Aristocrat, e.Pickpocket, e.Heretic, e.TroupOfPerformers, e.CivicOfficial, e.TempleGuard, e.TrashCollector, e.Merchant, e.AdventuringBandWithDead, e.Laborers ], // TODO add e.SpecialTG
+    "OT_N": [ e.SheriffsPatrol, e.Cleric, e.Pilgrims, e.Paladin, e.Beggar, e.Drunk, e.Shyster, e.Gambler, e.Aristocrat, e.TempleGuard, e.CivicOfficial, e.Harlot, e.Streetwalker, e.Heretic, e.Pickpocket, e.WinePeddler, e.FoodVendor, e.Shadowmasks, e.AdventuringBandWithDead ], // TODO add e.SpecialTG
+    "D_D": [ e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.Bully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Rivermen, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner ], // TODO add e.SpecialD
+    "D_N": [e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.Bully, e.Enforcer, e.Gambler, e.Sailor, e.AdventuringBand, e.BountyHunter, e.CanalWorker, e.Shyster, e.Rivermen, e.BanditGang, e.Monster ], // TODO add_e.SpecialD
+    "C_D": [e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.Bully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Rivermen, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner], // TODO add e.SpecialC
+    "C_N": [e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.Bully, e.Enforcer, e.Gambler, e.NurseMary, e.Rivermen, e.BountyHunter, e.PipersGuild, e.Skeletons, e.RedBladeInitiate, e.BanditGang, e.StreetUrchin], // TODO add e.SpecialC
+    "TH_D": [e.Merchant, e.LocalWatchTH, e.SculleryMaid, e.Valet, e.Guildsman, e.Dandy, e.Fighter, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.Aristocrat, e.CityWatch, e.Carriage, e.Butler, e.BodyGuard, e.Herald, e.Cleric ], // TODO add e.SpecialTH
+    "TH_N": [e.LocalWatchTH, e.Aristocrat, e.Valet, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.CivicOfficial, e.Carriage, e.Butler, e.Herald, e.Dandy, e.Drunk, e.Bard, e.Debutant, e.Cleric, e.Burglar, e.Lovers ], // TODO add e.SpecialTH
+    "UH": [e.HaflingPickpocket, e.DwarfPolitician, e.DwarfTravelers, e.HalflingBand, e.BeerVendor, e.CheeseVendor, e.LocalWatchUH, e.GameOfChance],
+
+
+
 };

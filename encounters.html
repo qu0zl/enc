@@ -8,7 +8,6 @@
     }
     .top_button {
         font-size:xx-large !important;
-        font-weight: bold;
         min-width:8em !important;
         margin:.3em .5em !important;
     }
@@ -37,7 +36,22 @@
     <h2 class='subtitle'>May Tsathogga infest with boils any Non-GMs who click below. In other words, beware spoilers!</h2>
 
 <button class="top_button" id="All">All</button>
+<button class="top_button" id="TC_D">Tent City (Day)</button>
+<button class="top_button" id="TC_N">Tent City (Night)</button>
+<button class="top_button" id="M_D">Market District (Day)</button>
+<button class="top_button" id="M_N">Market District (Night)</button>
+<button class="top_button" id="BM">Black Market</button>
+<button class="top_button" id="G_D">Guild District (Day)</button>
 <button class="top_button" id="OT_D">Old Temple District (Day)</button>
+<button class="top_button" id="OT_N">Old Temple District (Night)</button>
+<button class="top_button" id="D_D">Docks (East & West, Day)</button>
+<button class="top_button" id="D_N">Docks ( East & West, Night)</button>
+<button class="top_button" id="C_D">Canal District (Day)</button>
+<button class="top_button" id="C_N">Canal District (Night)</button>
+<button class="top_button" id="TH_D">The Hill (Day)</button>
+<button class="top_button" id="TH_N">The Hill (Night)</button>
+<button class="top_button" id="UH">UnderHill</button>
+
 <button class="top_button" id="OT_N">Drunk Encounter demo</button>
 <div class="enc">
 
@@ -128,11 +142,16 @@ function select_item(entry) {
                 }
                 else {
                     var stats;
+                    var text = "";
                     if (entry.extra.chances[i].stats)
                         stats = entry.extra.chances[i].stats;
                     else
                         stats = entry.stats;
-                    return [entry.name+": "+entry.extra.chances[i].text, stats];
+                    if (entry.extra.chances[i].name)
+                        text = entry.extra.chances[i].name+": ";
+                    else
+                        text = entry.name+": ";
+                    return [text+entry.extra.chances[i].text, stats];
                 }
             }
         }
@@ -156,13 +175,31 @@ function generate_encounter() {
     if (debug == true) {
         console.log("forcing to use latest entry for debugging purposes. remove this!!!");
         which = table.length - 1;
+        
+        for (var i=0; i<table.length-1; i++) {
+            if (table[i] == undefined)
+                console.log("error at " +i);
+        }
+        for (var eKey in e) {
+            var found = false;
+            //console.log("testing " + e[eKey].name);
+            for (var encKey in enc) {
+                if (found)
+                    break;
+                //console.log("against list " + encKey);
+                if (encKey != 'All') {
+                    for (var j=0; j<enc[encKey].length && !found; j++) {
+                        if (enc[encKey][j] == e[eKey]) {
+                            console.log("Found");
+                            found = true;
+                        }
+                    }
+                }
+            }
+            if (!found)
+                console.log("Encounter " + eKey + " is not used in any lists. Fix this.");
+        }
     }
-    /* for debugging if tables have undefined entries...
-    for (var i=0; i<table.length-1; i++) {
-        if (table[i] == undefined)
-            console.log("error at " +i);
-    }
-    */
     var item = select_item(table[which]);
 
     var text = replace_markers(item[0]);
