@@ -165,8 +165,6 @@ function get_table_entry(table) {
             console.log("forcing to use latest entry for debugging purposes. remove this!!!");
             which = table.items.length - 1;
         }
-        console.log(which);
-        console.log(table);
         if (table.items[which].sublist != undefined) {
             console.log("Sub table found");
             table = table.items[which].list; // now search the new sub-table

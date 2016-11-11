@@ -6,6 +6,8 @@ var stat_blocks = {
     BarbarianBouncer:"Barbarian Bouncer Half-Orcs (Ftr2): HP 10; AC 7[12]; Atk club (1d4) or fist (1d3); Move 12; Save 13; AL N; CL/XP 2/30.<br>Special: +1 to hit and damage due to high strength, darkvision 60ft, half-orc racial abilities, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, club.",
     Bat:"Bat: HD 1–2hp; AC 8[11]; Atk bite (1); Move 1 (fly 24); Save 18; AL N; CL/XP A/5;<br>Special: sonar flight in total darkness, swarm (causes spells to fail 50% of time).",
     BlackOrc:"Black Orcs: HD 2; AC 5[14]; Atk two-handed sword (1d10); Move 12; Save 16; AL C; CL/XP 2/30;<br>Special: none. (The Tome of Horrors Complete 418).",
+    BlackBrotherhoodFighter:"Black Brotherhood Fighter: HD 7; HP 50; AC 1[18]; Atk claw (1d12) or +1 longsword, +4 vs. humans (1d8+2); Move 9; Save 8 (3 vs magic); CL/XP 10/1400;<br>Special: +1 to hit and damage due to high strength, immune to sleep and charm, mimics shape.<br>Equipment: +1 chainmail, +1 shield, +1 longsword, +4 vs. humans, ring of protection +1.",
+    BlackBrotherhoodKiller:"Black Brotherhood Killer: HD 7; HP 35; AC 3[16]; Atk claw (1d12) or poisoned dagger (1d4 plus poison); Move 9; Save 8 (3 vs magic); CL/XP 10/1400;<br>Special: +1 to hit fighting with 2 weapons, +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, immune to sleep and charm, mimics shape.<br>Equipment: bracers of defense AC 4[15], 2 poisoned daggers (save at –1 or die), ring of protection +1, thieves’ tools.",
     BodyGuard:"Bodyguard (Ftr2): HP 13; AC 6[13]; Atk club (1d4)); Move 12; Save 13; AL N; CL/XP 2/30.<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, +1 hp per die due to high constitution, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, club, 2d4sp.",
     BodyGuard_F1:"Bodyguard (Ftr1): HP 6; AC 7[12]; Atk club (1d4); Move 12; Save 14; AL L; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, club, 1d4sp.",
     Shaman:"Shaman: HD 2; HP 9; AC 9[10]; Atk club (1d4); Move 12; Save 15; AL N; CL/XP 3/60;<br>Special: spells (2).<br>Spells: 1st—cure light wounds, protection from evil. Equipment: robes, bone-totem staff.",
@@ -112,6 +114,8 @@ var stat_blocks = {
     Otyugh:"Otyugh: HD 7; AC 3[16]; Atk 2 tentacles (1d8), bite (1d4+1); Move 6; Save 9; AL N; CL/XP 8/800;<br>Special: disease.",
     PaladinKnightErrant:"Knight Errant (Pal4): HP 25; AC 2[17]; Atk longsword (1d8+1); Move 12; Save 9; AL L; CL/XP 5/240;<br>Special: +1 to hit and damage due to high strength, immune to disease, lay on hands (8hp), warhorse mount.<br>Equipment: plate mail, shield, tabard bearing the symbol of Muir, longsword, holy symbol of Muir.",
     Constable:"Constable (Ftr1): HP 6; AC 6[13]; Atk longsword (1d8) or light crossbow (1d4+1); Move 12; Save 14; AL N; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, shield, longsword, light crossbow, 10 bolts.",
+    ConstableOfficer:"Constable Officer (Ftr3): HP 17; AC 5[14]; Atk short sword (1d6); Move 12; Save 12; AL L; CL/XP 3/60.<br>Special: multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, shield, short sword.",
+    ConstableSergeant:"Constable Sergeant (Ftr2): HP 10; AC 6[13]; Atk longsword (1d8) or light crossbow (1d4+1); Move 12; Save 13; AL L; CL/ XP 2/30.<br>Special: multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, shield, longsword, light crossbow, 10 bolts.",
     SheriffsDeputy:"Sheriff's Deputy (Ftr1): HP 6; AC 6[13]; Atk club (1d4+1); Move 12; Save 14; AL N; CL/XP 1/15.<br>Special: +1 to hit and damage due to high strength.<br>Equipment: leather armor, shield, club.",
     Ratling:"Ratling: HD 1; AC 9[10]; Atk bite (1d6 plus disease) or weapon; Save 17; Move 12; AL C; CL/XP 2/30; Special: diseased bite.",
     RiverfolkFighter:"Riverfolk Fighters (Ftr1): HP 6; AC 6[13]; Atk longsword (1d8) or spear (1d6) or light crossbow (1d4+1); Move 12; Save 14; AL N; CL/XP 1/15.<br>Special: none.<br>Equipment: leather armor, shield, longsword, light crossbow, 10 bolts.",
@@ -136,6 +140,8 @@ var stat_blocks = {
     WizardsApprentice:"Wizard's Apprentice (MU2): HP 4; AC 9[10]; Atk staff (1d6) or darts x3 (1d3); Move 12; Save 14; AL N; CL/XP 3/60;<br>Special: +2 on saves vs. spells, spells (2).<br>Spells: 1st—charm person, shield.<br>Equipment: robes, staff, 6 darts, spellbook.",
     Mohrg:"Mohrg: HD 10; AC 0 [19]; Atk 1 fist (1d8) or tongue (paralysis); Move 12; Save 5; AL C; CL/XP 13/2300;<br>Special: paralyzing tongue, grabs and holds.<br>Reference <a href='http://www.d20swsrd.com/swords-and-wizardry-srd/for-the-referee/monsters/all-monsters/monster-details-k-through-n#TOC-Mohrg'S&W SRD</a>",
     Zombie:"Zombie: HD 2; AC 8[11] or with shield 7[12]; Atk 1 weapon or strike (1d8); Move 6; Save 16; AL N; CL/XP 2/30;<br>Special: Immune to sleep and charm.",
+    UnderhillWatchman:"Underhill Watchman, Male or Female Dwarf (Ftr2): HD 2; AC 4[15]; Atk warhammer (1d4+1); Move 9; Save 13; AL L; CL/XP 2/30;<br>Special: darkvision 60ft, dwarf racial abilities, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: chainmail, shield, warhammer, potion of healing.",
+    UnderhillSergeant:"Underhill Sergeant, Male or Female Dwarf (Ftr2/Thf2): HD 4; AC 7[12]; Atk short sword (1d6+1) or light crossbow (1d4+1); Move 9; Save 12; AL L; CL/XP 4/120;<br>Special: +1 to hit and damage strength bonus, backstab (x2), darkvision 60ft, dwarf racial abilities, multiple attacks (2) vs. creatures with 1 or fewer HD, thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 30%, Hear 3 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, short sword, light cross- bow, 10 bolts, 2 potions of healing, whetstone, 1d6gp, 2d6sp."
 };
 
 var t = {
@@ -260,11 +266,22 @@ var e = {
             ]
         }
     },
+    BlackBrotherhoodMember:
+    {
+        name:"Black Brotherhood Member",
+        text:"A member of the Shadow Masks secret doppleganger ruling council, the Black Brotherhood. Likely not in its true form. It may be spying on the characters, planning to assassinate one, busy stalking or killing a third party, or simply passing through.",
+        stats:["BlackBrotherhoodFighter","BlackBrotherhoodKiller"]
+    },
     BlackOrcs:
     {
         name:"Black Orcs of Orcus",
         text:"This rare encounter is with !d[1d6+2] black orcs in the service of the Cult of Orcus hidden near the environs of the Claws of Orcus. The Black Orcs typically remain hidden from large bands and soldiers, but see that snoopy individuals (such as paladins and rangers) never return to Bard's Gate to report on the things they may have discovered.",
         stats:["BlackOrc"]
+    },
+    Blockage:
+    {
+        name:"Blockage",
+        text:"A sewer tunnel is currently impassable due to a blockage. Perhaps a storm has washed debris down here, perhaps the ceiling has collapsed, perhaps some sewer inhabitants have deliberately created a blockage here - possibly with a secret passage through. The blockage may be removable but will take time and be noisy, requiring multiple random encounter rolls."
     },
     BodyGuard:
     {
@@ -467,6 +484,16 @@ var e = {
         name:"Familiar",
         text:"This encounter is with a magic-user's familiar, who is out on some errand, possibly spying on the characters for its master. Referee's discretion on type and \"owner\" (see the various Tome of Horrors, Monstrosities, and other accessories for appropriate encounters)."
     },
+    Farmer:
+    {
+        name:"Farmer",
+        text:"This encounter is with !d[1d4] farmers (Neutral male or female commoner 2). They may be hawking wares, buying supplies, or blowing off steam."
+    },
+    Herdsman:
+    {
+        name:"Herdsman",
+        text:"This encounter is with !d[1d4] herdsmen (Neutral male or female commoner 2). They may be selling animals, buying feed, driving the animals to pasture, or blowing off steam."
+    },
     Fighter:
     {
         name:"Fighter",
@@ -652,11 +679,47 @@ var e = {
         text:"This encounter is with a patrol of a district’s own privately funded and appointed guard. For example, dog soldiers are the local guard for Tent City, and the Market Guard is the local guard for the Market District. There are !d[1d4+2] local guards in the patrol. See district chapters and Appendix A for further details."
         // TODO - greg you should do a district specific one of this for each district and include the relevant stats, that would be useful
     }, */
+    LocalWatchBC:
+    {
+        "name":"College Watch",
+        "text":"!d[1d4+2] members of the College Watch. Looking dapper in their dress uniforms, this professional force is always polite to locals and visitors to the Bard's College district.",
+        stats:["MarketGuard_F2"]
+    },
+    LocalWatchD:
+    {
+        name:"Local Dock's Guards",
+        text:"A group of !d[1d4+2] private guards, protecting their employers' property.",
+        stats:["MarketGuard_F2","MerchantGuard_T2"]
+    },
+    LocalWatchO:
+    {
+        name:"Constable Patrol",
+        text:"A patrol of !d[1d4+2] Constables out from the Constable's Station (O5). They may be patrolling, or helping to maintain Founders' Park.",
+        stats:["Constable","ConstableSergeant","ConstableOfficer"]
+    },
+    LocalWatchT:
+    {
+        name:"Constable Patrol",
+        text:"A patrol of !d[1d4+2] Constables that clearly drew the short straw or annoyed someone important to end up patrolling the Thieves' Quarter. They tend to be fairly hands-off unless a crime is blatantly commited in front of them.",
+        stats:["Constable","ConstableSergeant","ConstableOfficer"]
+    },
     LocalWatchTC:
     {
         name:"Tent City Local Watch",
         text:"This encounter is with a patrol of Tent City's own privately funded and appointed guard - the Dog Soldiers. There are !d[1d4+2] local guards in the patrol.",
         stats:["DogSoldiers","DogSoldierWarrior","DogSoldierMU"]
+    },
+    LocalWatchTH:
+    {
+        name:"Hill Watch",
+        text:"The Hill Watch is an elite patrol funded by the Hill District's own citizens. They are trained to blend in amongst the district residents. Patrols typically include 5 regular watchmen and a sargeant. Faintly magical medallions are used by residents of the Hill District to prove their right to access the Middle or Upper Ring to the Magic Users embedded in the Hill Watch.",
+        stats:["MarketGuard_F1","Veteran","WizardsApprentice"]
+    },
+    LocalWatchTW:
+    {
+        name:"Turlin's Well Watch",
+        text:"The Well Watch is a fairly corruptible but good-natured band of about 40 individuals. The group consists of patrols of 2–4 individuals, and may be encountered once every 20-30 minutes, when they aren’t busy hanging out in the local taverns while on duty.<br>This patrol is of !d[2d2] individuals.",
+        stats:["MarketGuard_F1","MarketGuard_F2"]
     },
     LocalWatchM:
     {
@@ -670,6 +733,12 @@ var e = {
         text:"This encounter is with a patrol of the Guild District's own privately funded and appointed guard - the Merchant Guard. There are !d[1d4+2] guards. It is generally known that the Merchant Guard are susceptible to bribes, and can easily be persuaded to look the other way as needed.",
         stats:["MerchantGuard_F1","MerchantGuard_F2","MerchantGuard_T2"],
         stats:["MerchantGuard_F1","MerchantGuard_F2","MerchantGuard_T2"],
+    },
+    LocalWatchUH:
+    {
+        name:"Underhill Watch",
+        text:"An Underhill Watch patrol consisting of 5 dwarven watchmen and a sergeant.",
+        stats:["UnderhillWatchman","UnderhillSergeant"]
     },
     Lovers:
     {
@@ -914,6 +983,11 @@ var e = {
         name:"Riverfolk",
         text:"This is an encounter with !d[2d6] rivermen. The rivermen have brought a supply of goods that they are shilling from their flatboats to folk along the docks, bridge, or canals of the city. These rivermen are !t[RiverfolkType]",
         stats:["RiverfolkFighter","RiverfolkSneak"]
+    },
+    RefugeeEncampment:
+    {
+        name:"Refugee Encampment",
+        text:"A refugee encampment consists of !d[1d20+10] adults and half that number of children. Perhaps displaced by the war with the Huun, or by other more localised problems such as Dragon, Orc or Gnoll incursion. They are malnourished, poorly clothed and in need of better shelter."
     },
     Sailor:
     {
@@ -1200,29 +1274,29 @@ var enc = {
     "G_N": {name:"Guild District (Night)", items:[ e.AdventuringBand, e.LocalWatchG, e.Drunk, e.Harlot, e.Streetwalker, e.Shadowmasks, e.Aristocrat, e.Rake, e.Guildsman, e.Dandy, e.MercenaryBand, e.ArcaneStudent, e.Wizard, e.Cleric, e.Laborers, e.RedBladeInitiate, e.CivicOfficial, e.SheriffsPatrol, e.Pickpocket ]}, // TODO add e.SpecialG
     "OT_D": {name:"Old Temple District (Day)", items:[ e.LyreguardPatrol, e.SheriffsPatrol, e.Cleric, e.Pilgrims,e.Paladin, e.WinePeddler, e.FoodVendor, e.Charlatan, e.Beggar, e.Aristocrat, e.Pickpocket, e.Heretic, e.TroupOfPerformers, e.CivicOfficial, e.TempleGuard, e.TrashCollector, e.Merchant, e.AdventuringBandWithDead, e.Laborers ]}, // TODO add e.SpecialTG
     "OT_N": {name:"Old Temple District (Night)", items:[e.SheriffsPatrol, e.Cleric, e.Pilgrims, e.Paladin, e.Beggar, e.Drunk, e.Shyster, e.Gambler, e.Aristocrat, e.TempleGuard, e.CivicOfficial, e.Harlot, e.Streetwalker, e.Heretic, e.Pickpocket, e.WinePeddler, e.FoodVendor, e.Shadowmasks, e.AdventuringBandWithDead ]}, // TODO add e.SpecialTG
-    "D_D": {name:"Docks (East & West, Day)", items:[ e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.Bully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Riverfolk, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner ]}, // TODO add e.SpecialD
-    "D_N": {name:"Docks (East & West, Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.Bully, e.Enforcer, e.Gambler, e.Sailor, e.AdventuringBand, e.BountyHunter, e.CanalWorker, e.Shyster, e.Riverfolk, e.BanditGang, sublists.Monster ]}, // TODO add_e.SpecialD
-    "C_D": {name:"Canal District (Day)", items: [e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.Bully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Riverfolk, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner]}, // TODO add e.SpecialC
-    "C_N": {name:"Canal District (Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.Bully, e.Enforcer, e.Gambler, e.NurseMary, e.Riverfolk, e.BountyHunter, e.PipersGuild, e.Skeletons, e.RedBladeInitiate, e.BanditGang, e.StreetUrchin]}, // TODO add e.SpecialC
+    "D_D": {name:"Docks (East & West, Day)", items:[ e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.LocalBully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Riverfolk, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner ]}, // TODO add e.SpecialD
+    "D_N": {name:"Docks (East & West, Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.LocalBully, e.Enforcer, e.Gambler, e.Sailor, e.AdventuringBand, e.BountyHunter, e.CanalWorker, e.Shyster, e.Riverfolk, e.BanditGang, sublists.Monster ]}, // TODO add_e.SpecialD
+    "C_D": {name:"Canal District (Day)", items: [e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.LocalBully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Riverfolk, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner]}, // TODO add e.SpecialC
+    "C_N": {name:"Canal District (Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.LocalBully, e.Enforcer, e.Gambler, e.NurseMary, e.Riverfolk, e.BountyHunter, e.PipersGuild, e.Skeletons, e.RedBladeInitiate, e.BanditGang, e.StreetUrchin]}, // TODO add e.SpecialC
     "TH_D":{name:"The Hill (Day)", items:[e.Merchant, e.LocalWatchTH, e.SculleryMaid, e.Valet, e.Guildsman, e.Dandy, e.Fighter, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.Aristocrat, e.CityWatch, e.Carriage, e.Butler, e.BodyGuard, e.Herald, e.Cleric ]}, // TODO add e.SpecialTH
     "TH_N": {name:"The Hill (Night)", items:[e.LocalWatchTH, e.Aristocrat, e.Valet, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.CivicOfficial, e.Carriage, e.Butler, e.Herald, e.Dandy, e.Drunk, e.Bard, e.Debutante, e.Cleric, e.Burglar, e.Lovers ]}, // TODO add e.SpecialTH
     "UH": {name:"Underhill", items:[e.HaflingPickpocket, e.DwarfPolitician, e.DwarfTravelers, e.HalflingBand, e.BeerVendor, e.CheeseVendor, e.LocalWatchUH, e.GameOfChance]},
-    "NW_D":{name:"North Wall (Day)", items:[e.Merchant, e.FoodVendor, e.LocalWatchNW, e.Caravan, e.Shyster, e.TrashCollector, e.Wheelwright, e.Pickpocket, e.Rake, e.Dandy, e.SculleryMaid, e.Fighter, e.ArcaneStudent, e.Artist, e.SculleryMaid, e.CivicOfficial, e.Pilgrims, e.Laborers, e.CivicOfficial ]}, // TODO add e.SpecialNW
-    "NW_N":{name:"North Wall (Night)", items:[e.Merchant, e.WinePeddler, e.LocalWatchNW, e.MerchantEncampment, e.Drunk, e.Harlot, e.Wheelwright, e.Burglar, e.Rake, e.Dandy, e.Gambler, e.Bard, e.Wizard, e.Aristocrat, e.Bully, e.CivicOfficial, e.Beggar, e.Streetwalker, sublists.Monster]}, // TODO add e.SpecialNW
+    "NW_D":{name:"North Wall (Day)", items:[e.Merchant, e.FoodVendor, e.WallWatcher, e.Caravan, e.Shyster, e.TrashCollector, e.Wheelwright, e.Pickpocket, e.Rake, e.Dandy, e.SculleryMaid, e.Fighter, e.ArcaneStudent, e.Artist, e.SculleryMaid, e.CivicOfficial, e.Pilgrims, e.Laborers, e.CivicOfficial ]}, // TODO add e.SpecialNW
+    "NW_N":{name:"North Wall (Night)", items:[e.Merchant, e.WinePeddler, e.WallWatcher, e.MerchantEncampment, e.Drunk, e.Harlot, e.Wheelwright, e.Burglar, e.Rake, e.Dandy, e.Gambler, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Streetwalker, sublists.Monster]}, // TODO add e.SpecialNW
     "K_D":{name:"The Keep (Day)",items:[e.CityWatch, e.LyreguardPatrol, e.FoodVendor, e.Merchant, e.Lawyer, e.CivicOfficial, e.Execution, e.Aristocrat, e.SheriffsPatrol, e.PrisonerWagon, e.Guildsman, e.Carriage, e.Herald, e.Paladin, e.Cleric, e.Wizard, e.ArcaneStudent, e.Fighter, e.Scribe ]}, // TODO add.e.SpecialK
     "K_N":{name:"The Keep (Night)",items:[e.CityWatch, e.FoodVendor, e.Merchant, e.Lawyer, e.SheriffsPatrol, e.PrisonerWagon, e.CivicOfficial, e.Aristocrat, e.Guildsman, e.Carriage, e.Herald, e.Drunk, e.Beggar, e.Cleric, e.Scribe, e.Paladin, e.BountyHunter, e.MercenaryBand, e.Wizard ]}, // TODO add.e.SpecialK
     "TW_D":{name:"Turlin's Well (Day)", items:[e.Merchant, e.WinePeddler, e.LocalWatchTW, e.SheriffsPatrol, e.Rake, e.AdventuringBand, e.CivicOfficial, e.Carriage, e.Dandy, e.TroupOfPerformers, e.Pickpocket, e.Guildsman, e.Wheelwright, e.Aristocrat, e.Pilgrims, e.Artist, e.Shyster, e.FoodVendor, e.TrashCollector ]}, // TODO add e.SpecialTW
-    "TW_N":{name:"Turlin's Well (Night)", items: [e.Merchant, e.WinePeddler, e.LocalWatchTW, e.SheriffsPatrol, e.Drunk, e.AdventuringBand, e.Streetwalker, e.Dandy, e.Bard, e.Courtesan, e.Burglar, e.Laborers, e.ShadowMask, e.Lovers, e.Gambler, e.Debutante, e.Artist, e.Carriage, e.Ghouls]}, // TODO add e.SpecialTW
+    "TW_N":{name:"Turlin's Well (Night)", items: [e.Merchant, e.WinePeddler, e.LocalWatchTW, e.SheriffsPatrol, e.Drunk, e.AdventuringBand, e.Streetwalker, e.Dandy, e.Bard, e.Courtesan, e.Burglar, e.Laborers, e.Shadowmasks, e.Lovers, e.Gambler, e.Debutante, e.Artist, e.Carriage, e.Ghouls]}, // TODO add e.SpecialTW
     "BC_D":{name:"Bard's College (Day)",items:[e.CityWatch, e.LocalWatchBC, e.Merchant, e.TroupOfPerformers, e.Pickpocket, e.Rake, e.Dandy, e.Author, e.Artist, e.Carriage, e.Debutante, e.Bard, e.Gambler, e.FoodVendor, e.CivicOfficial, e.WinePeddler, e.Aristocrat, e.Scribe, e.Sage ]}, // TODO add e.SpecialBC
-    "BC_N":{name:"Bard's College (Night)",items:[e.TroupOfPerformers, e.LocalWatchBC, e.WinePeddler, e.CityWatch, e.FoodVendor, e.Rake, e.Dandy, e.Author, e.Shyster, e.Gambler, e.Pickpocket, e.ShadowMask, e.CivicOfficial, e.Drunk, e.Carriage, e.Burglar, e.Bard, e.Streetwalker, e.Courtesan ]}, // TODO add e.SpecialBC
+    "BC_N":{name:"Bard's College (Night)",items:[e.TroupOfPerformers, e.LocalWatchBC, e.WinePeddler, e.CityWatch, e.FoodVendor, e.Rake, e.Dandy, e.Author, e.Shyster, e.Gambler, e.Pickpocket, e.Shadowmasks, e.CivicOfficial, e.Drunk, e.Carriage, e.Burglar, e.Bard, e.Streetwalker, e.Courtesan ]}, // TODO add e.SpecialBC
     "B_D":{name:"Bridge District (Day)", items:[e.LocalWatchD, e.Riverfolk, e.WinePeddler, e.Merchant, e.Cleric, e.Pilgrims, e.Wheelwright, e.Paladin, e.TempleGuard, e.Laborers, e.CivicOfficial, e.Lawyer, e.Pickpocket, e.FoodVendor, e.SculleryMaid, e.Artist, e.TroupOfPerformers, e.PrisonerWagon, e.Aristocrat]}, // TODO add e.SpecialB
-    "B_N":{name:"Bridge District (Night)", items:[e.CityWatch, e.Riverfolk, e.Sailor, e.Harlot, e.Gambler, e.Pilgrims, e.Wheelwright, e.Cleric, e.TempleGuard, e.CivicOfficial, e.Dandy, e.AdventuringBand, e.ShadowMask, e.Streetwalker, e.Burglar, e.Author, e.ShadowMask, e.Carriage, e.Courtesan]}, // TODO add e.SpecialB
+    "B_N":{name:"Bridge District (Night)", items:[e.CityWatch, e.Riverfolk, e.Sailor, e.Harlot, e.Gambler, e.Pilgrims, e.Wheelwright, e.Cleric, e.TempleGuard, e.CivicOfficial, e.Dandy, e.AdventuringBand, e.Shadowmasks, e.Streetwalker, e.Burglar, e.Author, e.Shadowmasks, e.Carriage, e.Courtesan]}, // TODO add e.SpecialB
     "O_D":{name:"Outer Quarter (Day)", items:[e.Beggar, e.Merchant, e.Caravan, e.MercenaryBand, e.LocalWatchO, e.SheriffsPatrol, e.Barbarian, e.Pickpocket, e.StreetUrchin, e.MercenaryBand, e.Wizard, e.ArcaneStudent, e.WallWatcher, e.Cleric, e.FoodVendor, e.CivicOfficial, e.TrashCollector, e.TroupOfPerformers, e.WinePeddler]}, // TODO add e.SpecialO
-    "O_N":{name:"Outer Quarter (Night)", items:[e.Beggar, e.Drunk, e.Harlot, e.Streetwalker, e.LocalWatchO, e.Pickpocket, e.Burglar, e.WallWatcher, e.StreetUrchin, e.MercenaryBand, e.Ghouls, e.Shyster, e.Fighter, e.Barbarian, e.CivicOfficial, e.Gambler, e.Wheelwright, e.ShadowMask, e.BountyHunter]}, // TODO add e.SpecialO
+    "O_N":{name:"Outer Quarter (Night)", items:[e.Beggar, e.Drunk, e.Harlot, e.Streetwalker, e.LocalWatchO, e.Pickpocket, e.Burglar, e.WallWatcher, e.StreetUrchin, e.MercenaryBand, e.Ghouls, e.Shyster, e.Fighter, e.Barbarian, e.CivicOfficial, e.Gambler, e.Wheelwright, e.Shadowmasks, e.BountyHunter]}, // TODO add e.SpecialO
     "T_D":{name:"Thieves' Quarter (Day)", items:[e.CityWatch, e.LocalWatchT, e.Merchant, e.Wheelwright, e.Aristocrat, e.Carriage, e.Pickpocket, e.TroupOfPerformers, e.Gambler, e.FoodVendor, e.Rake, e.Author, e.Artist, e.Herald, e.StreetUrchin, e.Debutante, e.SheriffsPatrol, e.Lovers, e.AdventuringBand]}, // TODO add e.SpecialT
-    "T_N":{name:"Thieves' Quarter (Night)", items:[e.CityWatch, e.LocalWatchT, e.Merchant, e.Wheelwright, e.Drunk, e.Carriage, e.Pickpocket, e.Bard, e.Gambler, e.NurseMary, e.Lovers, e.Dandy, e.ShadowMask, e.BlackBrotherhoodMember, e.RedBladeInitiate, e.Debutante, e.Burglar, e.Beggar, e.AdventuringBand]}, // TODO add e.SpecialT
-    "SR_D":{name:"Stable Row (Day)", items:[e.Caravan, e.MercenaryBand, e.Merchant, e.FoodVendor, e.WinePeddler, e.HorseTrader, e.HorseRace, e.Farseeker, e.Herdsman, e.FurTrader, e.Hunter, e.Cleric, e.Pickpocket, e.Farmer, e.Longhunter, e.Pilgrims, e.AdventuringBand, e.Charlatan, e.TroupOfPerformers]}, // TODO add e.SpecialSR
-    "SR_N":{name:"Stable Row (Night)", items:[e.MerchantEncampment, e.MercenaryEncampment, e.FoodVendor, e.Farmer, e.Herdsman, e.TentRevival, e.Pickpocket, e.RefugeeEncampment, e.AdventuringBand, e.Shyster, e.AleTent, e.BanditGang, e.LyreguardPatrol, e.VampireSpawn, e.Druid, e.Goblins, e.AdventuringBand, sublists.Monster]}, // TODO add e.SpecialSR
+    "T_N":{name:"Thieves' Quarter (Night)", items:[e.CityWatch, e.LocalWatchT, e.Merchant, e.Wheelwright, e.Drunk, e.Carriage, e.Pickpocket, e.Bard, e.Gambler, e.NurseMary, e.Lovers, e.Dandy, e.Shadowmasks, e.BlackBrotherhoodMember, e.RedBladeInitiate, e.Debutante, e.Burglar, e.Beggar, e.AdventuringBand]}, // TODO add e.SpecialT
+    "SR_D":{name:"Stable Row (Day)", items:[e.Caravan, e.MercenaryBand, e.Merchant, e.FoodVendor, e.WinePeddler, e.HorseTrader, e.HorseRace, e.Farseeker, e.Herdsman, e.FurTrader, e.FurTrader, e.Cleric, e.Pickpocket, e.Farmer, e.Longhunter, e.Pilgrims, e.AdventuringBand, e.Charlatan, e.TroupOfPerformers]}, // TODO add e.SpecialSR
+    "SR_N":{name:"Stable Row (Night)", items:[e.MerchantEncampment, e.MercenaryEncampment, e.FoodVendor, e.Farmer, e.Herdsman, e.TentRevival, e.Pickpocket, e.RefugeeEncampment, e.AdventuringBand, e.Shyster, e.AleTent, e.BanditGang, e.LyreguardPatrol, e.VampireSpawn, e.Druids, e.Goblins, e.AdventuringBand, sublists.Monster]}, // TODO add e.SpecialSR
     "Sewers":{name:"Sewers", items:[e.BanditGang, e.Beggar, e.SewerCleaner, e.Goblins, e.Ooze, e.Blockage, e.GiantRats, e.Shadowmasks, e.AdventuringBand, e.Ratmen, e.Kobolds, e.Lycanthrope, e.VampireSpawn, e.Ghouls, e.Skeletons, e.BatSwarm, e.Centipede, e.Spider, e.Choker ]}, // TODO add e.SpecialS
     "SpecialUndead":{hide:true, name:"Special Undead", items:[e.Ghouls, e.Zombie, e.Mohrg, e.Skeletons, e.Wraith, e.Spectre, e.Wraith, e.Ghost, e.Shadow, e.Ghasts]},
     "Monsters":{name:"Monsters", items:[e.Ghouls, e.Zombie, e.Mohrg, e.Skeletons, e.Wraith, e.Spectre, e.Wraith, e.Ghost, e.Shadow, e.Ghasts, e.Otyugh, e.Mimic, e.Elemental, e.Familiar]},
