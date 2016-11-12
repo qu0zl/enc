@@ -138,7 +138,7 @@ var stat_blocks = {
     WillOTheWisp:"Will-o'-the-wisp: HD 9; AC –8[27]; Atk shock (2d6); Move 18; Save 6; AL C; CL/XP 10/1400;<br>Special: lights.",
     Wizard:"Wizard (MU5): HP 12; AC 2[17]; Atk +1 dagger (1d4+1); Move 12; Save 11; AL N; CL/XP 6/400.<br>Special: +2 on saves vs. spells, spells (4/2/1).<br>Spells: 1st—charm person, detect magic, sleep; 2nd—ESP, phantasmal force; 3rd—dispel magic.<br>Equipment: bracers of defense AC 4[15], +1 dagger, ring of protection +2, wand of magic missiles (5 charges), spellbook.",
     WizardsApprentice:"Wizard's Apprentice (MU2): HP 4; AC 9[10]; Atk staff (1d6) or darts x3 (1d3); Move 12; Save 14; AL N; CL/XP 3/60;<br>Special: +2 on saves vs. spells, spells (2).<br>Spells: 1st—charm person, shield.<br>Equipment: robes, staff, 6 darts, spellbook.",
-    Mohrg:"Mohrg: HD 10; AC 0 [19]; Atk 1 fist (1d8) or tongue (paralysis); Move 12; Save 5; AL C; CL/XP 13/2300;<br>Special: paralyzing tongue, grabs and holds.<br>Reference <a href='http://www.d20swsrd.com/swords-and-wizardry-srd/for-the-referee/monsters/all-monsters/monster-details-k-through-n#TOC-Mohrg'S&W SRD</a>",
+    Mohrg:"Mohrg: HD 10; AC 0 [19]; Atk 1 fist (1d8) or tongue (paralysis); Move 12; Save 5; AL C; CL/XP 13/2300;<br>Special: paralyzing tongue, grabs and holds.<br>Reference <a href='http://www.d20swsrd.com/swords-and-wizardry-srd/for-the-referee/monsters/all-monsters/monster-details-k-through-n#TOC-Mohrg'>S&W SRD</a>",
     Zombie:"Zombie: HD 2; AC 8[11] or with shield 7[12]; Atk 1 weapon or strike (1d8); Move 6; Save 16; AL N; CL/XP 2/30;<br>Special: Immune to sleep and charm.",
     UnderhillWatchman:"Underhill Watchman, Male or Female Dwarf (Ftr2): HD 2; AC 4[15]; Atk warhammer (1d4+1); Move 9; Save 13; AL L; CL/XP 2/30;<br>Special: darkvision 60ft, dwarf racial abilities, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: chainmail, shield, warhammer, potion of healing.",
     UnderhillSergeant:"Underhill Sergeant, Male or Female Dwarf (Ftr2/Thf2): HD 4; AC 7[12]; Atk short sword (1d6+1) or light crossbow (1d4+1); Move 9; Save 12; AL L; CL/XP 4/120;<br>Special: +1 to hit and damage strength bonus, backstab (x2), darkvision 60ft, dwarf racial abilities, multiple attacks (2) vs. creatures with 1 or fewer HD, thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 30%, Hear 3 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, short sword, light cross- bow, 10 bolts, 2 potions of healing, whetstone, 1d6gp, 2d6sp."
@@ -514,6 +514,18 @@ var e = {
     {
         name:"Food Vendor",
         text:"Food vendors in the Black Market sell various charcoal-roasted \"street meats\" to visitors in the dank quarter's underground. Some of the food is quite good, being a fusion of meal types from various lands. Others are potentially life threatening. Eating street food sold in the Black Market affords a 15% chance of contracting food poisoning (-2 to all rolls for 24 hours). These snacks cost an average of !d[1d4+1]sp each."
+    },
+    Funeral:
+    {
+        name:"Funeral",
+        text:"This encounter is with a funeral entourage consisting of a Cleric and !d[1d100] friends and family members of the deceased.",
+        extra:{
+            total:4,
+            chances:[
+            {min:1, max:1, append:true, text:"The deceased was extremely wealthy."},
+            {min:2, max:2, append:true, text:"The deceased was extremely poor."}
+            ]
+        }
     },
     FurTrader:
     {
@@ -1005,11 +1017,6 @@ var e = {
             ]
         }
     },
-    ScribeOfTheScroll:
-    {
-        name:"Scribe of the Scroll",
-        text:"This encounter is with a scribe (Lawful male or female human expert 4) who works for the High Sanctum of the Scroll. The scribe may have a treasure map, a scroll with a new spell on it, or some other data or information. The scribe may be in the process of being pickpocketed or mugged on the way to the sanctum, or the mark that characters are supposed to rob. Either way, the scribe's scroll leads to untold adventure!"
-    },
     SculleryMaid:
     {
         name:"Scullery Maid",
@@ -1218,8 +1225,7 @@ var e = {
     {
         name:"Special",
         extra:{
-            total:19, // TODO add support for entry 14, reroll on daytime chart
-            // TODO add page references
+            total:19, // TODO support item 14, reroll on daytime table
             chances:[
                    {min:1, max:1, name:"Ash the Clever", text:"Ash the Clever (TC1, pg. 112), Lieutenant of Dennin Blackfinger is encountered", stats:["AshTheClever"]},
                    {min:2, max:2, name:"Dante the Baleful", text:"Dante the Baleful (TC1, pg. 112), Lieutenant of Dennin Blackfinger is encountered", stats:["DanteTheBaleful"]},
@@ -1243,6 +1249,115 @@ var e = {
             ]
         }
     },
+    SpecialTW:{
+        name:"SpecialTW",
+        extra:{
+            total:20,
+            chances:[
+            {min:1, max:1, name:"Virthalia", text:"Virthalia (TW1, pg. 239), friend of Cylria is a new member of the Greycloaks and moderately powerful magic user. She will trade with Lawfully aligned magic-users who wish to learn spells from her."},
+            {min:2, max:2, name:"Scribe of the Scroll", text:"This encounter is with a scribe (Lawful male or female human expert 4) who works for the High Sanctum of the Scroll (TW2, pg. 239). The scribe may have a treasure map, a scroll with a new spell on it, or some other data or information. The scribe may be in the process of being pickpocketed or mugged on the way to the sanctum, or the mark that characters are supposed to rob. Either way, the scribe's scroll leads to untold adventure!"},
+            {min:3, max:3, name:"Robert Terrafyrma", text:"Robert Terrafyrma (TW3, pg. 240, Neutral male halfling expert 3) is  master cartographer, and buys and sells maps and floor plans. "},
+            {min:4, max:4, name:"Takkerk", text:"Takkerk (TW4, pg. 240), owner of the Temple of the Beetle. He sells beetles, live and dead, monstrous and ordinary, as well as their component parts."},
+            {min:5, max:5, name:"Gunther Stone", text:"Gunther Stone (TW5, pg. 241) crafts bull-whips and gladly offers demonstrations"},
+            {min:6, max:6, name:"Ashtin Artcolmb", text:"Ashtin Artcolmb (TW6, pg. 241) crafts prosthetic arms and legs from steel, brass, tin, and wood."},
+            {min:7, max:7, name:"Enix Axlecrafter", text:"Enix Axlecrafter (TW7, pg. 241) comes from a long line of wagon and chariot builders."},
+            {min:8, max:8, name:"Tal Rowiv", text:"Tal Rowiv (TW8, pg. 241), creator of fine costume jewelry. Can craft fake jewelry that will pass initial inspection as the real thing."},
+            {min:9, max:9, name:"Giovanni Fusini", text:"Giovanni Fusini (TW9, pg. 241) famed avant-garde artist and social climber."},
+            {min:10, max:10, name:"Utello", text:"Utello (TW10, pg. 241), famed sculptor of fine gargoyle statues for the rich and powerful."},
+            {min:11, max:11, name:"Zedicha", text:"Zedicha (TW11, pg. 241), casket maker. May be on edge due to recent mysterious theft of caskets from her."},
+            {min:12, max:12, name:"Menoen the Limner", text:"Menoen the Limner (TW12, pg. 241), self taught sign and shield painter."},
+            {min:13, max:13, name:"Vok Wightkicker", text:"Vok Wightkicker (TW13, pg. 241), seller of rare magical books. His familiar, 'Bill' - a hideous old toad - may be seen riding on his shoulder, or resting on the antique desk at the rear of the shop."},
+            {min:14, max:14, name:"Arta", text:"Arta (TW14, pg. 242), hard-working laundress and local hero to the district's women."},
+            {min:15, max:15, name:"Goodman Furster", text:"Goodman Furster (TW15, pg. 242) owner of The Hanging Rose tavern. A protective man with 9 attractive daughters, he has little peace-of-mind."},
+            {min:16, max:16, name:"Joth", text:"Joth (TW16, pg. 242) (Neutral male human expert 5). An expert trap-maker, with a peg leg and some grumpiness."},
+            {min:17, max:17, name:"Gin Wa", text:"Gin Wa (TW17, pg. 242) painter of abstract portraits prized by the nobles."},
+            {min:18, max:18, name:"Hal", text:"Hal (TW18, pg. 243) owner of the Wyvern's Tail bar. A run-down, brawler bar, plagued by constant fighting and the Half-Orc thug Laamar."},
+            {min:19, max:19, name:"Keyslin Yebler", text:"Keyslin Yebler (TW20, pg. 243), baker and reknowned maker of cookies. Flips cookies in the air to impress passersby."},
+            {min:20, max:20, name:"Goric", text:"Goric (TW21, pg. 243, Netral male hill dwarf expert 5) bakes miniature copies of ceramic city locations and buildings out of clay and sometimes with real stone or precious metals."}]
+        }
+    },
+    SpecialMD:{
+        name:"SpecialMD",
+        extra:{
+            total:20,
+            chances:[
+            {min:1, max:1, name:"Willie (Market Bridge)", text:""},
+            {min:2, max:2, name:"Torrie Dixson (M2)", text:""},
+            {min:3, max:3, name:"Sergeant Vassale (M3)", text:""},
+            {min:4, max:4, name:"Durst Hammerhand (M4)", text:""},
+            {min:5, max:5, name:"Helman (M5)", text:""},
+            {min:6, max:6, name:"Tarkon and Kel (M6)", text:""},
+            {min:7, max:7, name:"Poldo (M7)", text:""},
+            {min:8, max:8, name:"Lasker (M9)", text:""},
+            {min:9, max:9, name:"Mar (M12)", text:""},
+            {min:10, max:10, name:"Xacanthia (M11)", text:""},
+            {min:11, max:11, name:"Fervin (M10)", text:""},
+            {min:12, max:12, name:"Brendus or Flint (M13)", text:""},
+            {min:13, max:13, name:"Andrigor (Appendix A)", text:""},
+            {min:14, max:14, name:"Cylyria (disguised, Appendix A)", text:""},
+            {min:15, max:15, name:"Imril (Appendix A)", text:""},
+            {min:16, max:16, name:"Velior or Syrele (M17)", text:""},
+            {min:17, max:17, name:"Queltin (M18)", text:""},
+            {min:18, max:18, name:"Commandant Rohanse (M19)", text:""},
+            {min:19, max:19, name:"Nurse Mary (C13, area 11)", text:""},
+            {min:20, max:20, name:"Imbo the Undying (Appendix A)", text:""}]
+        }
+    },
+    /*
+    SpecialTW:{
+        name:"SpecialTW",
+        extra:{
+            total:20,
+            chances:[
+            {min:1, max:1, name:"", text:""},
+            {min:2, max:2, name:"", text:""},
+            {min:3, max:3, name:"", text:""},
+            {min:4, max:4, name:"", text:""},
+            {min:5, max:5, name:"", text:""},
+            {min:6, max:6, name:"", text:""},
+            {min:7, max:7, name:"", text:""},
+            {min:8, max:8, name:"", text:""},
+            {min:9, max:9, name:"", text:""},
+            {min:10, max:10, name:"", text:""},
+            {min:11, max:11, name:"", text:""},
+            {min:12, max:12, name:"", text:""},
+            {min:13, max:13, name:"", text:""},
+            {min:14, max:14, name:"", text:""},
+            {min:15, max:15, name:"", text:""},
+            {min:16, max:16, name:"", text:""},
+            {min:17, max:17, name:"", text:""},
+            {min:18, max:18, name:"", text:""},
+            {min:19, max:19, name:"", text:""},
+            {min:20, max:20, name:"", text:""}]
+        }
+    },
+    SpecialTW:{
+        name:"SpecialTW",
+        extra:{
+            total:20,
+            chances:[
+            {min:1, max:1, name:"", text:""},
+            {min:2, max:2, name:"", text:""},
+            {min:3, max:3, name:"", text:""},
+            {min:4, max:4, name:"", text:""},
+            {min:5, max:5, name:"", text:""},
+            {min:6, max:6, name:"", text:""},
+            {min:7, max:7, name:"", text:""},
+            {min:8, max:8, name:"", text:""},
+            {min:9, max:9, name:"", text:""},
+            {min:10, max:10, name:"", text:""},
+            {min:11, max:11, name:"", text:""},
+            {min:12, max:12, name:"", text:""},
+            {min:13, max:13, name:"", text:""},
+            {min:14, max:14, name:"", text:""},
+            {min:15, max:15, name:"", text:""},
+            {min:16, max:16, name:"", text:""},
+            {min:17, max:17, name:"", text:""},
+            {min:18, max:18, name:"", text:""},
+            {min:19, max:19, name:"", text:""},
+            {min:20, max:20, name:"", text:""}]
+        }
+    },*/
     Zombie:
     {
         name:"Zombies",
@@ -1252,24 +1367,24 @@ var e = {
     Mohrg:
     {
         name:"Mohrg",
-        text:"Mohrgs are the animated corpses of mass murderers or similar villains who died without atoning for their crimes. They resemble zombies, but are far more dangerous, being somewhat more intelligent, much faster, and much stronger a zombie.<br>Due to a mohrg’s blinding speed, these monsters will always attack first during a combat round unless squared off against an opponent using some sort of magic that increases the character’s own speed of motion (such as boots of speed). Mohrgs have two possible methods of attacking. First, the mohrg’s tongue extends five feet, and has a paralyzing effect. A saving throw at -2 is permitted to avoid this effect, but victims failing the saving throw are paralyzed for 1d6 turns. The morgh’s second option in combat is to strike opponents with its fists. When the mohrg hits with its hands, the strike not only causes damage, but allows the mohrg to hold on if the victim fails a saving throw. A character who is so held cannot attack, and if the mohrg hits with its tongue in a subsequent round, the tongue will hit automatically (although the victim is still allowed a saving throw to avoid paralysis). Any held character may break free with a successful saving throw during the character’s attack initiative.<br><br> Any character killed by mohrg will rise after 1d4 days as a zombie under the morhg’s control. Thus, mohrgs are often found accompanied by 1d6 zombies (!d[1d6] in this instance).",
+        text:"The animated corpse of a mass murderer or similarly horrific villain, who died without atoning for their crimes. The mohrg is accompanied by !d[1d6] zombie(s) which are under its control.",
         stats:["Mohrg"]
     },
 }
 
 var sublists = {
     SpecialUndead:{sublist:true},
-    Monsters:{sublist:true}
+    Monsters:{sublist:true},
+    TentCityDay:{sublist:true}
 }
 
 var enc = {
     "All": { name:"All", items:[]},
     "TC_D": {name:"Tent City (Day)", items:[ e.LocalWatchTC, e.Druids, e.Farseeker, e.HorseTrader, e.HorseRace, e.WinePeddler, e.LyreguardPatrolTentCity, e.Caravan, e.CentaurBand, e.FurTrader, e.WanderingMonk, e.Halforc, e.Pickpocket, e.MercenaryBand, e.Longhunter, e.Pilgrims, e.FoodVendor, e.Charlatan, e.Shyster, e.TroupOfPerformers, e.SpecialTC ]},
-    // TODO support re-roll on daytime chart item 12 in TC_N
-    "TC_N": {name:"Tent City (Night)", items:[ e.Drunk, e.MerchantEncampment, e.BarbarianEncampment, e.MercenaryEncampment, e.Minstrel, e.Mugger, e.BanditGang, e.TentRevival, e.Gambler, e.Shyster, e.AleTent, e.LyreguardPatrolTentCity, e.Lycanthrope, e.VampireSpawn, e.Druids, e.Goblins, e.AdventuringBand, e.WillOTheWisp, e.SpecialTC ]},
-    "M_D": {name:"Market District (Day)", items:[ e.SheriffsPatrol, e.WallWatcher, e.LyreguardPatrol, e.LocalWatchM, e.WanderingMonk, e.FoodVendor, e.Grocer, e.WinePeddler, e.Pickpocket, e.TroupOfPerformers, e.Paladin, e.Fighter, e.ArcaneStudent, e.Merchant, e.SculleryMaid, e.CivicOfficial, e.Pilgrims, e.Laborers, e.TrashCollector]}, // TODO add e.specialMD ],
-    "M_N": {name:"Market District (Night)", items:[e.SheriffsPatrol, e.LocalWatchM, e.Streetwalker, e.Drunk, e.MercenaryBand, e.AdventuringBand, e.Mugger, e.Shyster, e.Gambler, e.Shadowmasks, e.RedBladeInitiate, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Harlot, e.Pickpocket ]}, // TODO add e.specialMD ],
-    "BM":{name:"Black Market", items:[ e.Spellcaster, e.BlackMarketWheelwrightThugBand, e.BlackMarketShadowmaskBand, e.Slavers, e.RedBladeInitiate, e.TemporaryBlackMarketStall, e.TemporaryBlackMarketStall, e.FoodVendorBlackMarket, e.Gambler, e.BlackMarketHarlots, e.BlackMarketPickpocket, e.WinePeddlera]},
+    "TC_N": {name:"Tent City (Night)", items:[ e.Drunk, e.MerchantEncampment, e.BarbarianEncampment, e.MercenaryEncampment, e.Minstrel, e.Mugger, e.BanditGang, e.TentRevival, e.Gambler, e.Shyster, e.AleTent, sublists.TentCityDay, e.LyreguardPatrolTentCity, e.Lycanthrope, e.VampireSpawn, e.Druids, e.Goblins, e.AdventuringBand, e.WillOTheWisp, e.SpecialTC ]},
+    "M_D": {name:"Market District (Day)", items:[ e.SheriffsPatrol, e.WallWatcher, e.LyreguardPatrol, e.LocalWatchM, e.WanderingMonk, e.FoodVendor, e.Grocer, e.WinePeddler, e.Pickpocket, e.TroupOfPerformers, e.Paladin, e.Fighter, e.ArcaneStudent, e.Merchant, e.SculleryMaid, e.CivicOfficial, e.Pilgrims, e.Laborers, e.TrashCollector, e.SpecialMD ]},
+    "M_N": {name:"Market District (Night)", items:[e.SheriffsPatrol, e.LocalWatchM, e.Streetwalker, e.Drunk, e.MercenaryBand, e.AdventuringBand, e.Mugger, e.Shyster, e.Gambler, e.Shadowmasks, e.RedBladeInitiate, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Harlot, e.Pickpocket, e.SpecialMD ]},
+    "BM":{name:"Black Market", items:[ e.Spellcaster, e.BlackMarketWheelwrightThugBand, e.BlackMarketShadowmaskBand, e.Slavers, e.RedBladeInitiate, e.TemporaryBlackMarketStall, e.TemporaryBlackMarketStall, e.FoodVendorBlackMarket, e.Gambler, e.BlackMarketHarlots, e.BlackMarketPickpocket, e.WinePeddler]},
     "G_D": {name:"Guild District (Day)", items:[ e.SheriffsPatrol, e.LocalWatchG, e.LyreguardPatrol, e.Guildsman, e.Laborers, e.TrashCollector, e.CivicOfficial, e.Merchant, e.ArcaneStudent, e.Wizard, e.Fighter, e.Pickpocket, e.Aristocrat, e.Paladin, e.Cleric, e.SculleryMaid, e.Pilgrims, e.Bard, e.TroupOfPerformers ]}, // TODO add e.SpecialG
     "G_N": {name:"Guild District (Night)", items:[ e.AdventuringBand, e.LocalWatchG, e.Drunk, e.Harlot, e.Streetwalker, e.Shadowmasks, e.Aristocrat, e.Rake, e.Guildsman, e.Dandy, e.MercenaryBand, e.ArcaneStudent, e.Wizard, e.Cleric, e.Laborers, e.RedBladeInitiate, e.CivicOfficial, e.SheriffsPatrol, e.Pickpocket ]}, // TODO add e.SpecialG
     "OT_D": {name:"Old Temple District (Day)", items:[ e.LyreguardPatrol, e.SheriffsPatrol, e.Cleric, e.Pilgrims,e.Paladin, e.WinePeddler, e.FoodVendor, e.Charlatan, e.Beggar, e.Aristocrat, e.Pickpocket, e.Heretic, e.TroupOfPerformers, e.CivicOfficial, e.TempleGuard, e.TrashCollector, e.Merchant, e.AdventuringBandWithDead, e.Laborers ]}, // TODO add e.SpecialTG
@@ -1285,8 +1400,8 @@ var enc = {
     "NW_N":{name:"North Wall (Night)", items:[e.Merchant, e.WinePeddler, e.WallWatcher, e.MerchantEncampment, e.Drunk, e.Harlot, e.Wheelwright, e.Burglar, e.Rake, e.Dandy, e.Gambler, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Streetwalker, sublists.Monster]}, // TODO add e.SpecialNW
     "K_D":{name:"The Keep (Day)",items:[e.CityWatch, e.LyreguardPatrol, e.FoodVendor, e.Merchant, e.Lawyer, e.CivicOfficial, e.Execution, e.Aristocrat, e.SheriffsPatrol, e.PrisonerWagon, e.Guildsman, e.Carriage, e.Herald, e.Paladin, e.Cleric, e.Wizard, e.ArcaneStudent, e.Fighter, e.Scribe ]}, // TODO add.e.SpecialK
     "K_N":{name:"The Keep (Night)",items:[e.CityWatch, e.FoodVendor, e.Merchant, e.Lawyer, e.SheriffsPatrol, e.PrisonerWagon, e.CivicOfficial, e.Aristocrat, e.Guildsman, e.Carriage, e.Herald, e.Drunk, e.Beggar, e.Cleric, e.Scribe, e.Paladin, e.BountyHunter, e.MercenaryBand, e.Wizard ]}, // TODO add.e.SpecialK
-    "TW_D":{name:"Turlin's Well (Day)", items:[e.Merchant, e.WinePeddler, e.LocalWatchTW, e.SheriffsPatrol, e.Rake, e.AdventuringBand, e.CivicOfficial, e.Carriage, e.Dandy, e.TroupOfPerformers, e.Pickpocket, e.Guildsman, e.Wheelwright, e.Aristocrat, e.Pilgrims, e.Artist, e.Shyster, e.FoodVendor, e.TrashCollector ]}, // TODO add e.SpecialTW
-    "TW_N":{name:"Turlin's Well (Night)", items: [e.Merchant, e.WinePeddler, e.LocalWatchTW, e.SheriffsPatrol, e.Drunk, e.AdventuringBand, e.Streetwalker, e.Dandy, e.Bard, e.Courtesan, e.Burglar, e.Laborers, e.Shadowmasks, e.Lovers, e.Gambler, e.Debutante, e.Artist, e.Carriage, e.Ghouls]}, // TODO add e.SpecialTW
+    "TW_D":{name:"Turlin's Well (Day)", items:[e.Merchant, e.WinePeddler, e.LocalWatchTW, e.SheriffsPatrol, e.Rake, e.AdventuringBand, e.CivicOfficial, e.Carriage, e.Dandy, e.TroupOfPerformers, e.Pickpocket, e.Guildsman, e.Wheelwright, e.Aristocrat, e.Pilgrims, e.Artist, e.Shyster, e.FoodVendor, e.TrashCollector, e.SpecialTW]},
+    "TW_N":{name:"Turlin's Well (Night)", items: [e.Merchant, e.WinePeddler, e.LocalWatchTW, e.SheriffsPatrol, e.Drunk, e.AdventuringBand, e.Streetwalker, e.Dandy, e.Bard, e.Courtesan, e.Burglar, e.Laborers, e.Shadowmasks, e.Lovers, e.Gambler, e.Debutante, e.Artist, e.Carriage, e.Ghouls, e.SpecialTW]},
     "BC_D":{name:"Bard's College (Day)",items:[e.CityWatch, e.LocalWatchBC, e.Merchant, e.TroupOfPerformers, e.Pickpocket, e.Rake, e.Dandy, e.Author, e.Artist, e.Carriage, e.Debutante, e.Bard, e.Gambler, e.FoodVendor, e.CivicOfficial, e.WinePeddler, e.Aristocrat, e.Scribe, e.Sage ]}, // TODO add e.SpecialBC
     "BC_N":{name:"Bard's College (Night)",items:[e.TroupOfPerformers, e.LocalWatchBC, e.WinePeddler, e.CityWatch, e.FoodVendor, e.Rake, e.Dandy, e.Author, e.Shyster, e.Gambler, e.Pickpocket, e.Shadowmasks, e.CivicOfficial, e.Drunk, e.Carriage, e.Burglar, e.Bard, e.Streetwalker, e.Courtesan ]}, // TODO add e.SpecialBC
     "B_D":{name:"Bridge District (Day)", items:[e.LocalWatchD, e.Riverfolk, e.WinePeddler, e.Merchant, e.Cleric, e.Pilgrims, e.Wheelwright, e.Paladin, e.TempleGuard, e.Laborers, e.CivicOfficial, e.Lawyer, e.Pickpocket, e.FoodVendor, e.SculleryMaid, e.Artist, e.TroupOfPerformers, e.PrisonerWagon, e.Aristocrat]}, // TODO add e.SpecialB
@@ -1300,11 +1415,12 @@ var enc = {
     "Sewers":{name:"Sewers", items:[e.BanditGang, e.Beggar, e.SewerCleaner, e.Goblins, e.Ooze, e.Blockage, e.GiantRats, e.Shadowmasks, e.AdventuringBand, e.Ratmen, e.Kobolds, e.Lycanthrope, e.VampireSpawn, e.Ghouls, e.Skeletons, e.BatSwarm, e.Centipede, e.Spider, e.Choker ]}, // TODO add e.SpecialS
     "SpecialUndead":{hide:true, name:"Special Undead", items:[e.Ghouls, e.Zombie, e.Mohrg, e.Skeletons, e.Wraith, e.Spectre, e.Wraith, e.Ghost, e.Shadow, e.Ghasts]},
     "Monsters":{name:"Monsters", items:[e.Ghouls, e.Zombie, e.Mohrg, e.Skeletons, e.Wraith, e.Spectre, e.Wraith, e.Ghost, e.Shadow, e.Ghasts, e.Otyugh, e.Mimic, e.Elemental, e.Familiar]},
-    "CoA_D":{name:"City of Ashes (Day)", items:[e.Mourner, e.Cleric, e.BanditGang, e.Undertaker, e.Bard, e.Charlatan, e.Shyster, e.Funeral]}, // TODO add e.SpecialUndead
-    "CoA_N":{name:"City of Ashes (Night)", items:[e.Mourner, e.BanditGang, e.Goblins, e.Undertaker, e.BatSwarm, e.Drunk,e.GraveRobbers]}, // TODO add e.SpecialUndead
-    "CoO":{name:"Claws of Orcus", items:[e.Cleric, e.Paladin, e.Goblins, e.BanditGang, e.Fighter, e.Mourner, e.BlackOrcs, e.Wizard, e.Gargoyle, sublists.SpecialUndead]}, // TODO add e.SpecialUndead
+    "CoA_D":{name:"City of Ashes (Day)", items:[e.Mourner, e.Cleric, e.BanditGang, e.Undertaker, e.Bard, e.Charlatan, e.Shyster, e.Funeral, sublists.SpecialUndead]},
+    "CoA_N":{name:"City of Ashes (Night)", items:[e.Mourner, e.BanditGang, e.Goblins, e.Undertaker, e.BatSwarm, e.Drunk,e.GraveRobbers, sublists.SpecialUndead]},
+    "CoO":{name:"Claws of Orcus", items:[e.Cleric, e.Paladin, e.Goblins, e.BanditGang, e.Fighter, e.Mourner, e.BlackOrcs, e.Wizard, e.Gargoyle, sublists.SpecialUndead]},
 };
 
 // now that the encounter table exists we can setup the rest of the sublist references
 sublists.SpecialUndead.list = enc.SpecialUndead;
 sublists.Monsters.list = enc.Monsters;
+sublists.TentCityDay.list = enc.TC_D;
