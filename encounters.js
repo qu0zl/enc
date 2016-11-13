@@ -453,12 +453,12 @@ var e = {
         extra:{
             total:6,
             chances:[
-                {min:1, max:1, stats:["ClayGolem"]},
-                {min:2, max:2, stats:["FleshGolem"]},
-                {min:3, max:3, stats:["AirElemental"]},
-                {min:4, max:4, stats:["EarthElemental_12HD"]},
-                {min:5, max:5, stats:["EarthElemental"]},
-                {min:6, max:6, stats:["FireElemental"]}
+                {min:1, max:1, append:true, stats:["ClayGolem"]},
+                {min:2, max:2, append:true, stats:["FleshGolem"]},
+                {min:3, max:3, append:true, stats:["AirElemental"]},
+                {min:4, max:4, append:true, stats:["EarthElemental_12HD"]},
+                {min:5, max:5, append:true, stats:["EarthElemental"]},
+                {min:6, max:6, append:true, stats:["FireElemental"]}
             ]
         }
     },
