@@ -688,13 +688,6 @@ var e = {
         text:"The biggest meanest bully on the street tries to pick a fight with the smallest and most fragile looking character. Stats for various thugs are located in Appendix A. Some are repeated below.",
         stats:["Enforcer", "BodyGuard","BarbarianLeader","SeniorShadowMask"]
     },
-    /* delete me
-    LocalWatch:
-    {
-        name:"Local Watch",
-        text:"This encounter is with a patrol of a district’s own privately funded and appointed guard. For example, dog soldiers are the local guard for Tent City, and the Market Guard is the local guard for the Market District. There are !d[1d4+2] local guards in the patrol. See district chapters and Appendix A for further details."
-        // TODO - greg you should do a district specific one of this for each district and include the relevant stats, that would be useful
-    }, */
     LocalWatchBC:
     {
         "name":"College Watch",
@@ -1471,61 +1464,110 @@ var e = {
             ]
         }
     },
+    SpecialBC:{
+        name:"SpecialBC",
+        extra:{
+            total:12,
+            chances:[
+            {min:1, max:1, name:"Wilhelm Rovellar (BC2)", text:""},
+            {min:2, max:2, name:"Piter Hagglesthorpe IV (BC3)", text:""},
+            {min:3, max:3, name:"Fathalir (BC4)", text:""},
+            {min:4, max:4, name:"Wesley (BC4)", text:""},
+            {min:5, max:5, name:"Cryndle (BC4)", text:""},
+            {min:6, max:6, name:"Carlis Pace (BC5)", text:""},
+            {min:7, max:7, name:"Lottobus (BC6)", text:""},
+            {min:8, max:8, name:"Osius (BC6)", text:""},
+            {min:9, max:9, name:"Estrellya (The Accursed, BC6)", text:""},
+            {min:10, max:10, name:"Geldin Lucan (BC7)", text:""},
+            {min:11, max:11, name:"Umberto Deleon (BC8)", text:""},
+            {min:12, max:12, name:"Ferdinand Kincaid (BC9)", text:""}
+            ]
+        }
+    },
+    SpecialB:{
+        name:"SpecialB",
+        extra:{
+            total:11,
+            chances:[
+            {min:1, max:1, name:"Goled (B1)", text:""},
+            {min:2, max:2, name:"Jared Strann (B3)", text:""},
+            {min:3, max:3, name:"Tobias Dricken (B5)", text:""},
+            {min:4, max:4, name:"Zoey (B6)", text:""},
+            {min:5, max:5, name:"Mangus the Lawbreaker (B7)", text:""},
+            {min:6, max:6, name:"Levis Prochnov (B9)", text:""},
+            {min:7, max:7, name:"Duloth or associates (Appendix A)", text:""},
+            {min:8, max:8, name:"Brin Zwiescher (C9)", text:""},
+            {min:9, max:9, name:"Eldon (B10)", text:""},
+            {min:10, max:10, name:"Johan the Bastard (T5)", text:""},
+            {min:11, max:11, name:"Tuvio and bodyguards (C2)", text:""}
+            ]
+        }
+    },
+    SpecialO:{
+        name:"SpecialO",
+        extra:{
+            total:20,
+            chances:[
+            {min:1, max:1, name:"Johan the Bastard (T5)", text:""},
+            {min:2, max:2, name:"Imbo the Undying (Appendix A)", text:""},
+            {min:3, max:3, name:"Gowan Mckean (O3)", text:""},
+            {min:4, max:4, name:"Deng Lo Do (O21)", text:""},
+            {min:5, max:5, name:"Reingolde Tumsen (O1)", text:""},
+            {min:6, max:6, name:"Hener Roundshield (O2)", text:""},
+            {min:7, max:7, name:"Luc O'Toole (O4)", text:""},
+            {min:8, max:8, name:"Utello (TW10)", text:""},
+            {min:9, max:9, name:"Horton McKaigh (O7)", text:""},
+            {min:10, max:10, name:"Shylor (O8)", text:""},
+            {min:11, max:11, name:"Dubois Montagno (O9)", text:""},
+            {min:12, max:12, name:"Lasker (Night, M9)", text:""},
+            {min:13, max:13, name:"Vagn (O12)", text:""},
+            {min:14, max:14, name:"Hauk (O14)", text:""},
+            {min:15, max:15, name:"Gramma Poppy (O15)", text:""},
+            {min:16, max:16, name:"Caagrah (O16)", text:""},
+            {min:17, max:17, name:"Ka'Zic (O18)", text:""},
+            {min:18, max:18, name:"Renald and Jorgan (O19)", text:""},
+            {min:19, max:19, name:"Mistress Wu (O20)", text:""},
+            {min:20, max:20, name:"Garret the Wanderer (O22)", text:""}]
+        }
+    },
+    SpecialSR:{
+        name:"SpecialSR",
+        extra:{
+            total:9,
+            chances:[
+            {min:1, max:1, name:"Jadeyn Roan (SR3)", text:""},
+            {min:2, max:2, name:"Knotaloke (SR4)", text:""},
+            {min:3, max:3, name:"Johan the Bastard (T5)", text:""},
+            {min:4, max:4, name:"Oberon Thanlaus (Chapter 1, Farseekers of Twilight)", text:""},
+            {min:5, max:5, name:"Rankir (Chapter 1, Longhunters)", text:""},
+            {min:6, max:6, name:"Vol (Chapter 1, The Red Blades)", text:""},
+            {min:7, max:7, name:"Brin Zwiescher (C9)", text:""},
+            {min:8, max:8, name:"The Accursed (BC6)", text:""},
+            {min:9, max:9, name:"Company of the Silver Spear (M8)", text:""}
+            ]
+        }
+    },
+    SpecialT:{
+        name:"SpecialT",
+        extra:{
+            total:12,
+            chances:[
+            {min:1, max:1, name:"Fat Julie and bodyguards (T1)", text:""},
+            {min:2, max:2, name:"Chadwick (T2)", text:""},
+            {min:3, max:3, name:"Duloth and associates (Appendix A)", text:""},
+            {min:4, max:4, name:"Tomokos (T4)", text:""},
+            {min:5, max:5, name:"Chord (T3)", text:""},
+            {min:6, max:6, name:"Scars (T5)", text:""},
+            {min:7, max:7, name:"Natala (T5)", text:""},
+            {min:8, max:8, name:"Zarabeshe (T5)", text:""},
+            {min:9, max:9, name:"Rath Kata (T6)", text:""},
+            {min:10, max:10, name:"Old One Tooth (T8)", text:""},
+            {min:11, max:11, name:"Mistress Honeysuckle (T9)", text:""},
+            {min:12, max:12, name:"Cylyria (disguised, Appendix A)", text:""}
+            ]
+        }
+    },
     /*
-    SpecialTW:{
-        name:"SpecialTW",
-        extra:{
-            total:20,
-            chances:[
-            {min:1, max:1, name:"", text:""},
-            {min:2, max:2, name:"", text:""},
-            {min:3, max:3, name:"", text:""},
-            {min:4, max:4, name:"", text:""},
-            {min:5, max:5, name:"", text:""},
-            {min:6, max:6, name:"", text:""},
-            {min:7, max:7, name:"", text:""},
-            {min:8, max:8, name:"", text:""},
-            {min:9, max:9, name:"", text:""},
-            {min:10, max:10, name:"", text:""},
-            {min:11, max:11, name:"", text:""},
-            {min:12, max:12, name:"", text:""},
-            {min:13, max:13, name:"", text:""},
-            {min:14, max:14, name:"", text:""},
-            {min:15, max:15, name:"", text:""},
-            {min:16, max:16, name:"", text:""},
-            {min:17, max:17, name:"", text:""},
-            {min:18, max:18, name:"", text:""},
-            {min:19, max:19, name:"", text:""},
-            {min:20, max:20, name:"", text:""}]
-        }
-    },
-    SpecialTW:{
-        name:"SpecialTW",
-        extra:{
-            total:20,
-            chances:[
-            {min:1, max:1, name:"", text:""},
-            {min:2, max:2, name:"", text:""},
-            {min:3, max:3, name:"", text:""},
-            {min:4, max:4, name:"", text:""},
-            {min:5, max:5, name:"", text:""},
-            {min:6, max:6, name:"", text:""},
-            {min:7, max:7, name:"", text:""},
-            {min:8, max:8, name:"", text:""},
-            {min:9, max:9, name:"", text:""},
-            {min:10, max:10, name:"", text:""},
-            {min:11, max:11, name:"", text:""},
-            {min:12, max:12, name:"", text:""},
-            {min:13, max:13, name:"", text:""},
-            {min:14, max:14, name:"", text:""},
-            {min:15, max:15, name:"", text:""},
-            {min:16, max:16, name:"", text:""},
-            {min:17, max:17, name:"", text:""},
-            {min:18, max:18, name:"", text:""},
-            {min:19, max:19, name:"", text:""},
-            {min:20, max:20, name:"", text:""}]
-        }
-    },
     SpecialTW:{
         name:"SpecialTW",
         extra:{
@@ -1572,6 +1614,11 @@ var e = {
         text:"A wight stalks the party.",
         stats:["Wight"]
     },
+    Sage:
+    {
+        name:"Sage",
+        text:"A learned sage (Neutral male or female expert 2-4) passes by."
+    }
 }
 
 var sublists = {
@@ -1583,11 +1630,11 @@ var sublists = {
 
 var enc = {
     "All": { name:"All", items:[]},
-    "BC_D":{name:"Bard's College (Day)",items:[e.CityWatch, e.LocalWatchBC, e.Merchant, e.TroupOfPerformers, e.Pickpocket, e.Rake, e.Dandy, e.Author, e.Artist, e.Carriage, e.Debutante, e.Bard, e.Gambler, e.FoodVendor, e.CivicOfficial, e.WinePeddler, e.Aristocrat, e.Scribe, e.Sage ]}, // TODO add e.SpecialBC
-    "BC_N":{name:"Bard's College (Night)",items:[e.TroupOfPerformers, e.LocalWatchBC, e.WinePeddler, e.CityWatch, e.FoodVendor, e.Rake, e.Dandy, e.Author, e.Shyster, e.Gambler, e.Pickpocket, e.Shadowmasks, e.CivicOfficial, e.Drunk, e.Carriage, e.Burglar, e.Bard, e.Streetwalker, e.Courtesan ]}, // TODO add e.SpecialBC
+    "BC_D":{name:"Bard's College (Day)",items:[e.CityWatch, e.LocalWatchBC, e.Merchant, e.TroupOfPerformers, e.Pickpocket, e.Rake, e.Dandy, e.Author, e.Artist, e.Carriage, e.Debutante, e.Bard, e.Gambler, e.FoodVendor, e.CivicOfficial, e.WinePeddler, e.Aristocrat, e.Scribe, e.Sage, e.SpecialBC ]},
+    "BC_N":{name:"Bard's College (Night)",items:[e.TroupOfPerformers, e.LocalWatchBC, e.WinePeddler, e.CityWatch, e.FoodVendor, e.Rake, e.Dandy, e.Author, e.Shyster, e.Gambler, e.Pickpocket, e.Shadowmasks, e.CivicOfficial, e.Drunk, e.Carriage, e.Burglar, e.Bard, e.Streetwalker, e.Courtesan, e.SpecialBC ]},
     "BM":{name:"Black Market", items:[ e.Spellcaster, e.BlackMarketWheelwrightThugBand, e.BlackMarketShadowmaskBand, e.Slavers, e.RedBladeInitiate, e.TemporaryBlackMarketStall, e.TemporaryBlackMarketStall, e.FoodVendorBlackMarket, e.Gambler, e.BlackMarketHarlots, e.BlackMarketPickpocket, e.WinePeddler]},
-    "B_D":{name:"Bridge District (Day)", items:[e.LocalWatchD, e.Riverfolk, e.WinePeddler, e.Merchant, e.Cleric, e.Pilgrims, e.Wheelwright, e.Paladin, e.TempleGuard, e.Laborers, e.CivicOfficial, e.Lawyer, e.Pickpocket, e.FoodVendor, e.SculleryMaid, e.Artist, e.TroupOfPerformers, e.PrisonerWagon, e.Aristocrat]}, // TODO add e.SpecialB
-    "B_N":{name:"Bridge District (Night)", items:[e.CityWatch, e.Riverfolk, e.Sailor, e.Harlot, e.Gambler, e.Pilgrims, e.Wheelwright, e.Cleric, e.TempleGuard, e.CivicOfficial, e.Dandy, e.AdventuringBand, e.Shadowmasks, e.Streetwalker, e.Burglar, e.Author, e.Shadowmasks, e.Carriage, e.Courtesan]}, // TODO add e.SpecialB
+    "B_D":{name:"Bridge District (Day)", items:[e.LocalWatchD, e.Riverfolk, e.WinePeddler, e.Merchant, e.Cleric, e.Pilgrims, e.Wheelwright, e.Paladin, e.TempleGuard, e.Laborers, e.CivicOfficial, e.Lawyer, e.Pickpocket, e.FoodVendor, e.SculleryMaid, e.Artist, e.TroupOfPerformers, e.PrisonerWagon, e.Aristocrat, e.SpecialB]},
+    "B_N":{name:"Bridge District (Night)", items:[e.CityWatch, e.Riverfolk, e.Sailor, e.Harlot, e.Gambler, e.Pilgrims, e.Wheelwright, e.Cleric, e.TempleGuard, e.CivicOfficial, e.Dandy, e.AdventuringBand, e.Shadowmasks, e.Streetwalker, e.Burglar, e.Author, e.Shadowmasks, e.Carriage, e.Courtesan, e.SpecialB]},
     "C_D": {name:"Canal District (Day)", items: [e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.LocalBully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Riverfolk, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner, e.SpecialC ]},
     "C_N": {name:"Canal District (Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.LocalBully, e.Enforcer, e.Gambler, e.NurseMary, e.Riverfolk, e.BountyHunter, e.PipersGuild, e.Skeletons, e.RedBladeInitiate, e.BanditGang, e.StreetUrchin, e.SpecialC ]},
     "CoA_D":{name:"City of Ashes (Day)", items:[e.Mourner, e.Cleric, e.BanditGang, e.Undertaker, e.Bard, e.Charlatan, e.Shyster, e.Funeral, sublists.SpecialUndead]},
@@ -1608,15 +1655,15 @@ var enc = {
     "NW_N":{name:"North Wall (Night)", items:[e.Merchant, e.WinePeddler, e.WallWatcher, e.MerchantEncampment, e.Drunk, e.Harlot, e.Wheelwright, e.Burglar, e.Rake, e.Dandy, e.Gambler, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Streetwalker, sublists.Monsters, e.SpecialNW ]},
     "OT_D": {name:"Old Temple District (Day)", items:[ e.LyreguardPatrol, e.SheriffsPatrol, e.Cleric, e.Pilgrims,e.Paladin, e.WinePeddler, e.FoodVendor, e.Charlatan, e.Beggar, e.Aristocrat, e.Pickpocket, e.Heretic, e.TroupOfPerformers, e.CivicOfficial, e.TempleGuard, e.TrashCollector, e.Merchant, e.AdventuringBandWithDead, e.Laborers, e.SpecialOT ]},
     "OT_N": {name:"Old Temple District (Night)", items:[e.SheriffsPatrol, e.Cleric, e.Pilgrims, e.Paladin, e.Beggar, e.Drunk, e.Shyster, e.Gambler, e.Aristocrat, e.TempleGuard, e.CivicOfficial, e.Harlot, e.Streetwalker, e.Heretic, e.Pickpocket, e.WinePeddler, e.FoodVendor, e.Shadowmasks, e.AdventuringBandWithDead, e.SpecialOT ]},
-    "O_D":{name:"Outer Quarter (Day)", items:[e.Beggar, e.Merchant, e.Caravan, e.MercenaryBand, e.LocalWatchO, e.SheriffsPatrol, e.Barbarian, e.Pickpocket, e.StreetUrchin, e.MercenaryBand, e.Wizard, e.ArcaneStudent, e.WallWatcher, e.Cleric, e.FoodVendor, e.CivicOfficial, e.TrashCollector, e.TroupOfPerformers, e.WinePeddler]}, // TODO add e.SpecialO
-    "O_N":{name:"Outer Quarter (Night)", items:[e.Beggar, e.Drunk, e.Harlot, e.Streetwalker, e.LocalWatchO, e.Pickpocket, e.Burglar, e.WallWatcher, e.StreetUrchin, e.MercenaryBand, e.Ghouls, e.Shyster, e.Fighter, e.Barbarian, e.CivicOfficial, e.Gambler, e.Wheelwright, e.Shadowmasks, e.BountyHunter]}, // TODO add e.SpecialO
+    "O_D":{name:"Outer Quarter (Day)", items:[e.Beggar, e.Merchant, e.Caravan, e.MercenaryBand, e.LocalWatchO, e.SheriffsPatrol, e.Barbarian, e.Pickpocket, e.StreetUrchin, e.MercenaryBand, e.Wizard, e.ArcaneStudent, e.WallWatcher, e.Cleric, e.FoodVendor, e.CivicOfficial, e.TrashCollector, e.TroupOfPerformers, e.WinePeddler, e.SpecialO]},
+    "O_N":{name:"Outer Quarter (Night)", items:[e.Beggar, e.Drunk, e.Harlot, e.Streetwalker, e.LocalWatchO, e.Pickpocket, e.Burglar, e.WallWatcher, e.StreetUrchin, e.MercenaryBand, e.Ghouls, e.Shyster, e.Fighter, e.Barbarian, e.CivicOfficial, e.Gambler, e.Wheelwright, e.Shadowmasks, e.BountyHunter, e.SpecialO]},
     "Sewers":{name:"Sewers", items:[e.BanditGang, e.Beggar, e.SewerCleaner, e.Goblins, e.Ooze, e.Blockage, e.GiantRats, e.Shadowmasks, e.AdventuringBand, e.Ratmen, e.Kobolds, e.Lycanthrope, e.VampireSpawn, e.Ghouls, e.Skeletons, e.BatSwarm, e.Centipede, e.Spider/* No SRD stats for, e.Choker */, sublists.SpecialS]},
-    "SR_D":{name:"Stable Row (Day)", items:[e.Caravan, e.MercenaryBand, e.Merchant, e.FoodVendor, e.WinePeddler, e.HorseTrader, e.HorseRace, e.Farseeker, e.Herdsman, e.FurTrader, e.FurTrader, e.Cleric, e.Pickpocket, e.Farmer, e.Longhunter, e.Pilgrims, e.AdventuringBand, e.Charlatan, e.TroupOfPerformers]}, // TODO add e.SpecialSR
-    "SR_N":{name:"Stable Row (Night)", items:[e.MerchantEncampment, e.MercenaryEncampment, e.FoodVendor, e.Farmer, e.Herdsman, e.TentRevival, e.Pickpocket, e.RefugeeEncampment, e.AdventuringBand, e.Shyster, e.AleTent, e.BanditGang, e.LyreguardPatrol, e.VampireSpawn, e.Druids, e.Goblins, e.AdventuringBand, sublists.Monster]}, // TODO add e.SpecialSR
+    "SR_D":{name:"Stable Row (Day)", items:[e.Caravan, e.MercenaryBand, e.Merchant, e.FoodVendor, e.WinePeddler, e.HorseTrader, e.HorseRace, e.Farseeker, e.Herdsman, e.FurTrader, e.FurTrader, e.Cleric, e.Pickpocket, e.Farmer, e.Longhunter, e.Pilgrims, e.AdventuringBand, e.Charlatan, e.TroupOfPerformers, e.SpecialSR]},
+    "SR_N":{name:"Stable Row (Night)", items:[e.MerchantEncampment, e.MercenaryEncampment, e.FoodVendor, e.Farmer, e.Herdsman, e.TentRevival, e.Pickpocket, e.RefugeeEncampment, e.AdventuringBand, e.Shyster, e.AleTent, e.BanditGang, e.LyreguardPatrol, e.VampireSpawn, e.Druids, e.Goblins, e.AdventuringBand, sublists.Monsters, e.SpecialSR]},
     "TC_D": {name:"Tent City (Day)", items:[ e.LocalWatchTC, e.Druids, e.Farseeker, e.HorseTrader, e.HorseRace, e.WinePeddler, e.LyreguardPatrolTentCity, e.Caravan, e.CentaurBand, e.FurTrader, e.WanderingMonk, e.Halforc, e.Pickpocket, e.MercenaryBand, e.Longhunter, e.Pilgrims, e.FoodVendor, e.Charlatan, e.Shyster, e.TroupOfPerformers, e.SpecialTC ]},
     "TC_N": {name:"Tent City (Night)", items:[ e.Drunk, e.MerchantEncampment, e.BarbarianEncampment, e.MercenaryEncampment, e.Minstrel, e.Mugger, e.BanditGang, e.TentRevival, e.Gambler, e.Shyster, e.AleTent, sublists.TentCityDay, e.LyreguardPatrolTentCity, e.Lycanthrope, e.VampireSpawn, e.Druids, e.Goblins, e.AdventuringBand, e.WillOTheWisp, e.SpecialTC ]},
-    "T_D":{name:"Thieves' Quarter (Day)", items:[e.CityWatch, e.LocalWatchT, e.Merchant, e.Wheelwright, e.Aristocrat, e.Carriage, e.Pickpocket, e.TroupOfPerformers, e.Gambler, e.FoodVendor, e.Rake, e.Author, e.Artist, e.Herald, e.StreetUrchin, e.Debutante, e.SheriffsPatrol, e.Lovers, e.AdventuringBand]}, // TODO add e.SpecialT
-    "T_N":{name:"Thieves' Quarter (Night)", items:[e.CityWatch, e.LocalWatchT, e.Merchant, e.Wheelwright, e.Drunk, e.Carriage, e.Pickpocket, e.Bard, e.Gambler, e.NurseMary, e.Lovers, e.Dandy, e.Shadowmasks, e.BlackBrotherhoodMember, e.RedBladeInitiate, e.Debutante, e.Burglar, e.Beggar, e.AdventuringBand]}, // TODO add e.SpecialT
+    "T_D":{name:"Thieves' Quarter (Day)", items:[e.CityWatch, e.LocalWatchT, e.Merchant, e.Wheelwright, e.Aristocrat, e.Carriage, e.Pickpocket, e.TroupOfPerformers, e.Gambler, e.FoodVendor, e.Rake, e.Author, e.Artist, e.Herald, e.StreetUrchin, e.Debutante, e.SheriffsPatrol, e.Lovers, e.AdventuringBand, e.SpecialT]},
+    "T_N":{name:"Thieves' Quarter (Night)", items:[e.CityWatch, e.LocalWatchT, e.Merchant, e.Wheelwright, e.Drunk, e.Carriage, e.Pickpocket, e.Bard, e.Gambler, e.NurseMary, e.Lovers, e.Dandy, e.Shadowmasks, e.BlackBrotherhoodMember, e.RedBladeInitiate, e.Debutante, e.Burglar, e.Beggar, e.AdventuringBand, e.SpecialT]},
     "TW_D":{name:"Turlin's Well (Day)", items:[e.Merchant, e.WinePeddler, e.LocalWatchTW, e.SheriffsPatrol, e.Rake, e.AdventuringBand, e.CivicOfficial, e.Carriage, e.Dandy, e.TroupOfPerformers, e.Pickpocket, e.Guildsman, e.Wheelwright, e.Aristocrat, e.Pilgrims, e.Artist, e.Shyster, e.FoodVendor, e.TrashCollector, e.SpecialTW]},
     "TW_N":{name:"Turlin's Well (Night)", items: [e.Merchant, e.WinePeddler, e.LocalWatchTW, e.SheriffsPatrol, e.Drunk, e.AdventuringBand, e.Streetwalker, e.Dandy, e.Bard, e.Courtesan, e.Burglar, e.Laborers, e.Shadowmasks, e.Lovers, e.Gambler, e.Debutante, e.Artist, e.Carriage, e.Ghouls, e.SpecialTW]},
     "UH": {name:"Underhill", items:[e.HaflingPickpocket, e.DwarfPolitician, e.DwarfTravelers, e.HalflingBand, e.BeerVendor, e.CheeseVendor, e.LocalWatchUH, e.GameOfChance]},
