@@ -1368,7 +1368,7 @@ var e = {
     {
         name:"Mohrg",
         text:"The animated corpse of a mass murderer or similarly horrific villain, who died without atoning for their crimes. The mohrg is accompanied by !d[1d6] zombie(s) which are under its control.",
-        stats:["Mohrg"]
+        stats:["Mohrg", "Zombie"]
     },
 }
 
