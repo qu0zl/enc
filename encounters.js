@@ -100,6 +100,8 @@ var stat_blocks = {
     DenninBlackfinger:"Dennin Blackfinger (MU6): HP 20; AC 7[12]; Atk +2 dagger (1d4+2) or darts x3 (1d3); Move 12; Save 9; AL N; CL/XP 7/600;<br>Special: +2 save bonus vs. magic, spells (4/2/2).<br>Spells: 1st—charm person, magic missile x2, shield; 2nd—darkness 15 ft. radius, mirror image; 3rd—fireball x2.<br> Equipment: +2 dagger, 20 darts, wand of hold person (27 charges), ring of protection +1, spellbook.",
     AshTheClever:"Ash the Clever (Thf4): HP 11; AC 6[13]; Atk +1 short sword (1d6+1) or light crossbow (1d4+1); Move 12; Save 12; AL N; CL/XP 4/120;<br>Special: +2 on saving throws vs. devices, backstab (x2), read languages, thieving skills.<br>Thieving Skills: Climb 88%, Tasks/Traps 30%, Hear 4 in 6, Hide 25%, Silent 35%, Locks 25%.<br>Equipment: +1 leather armor, +1 short sword, light crossbow, 20 bolts, thieves’ tools.",
     DanteTheBaleful:"Dante the Baleful, Cleric of Vanitthu (Clr4): HP 21; AC 1[18]; Atk +1 warhammer (1d4+2); Move 12; Save 12; AL L; CL/XP 5/240;<br>Special: +2 save versus paralyzation and poison, spells (2/1), turn undead.<br>Spells: 1st—protection from evil, purify food and drink; 2nd—bless.<br>Equipment: plate mail, +1 shield, +1 warhammer, wand of cure light wounds (10 charges), holy symbol of Vanitthu.",
+    FelicityBigh:"Felicity Bigh, Female Vampire: HD 8; HP 44; AC 5[14]; Atk +1 short sword (1d6+1) or bite (1d10 plus level drain); Move 12 (Fly 18); Save 8; AL C; CL/XP 11/1700;<br>Special: charm gaze, drain 2 levels with hit gaseous form, immune to non-magic weapons, only killed in coffin, regenerate (3/round), shape-shift, summon rats or wolves.<br>Equipment: +1 short sword.",
+    JustinGreenwood:"Justin Greenwood (Rgr6): HP 42; AC 5[14]; Atk +1 longsword (1d8+1) or +1 longbow x2 (1d6+1); Move 12; Save 9; AL L; CL/XP 7/600;<br>Special: +6 to damage vs. giants and goblinoids, alertness, tracking.<br>Equipment: +1 leather armor, +1 long sword, +1 long- bow, 20 arrows, 2 +1, +2 vs. undead arrows, instant fortress (see Appendix C), 6 vials of holy water, 3 wooden stakes, 2d10gp in loose coins.",
     Mimic:"Mimic: HD 7; AC 6[13]; Atk smash (2d6); Move 2; Save 9; AL N; CL/XP 8/800; Special: glue, mimicry. (Monstrosities 329)",
     BlackPudding:"Black Pudding: HD 10; AC 6[13]; Atk attack (3d8); Move 6; Save 5; AL N; CL/XP 12/2000;<br>Special: acidic surface, divides when hit with lightning, immune to cold.",
     Andrigor:"Andrigor (MU12): HP 32; AC 2[17]; Atk +1 dagger (1d4+1); Move 12; Save 3; AL L; CL/XP 14/2600.<br>Special: +2 on saves vs. spells, spells (4/4/4/4/4/1).<br>Spells: 1st—charm person, read magic, shield, sleep;<br>2nd—detect evil, ESP, mirror image, phantasmal force;<br>3rd—clairvoyance, dispel magic, fly, hold person;<br>4th—charm monster, confusion, polymorph self, wizard eye;<br>5th—feeblemind, hold monster, teleport (x2);<br>6th—repulsion.<br> Equipment: bracers of defense AC 4[15], +1 dagger, wand of magic missiles (6 charges), wand of enemy detection, ring of protection +2, crystal ball with clairaudience, 1d4 random potions, 1d4 random scrolls, spellbook.",
@@ -141,7 +143,9 @@ var stat_blocks = {
     Mohrg:"Mohrg: HD 10; AC 0 [19]; Atk 1 fist (1d8) or tongue (paralysis); Move 12; Save 5; AL C; CL/XP 13/2300;<br>Special: paralyzing tongue, grabs and holds.<br>Reference <a href='http://www.d20swsrd.com/swords-and-wizardry-srd/for-the-referee/monsters/all-monsters/monster-details-k-through-n#TOC-Mohrg'>S&W SRD</a>",
     Zombie:"Zombie: HD 2; AC 8[11] or with shield 7[12]; Atk 1 weapon or strike (1d8); Move 6; Save 16; AL N; CL/XP 2/30;<br>Special: Immune to sleep and charm.",
     UnderhillWatchman:"Underhill Watchman, Male or Female Dwarf (Ftr2): HD 2; AC 4[15]; Atk warhammer (1d4+1); Move 9; Save 13; AL L; CL/XP 2/30;<br>Special: darkvision 60ft, dwarf racial abilities, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: chainmail, shield, warhammer, potion of healing.",
-    UnderhillSergeant:"Underhill Sergeant, Male or Female Dwarf (Ftr2/Thf2): HD 4; AC 7[12]; Atk short sword (1d6+1) or light crossbow (1d4+1); Move 9; Save 12; AL L; CL/XP 4/120;<br>Special: +1 to hit and damage strength bonus, backstab (x2), darkvision 60ft, dwarf racial abilities, multiple attacks (2) vs. creatures with 1 or fewer HD, thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 30%, Hear 3 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, short sword, light cross- bow, 10 bolts, 2 potions of healing, whetstone, 1d6gp, 2d6sp."
+    UnderhillSergeant:"Underhill Sergeant, Male or Female Dwarf (Ftr2/Thf2): HD 4; AC 7[12]; Atk short sword (1d6+1) or light crossbow (1d4+1); Move 9; Save 12; AL L; CL/XP 4/120;<br>Special: +1 to hit and damage strength bonus, backstab (x2), darkvision 60ft, dwarf racial abilities, multiple attacks (2) vs. creatures with 1 or fewer HD, thieving skills.<br>Thieving Skills: Climb 86%, Tasks/Traps 30%, Hear 3 in 6, Hide 20%, Silent 30%, Locks 20%.<br>Equipment: leather armor, short sword, light cross- bow, 10 bolts, 2 potions of healing, whetstone, 1d6gp, 2d6sp.",
+    Wight:"Wight: HD 3; HP 14; AC 5[14]; Atk claw (1hp plus level drain); Move 9; Save 14; AL N; CL/XP 6/400; Special: drain 1 level with hit, hit only by magic or silver weapons."
+
 };
 
 var t = {
@@ -1216,6 +1220,12 @@ var e = {
         text:"This encounter is with a wraith. The wraith is the unkind spirit of a convicted murderer now out to get revenge upon the sheriffs who caught him in the act of his crime.",
         stats:["Wraith"]
     },
+    FelicityBigh:
+    {
+        name:"Felicity Bigh",
+        text:"Felicity Bigh (CAT3, pg. 163) Vampiress, stalks the darkness. Perhaps she hunts or is hunted by her former lover Justin Greenwood (N5, pg. 202).",
+        stats:["FelicityBigh","JustinGreenwood"]
+    },
     Gondolier:
     {
         name:"Gondolier",
@@ -1369,7 +1379,7 @@ var e = {
             {min:4, max:4, name:"Jaeger (D1)", text:""},
             {min:5, max:5, name:"Duloth or associates (Appendix A)", text:""},
             {min:6, max:6, name:"Cylyria (disguised, Appendix A)", text:""},
-            {min:7, max:7, name:"Felicity Bigh (Night, CAT3)", text:""},
+            {min:7, max:7, name:"Felicity Bigh (Night, CAT3)", text:"", stats:["FelicityBigh"]},
             {min:8, max:8, name:"Evan Agrendive (East Docks, ED1)", text:""},
             {min:9, max:9, name:"Widow Waker (East Docks, ED2)", text:""},
             {min:10, max:10, name:"Eli (East Docks, ED3)", text:""},
@@ -1543,33 +1553,6 @@ var e = {
             {min:20, max:20, name:"", text:""}]
         }
     },
-    SpecialTW:{
-        name:"SpecialTW",
-        extra:{
-            total:20,
-            chances:[
-            {min:1, max:1, name:"", text:""},
-            {min:2, max:2, name:"", text:""},
-            {min:3, max:3, name:"", text:""},
-            {min:4, max:4, name:"", text:""},
-            {min:5, max:5, name:"", text:""},
-            {min:6, max:6, name:"", text:""},
-            {min:7, max:7, name:"", text:""},
-            {min:8, max:8, name:"", text:""},
-            {min:9, max:9, name:"", text:""},
-            {min:10, max:10, name:"", text:""},
-            {min:11, max:11, name:"", text:""},
-            {min:12, max:12, name:"", text:""},
-            {min:13, max:13, name:"", text:""},
-            {min:14, max:14, name:"", text:""},
-            {min:15, max:15, name:"", text:""},
-            {min:16, max:16, name:"", text:""},
-            {min:17, max:17, name:"", text:""},
-            {min:18, max:18, name:"", text:""},
-            {min:19, max:19, name:"", text:""},
-            {min:20, max:20, name:"", text:""}]
-        }
-    },
      */
     Zombie:
     {
@@ -1583,9 +1566,16 @@ var e = {
         text:"The animated corpse of a mass murderer or similarly horrific villain, who died without atoning for their crimes. The mohrg is accompanied by !d[1d6] zombie(s) which are under its control.",
         stats:["Mohrg", "Zombie"]
     },
+    Wight:
+    {
+        name:"Wight",
+        text:"A wight stalks the party.",
+        stats:["Wight"]
+    },
 }
 
 var sublists = {
+    SpecialS:{sublist:true},
     SpecialUndead:{sublist:true},
     Monsters:{sublist:true},
     TentCityDay:{sublist:true}
@@ -1604,7 +1594,7 @@ var enc = {
     "CoA_N":{name:"City of Ashes (Night)", items:[e.Mourner, e.BanditGang, e.Goblins, e.Undertaker, e.BatSwarm, e.Drunk,e.GraveRobbers, sublists.SpecialUndead]},
     "CoO":{name:"Claw of Orcus", items:[e.Cleric, e.Paladin, e.Goblins, e.BanditGang, e.Fighter, e.Mourner, e.BlackOrcs, e.Wizard, e.Gargoyle, sublists.SpecialUndead]},
     "D_D": {name:"Docks (East & West, Day)", items:[ e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.LocalBully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Riverfolk, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner, e.SpecialD]},
-    "D_N": {name:"Docks (East & West, Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.LocalBully, e.Enforcer, e.Gambler, e.Sailor, e.AdventuringBand, e.BountyHunter, e.CanalWorker, e.Shyster, e.Riverfolk, e.BanditGang, sublists.Monster, e.SpecialD]},
+    "D_N": {name:"Docks (East & West, Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.LocalBully, e.Enforcer, e.Gambler, e.Sailor, e.AdventuringBand, e.BountyHunter, e.CanalWorker, e.Shyster, e.Riverfolk, e.BanditGang, sublists.Monsters, e.SpecialD]},
     "G_D": {name:"Guild District (Day)", items:[ e.SheriffsPatrol, e.LocalWatchG, e.LyreguardPatrol, e.Guildsman, e.Laborers, e.TrashCollector, e.CivicOfficial, e.Merchant, e.ArcaneStudent, e.Wizard, e.Fighter, e.Pickpocket, e.Aristocrat, e.Paladin, e.Cleric, e.SculleryMaid, e.Pilgrims, e.Bard, e.TroupOfPerformers, e.SpecialG]},
     "G_N": {name:"Guild District (Night)", items:[ e.AdventuringBand, e.LocalWatchG, e.Drunk, e.Harlot, e.Streetwalker, e.Shadowmasks, e.Aristocrat, e.Rake, e.Guildsman, e.Dandy, e.MercenaryBand, e.ArcaneStudent, e.Wizard, e.Cleric, e.Laborers, e.RedBladeInitiate, e.CivicOfficial, e.SheriffsPatrol, e.Pickpocket, e.SpecialG ]},
     "TH_D":{name:"The Hill (Day)", items:[e.Merchant, e.LocalWatchTH, e.SculleryMaid, e.Valet, e.Guildsman, e.Dandy, e.Fighter, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.Aristocrat, e.CityWatch, e.Carriage, e.Butler, e.BodyGuard, e.Herald, e.Cleric, e.SpecialTH]},
@@ -1615,12 +1605,12 @@ var enc = {
     "M_N": {name:"Market District (Night)", items:[e.SheriffsPatrol, e.LocalWatchM, e.Streetwalker, e.Drunk, e.MercenaryBand, e.AdventuringBand, e.Mugger, e.Shyster, e.Gambler, e.Shadowmasks, e.RedBladeInitiate, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Harlot, e.Pickpocket, e.SpecialMD ]},
     "Monsters":{name:"Monsters", items:[e.Ghouls, e.Zombie, e.Mohrg, e.Skeletons, e.Wraith, e.Spectre, e.Wraith, e.Ghost, e.Shadow, e.Ghasts, e.Otyugh, e.Mimic, e.Elemental, e.Familiar]},
     "NW_D":{name:"North Wall (Day)", items:[e.Merchant, e.FoodVendor, e.WallWatcher, e.Caravan, e.Shyster, e.TrashCollector, e.Wheelwright, e.Pickpocket, e.Rake, e.Dandy, e.SculleryMaid, e.Fighter, e.ArcaneStudent, e.Artist, e.SculleryMaid, e.CivicOfficial, e.Pilgrims, e.Laborers, e.CivicOfficial, e.SpecialNW]},
-    "NW_N":{name:"North Wall (Night)", items:[e.Merchant, e.WinePeddler, e.WallWatcher, e.MerchantEncampment, e.Drunk, e.Harlot, e.Wheelwright, e.Burglar, e.Rake, e.Dandy, e.Gambler, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Streetwalker, sublists.Monster, e.SpecialNW ]},
+    "NW_N":{name:"North Wall (Night)", items:[e.Merchant, e.WinePeddler, e.WallWatcher, e.MerchantEncampment, e.Drunk, e.Harlot, e.Wheelwright, e.Burglar, e.Rake, e.Dandy, e.Gambler, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Streetwalker, sublists.Monsters, e.SpecialNW ]},
     "OT_D": {name:"Old Temple District (Day)", items:[ e.LyreguardPatrol, e.SheriffsPatrol, e.Cleric, e.Pilgrims,e.Paladin, e.WinePeddler, e.FoodVendor, e.Charlatan, e.Beggar, e.Aristocrat, e.Pickpocket, e.Heretic, e.TroupOfPerformers, e.CivicOfficial, e.TempleGuard, e.TrashCollector, e.Merchant, e.AdventuringBandWithDead, e.Laborers, e.SpecialOT ]},
     "OT_N": {name:"Old Temple District (Night)", items:[e.SheriffsPatrol, e.Cleric, e.Pilgrims, e.Paladin, e.Beggar, e.Drunk, e.Shyster, e.Gambler, e.Aristocrat, e.TempleGuard, e.CivicOfficial, e.Harlot, e.Streetwalker, e.Heretic, e.Pickpocket, e.WinePeddler, e.FoodVendor, e.Shadowmasks, e.AdventuringBandWithDead, e.SpecialOT ]},
     "O_D":{name:"Outer Quarter (Day)", items:[e.Beggar, e.Merchant, e.Caravan, e.MercenaryBand, e.LocalWatchO, e.SheriffsPatrol, e.Barbarian, e.Pickpocket, e.StreetUrchin, e.MercenaryBand, e.Wizard, e.ArcaneStudent, e.WallWatcher, e.Cleric, e.FoodVendor, e.CivicOfficial, e.TrashCollector, e.TroupOfPerformers, e.WinePeddler]}, // TODO add e.SpecialO
     "O_N":{name:"Outer Quarter (Night)", items:[e.Beggar, e.Drunk, e.Harlot, e.Streetwalker, e.LocalWatchO, e.Pickpocket, e.Burglar, e.WallWatcher, e.StreetUrchin, e.MercenaryBand, e.Ghouls, e.Shyster, e.Fighter, e.Barbarian, e.CivicOfficial, e.Gambler, e.Wheelwright, e.Shadowmasks, e.BountyHunter]}, // TODO add e.SpecialO
-    "Sewers":{name:"Sewers", items:[e.BanditGang, e.Beggar, e.SewerCleaner, e.Goblins, e.Ooze, e.Blockage, e.GiantRats, e.Shadowmasks, e.AdventuringBand, e.Ratmen, e.Kobolds, e.Lycanthrope, e.VampireSpawn, e.Ghouls, e.Skeletons, e.BatSwarm, e.Centipede, e.Spider, e.Choker ]}, // TODO add e.SpecialS
+    "Sewers":{name:"Sewers", items:[e.BanditGang, e.Beggar, e.SewerCleaner, e.Goblins, e.Ooze, e.Blockage, e.GiantRats, e.Shadowmasks, e.AdventuringBand, e.Ratmen, e.Kobolds, e.Lycanthrope, e.VampireSpawn, e.Ghouls, e.Skeletons, e.BatSwarm, e.Centipede, e.Spider/* No SRD stats for, e.Choker */, sublists.SpecialS]},
     "SR_D":{name:"Stable Row (Day)", items:[e.Caravan, e.MercenaryBand, e.Merchant, e.FoodVendor, e.WinePeddler, e.HorseTrader, e.HorseRace, e.Farseeker, e.Herdsman, e.FurTrader, e.FurTrader, e.Cleric, e.Pickpocket, e.Farmer, e.Longhunter, e.Pilgrims, e.AdventuringBand, e.Charlatan, e.TroupOfPerformers]}, // TODO add e.SpecialSR
     "SR_N":{name:"Stable Row (Night)", items:[e.MerchantEncampment, e.MercenaryEncampment, e.FoodVendor, e.Farmer, e.Herdsman, e.TentRevival, e.Pickpocket, e.RefugeeEncampment, e.AdventuringBand, e.Shyster, e.AleTent, e.BanditGang, e.LyreguardPatrol, e.VampireSpawn, e.Druids, e.Goblins, e.AdventuringBand, sublists.Monster]}, // TODO add e.SpecialSR
     "TC_D": {name:"Tent City (Day)", items:[ e.LocalWatchTC, e.Druids, e.Farseeker, e.HorseTrader, e.HorseRace, e.WinePeddler, e.LyreguardPatrolTentCity, e.Caravan, e.CentaurBand, e.FurTrader, e.WanderingMonk, e.Halforc, e.Pickpocket, e.MercenaryBand, e.Longhunter, e.Pilgrims, e.FoodVendor, e.Charlatan, e.Shyster, e.TroupOfPerformers, e.SpecialTC ]},
@@ -1631,9 +1621,11 @@ var enc = {
     "TW_N":{name:"Turlin's Well (Night)", items: [e.Merchant, e.WinePeddler, e.LocalWatchTW, e.SheriffsPatrol, e.Drunk, e.AdventuringBand, e.Streetwalker, e.Dandy, e.Bard, e.Courtesan, e.Burglar, e.Laborers, e.Shadowmasks, e.Lovers, e.Gambler, e.Debutante, e.Artist, e.Carriage, e.Ghouls, e.SpecialTW]},
     "UH": {name:"Underhill", items:[e.HaflingPickpocket, e.DwarfPolitician, e.DwarfTravelers, e.HalflingBand, e.BeerVendor, e.CheeseVendor, e.LocalWatchUH, e.GameOfChance]},
     "SpecialUndead":{hide:true, name:"Special Undead", items:[e.Ghouls, e.Zombie, e.Mohrg, e.Skeletons, e.Wraith, e.Spectre, e.Wraith, e.Ghost, e.Shadow, e.Ghasts]},
+    "SpecialS":{hide:true, name:"SpecialS", items:[e.Burglar, e.BanditGang, e.Shadowmasks, e.RedBladeInitiate, e.BountyHunter, e.Wheelwright, e.Ghost, e.Wight, e.Wraith, e.FelicityBigh]},
 };
 
 // now that the encounter table exists we can setup the rest of the sublist references
 sublists.SpecialUndead.list = enc.SpecialUndead;
+sublists.SpecialS.list = enc.SpecialS;
 sublists.Monsters.list = enc.Monsters;
 sublists.TentCityDay.list = enc.TC_D;
