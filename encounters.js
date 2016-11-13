@@ -1303,6 +1303,164 @@ var e = {
             {min:20, max:20, name:"Imbo the Undying (Appendix A)", text:""}]
         }
     },
+    SpecialG:{
+        name:"SpecialG",
+        extra:{
+            total:40,
+            chances:[
+            {min:1, max:2, name:"Culver Ringsmith (G1)", text:""},
+            {min:3, max:4, name:"Thayco Manslayer and Booginz (G2)", text:""},
+            {min:5, max:6, name:"Wareth Drumstrike (G3)", text:""},
+            {min:7, max:8, name:"Eltern (G4)", text:""},
+            {min:9, max:10, name:"Guillome (G5)", text:""},
+            {min:11, max:12, name:"Milago (G6)", text:""},
+            {min:13, max:14, name:"Darius Dougle (G7)", text:""},
+            {min:15, max:16, name:"Amaryllis Silverfeet (G8)", text:""},
+            {min:17, max:18, name:"Fawar/Shelen Tshaziq (G9)", text:""},
+            {min:19, max:20, name:"Duloth and Zalatha (Appendix A)", text:""},
+            {min:21, max:22, name:"Borm Morgarm (G11)", text:""},
+            {min:23, max:24, name:"Livit Lockhardt (G12)", text:""},
+            {min:25, max:26, name:"Guildmaster Barik (G13)", text:""},
+            {min:27, max:28, name:"Tanna Evasho (G14)", text:""},
+            {min:29, max:30, name:"Madam Toulon (G18)", text:""},
+            {min:31, max:32, name:"Brelliar (Appendix A)", text:""},
+            {min:33, max:34, name:"Velior (M17)", text:""},
+            {min:35, max:36, name:"Andrigor (Appendix A)", text:""},
+            {min:37, max:37, name:"Cylyria (in disguise, Appendix A)", text:""},
+            {min:38, max:38, name:"Cylyria (not in disguise, Appendix A)", text:""},
+            {min:39, max:40, name:"Manisool (Appendix A)", text:""}]
+        }
+    },
+    SpecialOT:{
+        name:"SpecialOT",
+        extra:{
+            total:20,
+            chances:[
+            {min:1, max:1, name:"Elissa Perinor (OT1)", text:""},
+            {min:2, max:2, name:"Bofred the Just (OT2)", text:""},
+            {min:3, max:3, name:"Danya Darkfeather (OT4)", text:""},
+            {min:4, max:4, name:"Ivillivil, Haldor, Purrann, or Thord (OT5)", text:""},
+            {min:5, max:5, name:"Ginivarin Krandolve (OT6)", text:""},
+            {min:6, max:6, name:"Fanr Flameson (OT7)", text:""},
+            {min:7, max:7, name:"Torin Heweth (OT8)", text:""},
+            {min:8, max:8, name:"Sister Jenny or Mr. Frown (OT9)", text:""},
+            {min:9, max:9, name:"Mistress Gantry (OT10)", text:""},
+            {min:10, max:10, name:"Odof Lionsmane, or Sanya (OT11)", text:""},
+            {min:11, max:11, name:"Bolo Histan (OT12)", text:""},
+            {min:12, max:12, name:"Gilant Narvess (OT13)", text:""},
+            {min:13, max:13, name:"Drasil Narben (OT14)", text:""},
+            {min:14, max:14, name:"Sventz Borsi (OT15)", text:""},
+            {min:15, max:15, name:"Gruden Greybeard (OT16)", text:""},
+            {min:16, max:16, name:"Hadro (OT17)", text:""},
+            {min:17, max:17, name:"Imril (Appendix A)", text:""},
+            {min:18, max:18, name:"Manisool (Appendix A)", text:""},
+            {min:19, max:19, name:"Watenga (TC2)", text:""},
+            {min:20, max:20, name:"Janette Holycraft (TW27)", text:""}]
+        }
+    },
+    SpecialD:{
+        name:"SpecialD",
+        extra:{
+            total:12,
+            chances:[
+            {min:1, max:1, name:"Chase (West Docks, D3)", text:""},
+            {min:2, max:2, name:"Frenrick (West Docks, D4)", text:""},
+            {min:3, max:3, name:"Aicha (West Docks, D2)", text:""},
+            {min:4, max:4, name:"Jaeger (D1)", text:""},
+            {min:5, max:5, name:"Duloth or associates (Appendix A)", text:""},
+            {min:6, max:6, name:"Cylyria (disguised, Appendix A)", text:""},
+            {min:7, max:7, name:"Felicity Bigh (Night, CAT3)", text:""},
+            {min:8, max:8, name:"Evan Agrendive (East Docks, ED1)", text:""},
+            {min:9, max:9, name:"Widow Waker (East Docks, ED2)", text:""},
+            {min:10, max:10, name:"Eli (East Docks, ED3)", text:""},
+            {min:11, max:11, name:"Lasker (Night, M9)", text:""},
+            {min:12, max:12, name:"Rolnüt Half-Axe, looking for Tvorji (see The Hidden Huscarl, The Sea Bear)", text:""}
+            ]
+        }
+    },
+    SpecialC:{
+        name:"SpecialC",
+        extra:{
+            total:20,
+            chances:[
+            {min:1, max:1, name:"Lasker (Night, M9)", text:""},
+            {min:2, max:2, name:"Lady Garga (C1)", text:""},
+            {min:3, max:3, name:"Tuvio and guards (C2)", text:""},
+            {min:4, max:4, name:"Left Eye Lanny (C4)", text:""},
+            {min:5, max:5, name:"Scolich (C5)", text:""},
+            {min:6, max:6, name:"Asa (C6)", text:""},
+            {min:7, max:7, name:"Rhora (C7)", text:""},
+            {min:8, max:8, name:"Valequinn (C8)", text:""},
+            {min:9, max:9, name:"Brin Zweischer (C9)", text:""},
+            {min:10, max:10, name:"Filthy Reebo (C10)", text:""},
+            {min:11, max:11, name:"Manky Mary (C11)", text:""},
+            {min:12, max:12, name:"Oswold (C12)", text:""},
+            {min:13, max:13, name:"Rolnüt Half-Axe (see The Hidden Huscarl, The Sea Bear)", text:""},
+            {min:14, max:14, name:"Lucius Gromp (C13)", text:""},
+            {min:15, max:15, name:"Piter Hagglesthorpe IV (BC3)", text:""},
+            {min:16, max:16, name:"F'arin Du'n (Appendix A)", text:""},
+            {min:17, max:17, name:"Noria Verilath (Chapter 3, The Red Blades)", text:""},
+            {min:18, max:18, name:"Cylyria (disguised, Appendix A)", text:""},
+            {min:19, max:19, name:"Manisool (Appendix A)", text:""},
+            {min:20, max:20, name:"Tovan (Chapter 25, the Claw of Orcus)", text:""}]
+        }
+    },
+    SpecialTH:{
+        name:"SpecialTH",
+        extra:{
+            total:12,
+            chances:[
+            {min:1, max:1, name:"Duloth or associates (Appendix A)", text:""},
+            {min:2, max:2, name:"Imril (Appendix A)", text:""},
+            {min:3, max:3, name:"Cylyria (Appendix A)", text:""},
+            {min:4, max:4, name:"Borm Morgarm (G11)", text:""},
+            {min:5, max:5, name:"Petyr Nordin (H10)", text:""},
+            {min:6, max:6, name:"Lady Helon (H7)", text:""},
+            {min:7, max:7, name:"Evan or Naces Corseen (H4)", text:""},
+            {min:8, max:8, name:"Lisial Elmwish (H5)", text:""},
+            {min:9, max:9, name:"Whitus Platonus entourage (H6)", text:""},
+            {min:10, max:10, name:"Wynstyn or Meda Gallam (H2)", text:""},
+            {min:11, max:11, name:"Brelliar (Appendix A)", text:""},
+            {min:12, max:12, name:"Vermund Durnian (H3)", text:""}
+            ]
+        }
+    },
+    SpecialNW:{
+        name:"SpecialNW",
+        extra:{
+            total:8,
+            chances:[
+            {min:1, max:1, name:"Manisool (Appendix A)", text:""},
+            {min:2, max:2, name:"Samos Kenthi (N2)", text:""},
+            {min:3, max:3, name:"Duloth and associates (Appendix A)", text:""},
+            {min:4, max:4, name:"Cylyria and associates (in disguise, Appendix A)", text:""},
+            {min:5, max:5, name:"Ruvuldo (N3)", text:""},
+            {min:6, max:6, name:"Chango (N4)", text:""},
+            {min:7, max:7, name:"Justin Greenwood (N5)", text:""},
+            {min:8, max:8, name:"Malo Enzeger (N7)", text:""}
+            ]
+        }
+    },
+    SpecialK:{
+        name:"SpecialK",
+        extra:{
+            total:12,
+            chances:[
+            {min:1, max:1, name:"Garrid Garzag (K7)", text:""},
+            {min:2, max:2, name:"Pthan Traklos (K7)", text:""},
+            {min:3, max:3, name:"Chu'aine (K6)", text:""},
+            {min:4, max:4, name:"Cylyria (Appendix A)", text:""},
+            {min:5, max:5, name:"Imril (Appendix A)", text:""},
+            {min:6, max:6, name:"Bofred (Appendix A)", text:""},
+            {min:7, max:7, name:"Duloth (Appendix A)", text:""},
+            {min:8, max:8, name:"Topfer Brighteye (K5)", text:""},
+            {min:9, max:9, name:"Sergeant Major Kotchko (K5)", text:""},
+            {min:10, max:10, name:"Company of the Silver Spear (M8)", text:""},
+            {min:11, max:11, name:"The Accursed (BC6)", text:""},
+            {min:12, max:12, name:"Tork (T5)", text:""}
+            ]
+        }
+    },
     /*
     SpecialTW:{
         name:"SpecialTW",
@@ -1357,7 +1515,62 @@ var e = {
             {min:19, max:19, name:"", text:""},
             {min:20, max:20, name:"", text:""}]
         }
-    },*/
+    },
+    SpecialTW:{
+        name:"SpecialTW",
+        extra:{
+            total:20,
+            chances:[
+            {min:1, max:1, name:"", text:""},
+            {min:2, max:2, name:"", text:""},
+            {min:3, max:3, name:"", text:""},
+            {min:4, max:4, name:"", text:""},
+            {min:5, max:5, name:"", text:""},
+            {min:6, max:6, name:"", text:""},
+            {min:7, max:7, name:"", text:""},
+            {min:8, max:8, name:"", text:""},
+            {min:9, max:9, name:"", text:""},
+            {min:10, max:10, name:"", text:""},
+            {min:11, max:11, name:"", text:""},
+            {min:12, max:12, name:"", text:""},
+            {min:13, max:13, name:"", text:""},
+            {min:14, max:14, name:"", text:""},
+            {min:15, max:15, name:"", text:""},
+            {min:16, max:16, name:"", text:""},
+            {min:17, max:17, name:"", text:""},
+            {min:18, max:18, name:"", text:""},
+            {min:19, max:19, name:"", text:""},
+            {min:20, max:20, name:"", text:""}]
+        }
+    },
+    SpecialTW:{
+        name:"SpecialTW",
+        extra:{
+            total:20,
+            chances:[
+            {min:1, max:1, name:"", text:""},
+            {min:2, max:2, name:"", text:""},
+            {min:3, max:3, name:"", text:""},
+            {min:4, max:4, name:"", text:""},
+            {min:5, max:5, name:"", text:""},
+            {min:6, max:6, name:"", text:""},
+            {min:7, max:7, name:"", text:""},
+            {min:8, max:8, name:"", text:""},
+            {min:9, max:9, name:"", text:""},
+            {min:10, max:10, name:"", text:""},
+            {min:11, max:11, name:"", text:""},
+            {min:12, max:12, name:"", text:""},
+            {min:13, max:13, name:"", text:""},
+            {min:14, max:14, name:"", text:""},
+            {min:15, max:15, name:"", text:""},
+            {min:16, max:16, name:"", text:""},
+            {min:17, max:17, name:"", text:""},
+            {min:18, max:18, name:"", text:""},
+            {min:19, max:19, name:"", text:""},
+            {min:20, max:20, name:"", text:""}]
+        }
+    },
+     */
     Zombie:
     {
         name:"Zombies",
@@ -1385,26 +1598,26 @@ var enc = {
     "BM":{name:"Black Market", items:[ e.Spellcaster, e.BlackMarketWheelwrightThugBand, e.BlackMarketShadowmaskBand, e.Slavers, e.RedBladeInitiate, e.TemporaryBlackMarketStall, e.TemporaryBlackMarketStall, e.FoodVendorBlackMarket, e.Gambler, e.BlackMarketHarlots, e.BlackMarketPickpocket, e.WinePeddler]},
     "B_D":{name:"Bridge District (Day)", items:[e.LocalWatchD, e.Riverfolk, e.WinePeddler, e.Merchant, e.Cleric, e.Pilgrims, e.Wheelwright, e.Paladin, e.TempleGuard, e.Laborers, e.CivicOfficial, e.Lawyer, e.Pickpocket, e.FoodVendor, e.SculleryMaid, e.Artist, e.TroupOfPerformers, e.PrisonerWagon, e.Aristocrat]}, // TODO add e.SpecialB
     "B_N":{name:"Bridge District (Night)", items:[e.CityWatch, e.Riverfolk, e.Sailor, e.Harlot, e.Gambler, e.Pilgrims, e.Wheelwright, e.Cleric, e.TempleGuard, e.CivicOfficial, e.Dandy, e.AdventuringBand, e.Shadowmasks, e.Streetwalker, e.Burglar, e.Author, e.Shadowmasks, e.Carriage, e.Courtesan]}, // TODO add e.SpecialB
-    "C_D": {name:"Canal District (Day)", items: [e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.LocalBully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Riverfolk, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner]}, // TODO add e.SpecialC
-    "C_N": {name:"Canal District (Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.LocalBully, e.Enforcer, e.Gambler, e.NurseMary, e.Riverfolk, e.BountyHunter, e.PipersGuild, e.Skeletons, e.RedBladeInitiate, e.BanditGang, e.StreetUrchin]}, // TODO add e.SpecialC
+    "C_D": {name:"Canal District (Day)", items: [e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.LocalBully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Riverfolk, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner, e.SpecialC ]},
+    "C_N": {name:"Canal District (Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.LocalBully, e.Enforcer, e.Gambler, e.NurseMary, e.Riverfolk, e.BountyHunter, e.PipersGuild, e.Skeletons, e.RedBladeInitiate, e.BanditGang, e.StreetUrchin, e.SpecialC ]},
     "CoA_D":{name:"City of Ashes (Day)", items:[e.Mourner, e.Cleric, e.BanditGang, e.Undertaker, e.Bard, e.Charlatan, e.Shyster, e.Funeral, sublists.SpecialUndead]},
     "CoA_N":{name:"City of Ashes (Night)", items:[e.Mourner, e.BanditGang, e.Goblins, e.Undertaker, e.BatSwarm, e.Drunk,e.GraveRobbers, sublists.SpecialUndead]},
     "CoO":{name:"Claw of Orcus", items:[e.Cleric, e.Paladin, e.Goblins, e.BanditGang, e.Fighter, e.Mourner, e.BlackOrcs, e.Wizard, e.Gargoyle, sublists.SpecialUndead]},
-    "D_D": {name:"Docks (East & West, Day)", items:[ e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.LocalBully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Riverfolk, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner ]}, // TODO add e.SpecialD
-    "D_N": {name:"Docks (East & West, Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.LocalBully, e.Enforcer, e.Gambler, e.Sailor, e.AdventuringBand, e.BountyHunter, e.CanalWorker, e.Shyster, e.Riverfolk, e.BanditGang, sublists.Monster ]}, // TODO add_e.SpecialD
-    "G_D": {name:"Guild District (Day)", items:[ e.SheriffsPatrol, e.LocalWatchG, e.LyreguardPatrol, e.Guildsman, e.Laborers, e.TrashCollector, e.CivicOfficial, e.Merchant, e.ArcaneStudent, e.Wizard, e.Fighter, e.Pickpocket, e.Aristocrat, e.Paladin, e.Cleric, e.SculleryMaid, e.Pilgrims, e.Bard, e.TroupOfPerformers ]}, // TODO add e.SpecialG
-    "G_N": {name:"Guild District (Night)", items:[ e.AdventuringBand, e.LocalWatchG, e.Drunk, e.Harlot, e.Streetwalker, e.Shadowmasks, e.Aristocrat, e.Rake, e.Guildsman, e.Dandy, e.MercenaryBand, e.ArcaneStudent, e.Wizard, e.Cleric, e.Laborers, e.RedBladeInitiate, e.CivicOfficial, e.SheriffsPatrol, e.Pickpocket ]}, // TODO add e.SpecialG
-    "TH_D":{name:"The Hill (Day)", items:[e.Merchant, e.LocalWatchTH, e.SculleryMaid, e.Valet, e.Guildsman, e.Dandy, e.Fighter, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.Aristocrat, e.CityWatch, e.Carriage, e.Butler, e.BodyGuard, e.Herald, e.Cleric ]}, // TODO add e.SpecialTH
-    "TH_N": {name:"The Hill (Night)", items:[e.LocalWatchTH, e.Aristocrat, e.Valet, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.CivicOfficial, e.Carriage, e.Butler, e.Herald, e.Dandy, e.Drunk, e.Bard, e.Debutante, e.Cleric, e.Burglar, e.Lovers ]}, // TODO add e.SpecialTH
-    "K_D":{name:"The Keep (Day)",items:[e.CityWatch, e.LyreguardPatrol, e.FoodVendor, e.Merchant, e.Lawyer, e.CivicOfficial, e.Execution, e.Aristocrat, e.SheriffsPatrol, e.PrisonerWagon, e.Guildsman, e.Carriage, e.Herald, e.Paladin, e.Cleric, e.Wizard, e.ArcaneStudent, e.Fighter, e.Scribe ]}, // TODO add.e.SpecialK
-    "K_N":{name:"The Keep (Night)",items:[e.CityWatch, e.FoodVendor, e.Merchant, e.Lawyer, e.SheriffsPatrol, e.PrisonerWagon, e.CivicOfficial, e.Aristocrat, e.Guildsman, e.Carriage, e.Herald, e.Drunk, e.Beggar, e.Cleric, e.Scribe, e.Paladin, e.BountyHunter, e.MercenaryBand, e.Wizard ]}, // TODO add.e.SpecialK
+    "D_D": {name:"Docks (East & West, Day)", items:[ e.SheriffsPatrol, e.Fisherman, e.Gondolier, e.Pickpocket, e.LocalBully, e.Shadowmasks, e.Beggar, e.Harlot, e.Laborers, e.Gambler, e.Riverfolk, e.Merchant, e.WinePeddler, e.FoodVendor, e.Enforcer, e.SculleryMaid, e.Sailor, e.AdventuringBand, e.SewerCleaner, e.SpecialD]},
+    "D_N": {name:"Docks (East & West, Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.LocalBully, e.Enforcer, e.Gambler, e.Sailor, e.AdventuringBand, e.BountyHunter, e.CanalWorker, e.Shyster, e.Riverfolk, e.BanditGang, sublists.Monster, e.SpecialD]},
+    "G_D": {name:"Guild District (Day)", items:[ e.SheriffsPatrol, e.LocalWatchG, e.LyreguardPatrol, e.Guildsman, e.Laborers, e.TrashCollector, e.CivicOfficial, e.Merchant, e.ArcaneStudent, e.Wizard, e.Fighter, e.Pickpocket, e.Aristocrat, e.Paladin, e.Cleric, e.SculleryMaid, e.Pilgrims, e.Bard, e.TroupOfPerformers, e.SpecialG]},
+    "G_N": {name:"Guild District (Night)", items:[ e.AdventuringBand, e.LocalWatchG, e.Drunk, e.Harlot, e.Streetwalker, e.Shadowmasks, e.Aristocrat, e.Rake, e.Guildsman, e.Dandy, e.MercenaryBand, e.ArcaneStudent, e.Wizard, e.Cleric, e.Laborers, e.RedBladeInitiate, e.CivicOfficial, e.SheriffsPatrol, e.Pickpocket, e.SpecialG ]},
+    "TH_D":{name:"The Hill (Day)", items:[e.Merchant, e.LocalWatchTH, e.SculleryMaid, e.Valet, e.Guildsman, e.Dandy, e.Fighter, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.Aristocrat, e.CityWatch, e.Carriage, e.Butler, e.BodyGuard, e.Herald, e.Cleric, e.SpecialTH]},
+    "TH_N": {name:"The Hill (Night)", items:[e.LocalWatchTH, e.Aristocrat, e.Valet, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.CivicOfficial, e.Carriage, e.Butler, e.Herald, e.Dandy, e.Drunk, e.Bard, e.Debutante, e.Cleric, e.Burglar, e.Lovers, e.SpecialTH]},
+    "K_D":{name:"The Keep (Day)",items:[e.CityWatch, e.LyreguardPatrol, e.FoodVendor, e.Merchant, e.Lawyer, e.CivicOfficial, e.Execution, e.Aristocrat, e.SheriffsPatrol, e.PrisonerWagon, e.Guildsman, e.Carriage, e.Herald, e.Paladin, e.Cleric, e.Wizard, e.ArcaneStudent, e.Fighter, e.Scribe, e.SpecialK]},
+    "K_N":{name:"The Keep (Night)",items:[e.CityWatch, e.FoodVendor, e.Merchant, e.Lawyer, e.SheriffsPatrol, e.PrisonerWagon, e.CivicOfficial, e.Aristocrat, e.Guildsman, e.Carriage, e.Herald, e.Drunk, e.Beggar, e.Cleric, e.Scribe, e.Paladin, e.BountyHunter, e.MercenaryBand, e.Wizard, e.SpecialK]},
     "M_D": {name:"Market District (Day)", items:[ e.SheriffsPatrol, e.WallWatcher, e.LyreguardPatrol, e.LocalWatchM, e.WanderingMonk, e.FoodVendor, e.Grocer, e.WinePeddler, e.Pickpocket, e.TroupOfPerformers, e.Paladin, e.Fighter, e.ArcaneStudent, e.Merchant, e.SculleryMaid, e.CivicOfficial, e.Pilgrims, e.Laborers, e.TrashCollector, e.SpecialMD ]},
     "M_N": {name:"Market District (Night)", items:[e.SheriffsPatrol, e.LocalWatchM, e.Streetwalker, e.Drunk, e.MercenaryBand, e.AdventuringBand, e.Mugger, e.Shyster, e.Gambler, e.Shadowmasks, e.RedBladeInitiate, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Harlot, e.Pickpocket, e.SpecialMD ]},
     "Monsters":{name:"Monsters", items:[e.Ghouls, e.Zombie, e.Mohrg, e.Skeletons, e.Wraith, e.Spectre, e.Wraith, e.Ghost, e.Shadow, e.Ghasts, e.Otyugh, e.Mimic, e.Elemental, e.Familiar]},
-    "NW_D":{name:"North Wall (Day)", items:[e.Merchant, e.FoodVendor, e.WallWatcher, e.Caravan, e.Shyster, e.TrashCollector, e.Wheelwright, e.Pickpocket, e.Rake, e.Dandy, e.SculleryMaid, e.Fighter, e.ArcaneStudent, e.Artist, e.SculleryMaid, e.CivicOfficial, e.Pilgrims, e.Laborers, e.CivicOfficial ]}, // TODO add e.SpecialNW
-    "NW_N":{name:"North Wall (Night)", items:[e.Merchant, e.WinePeddler, e.WallWatcher, e.MerchantEncampment, e.Drunk, e.Harlot, e.Wheelwright, e.Burglar, e.Rake, e.Dandy, e.Gambler, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Streetwalker, sublists.Monster]}, // TODO add e.SpecialNW
-    "OT_D": {name:"Old Temple District (Day)", items:[ e.LyreguardPatrol, e.SheriffsPatrol, e.Cleric, e.Pilgrims,e.Paladin, e.WinePeddler, e.FoodVendor, e.Charlatan, e.Beggar, e.Aristocrat, e.Pickpocket, e.Heretic, e.TroupOfPerformers, e.CivicOfficial, e.TempleGuard, e.TrashCollector, e.Merchant, e.AdventuringBandWithDead, e.Laborers ]}, // TODO add e.SpecialTG
-    "OT_N": {name:"Old Temple District (Night)", items:[e.SheriffsPatrol, e.Cleric, e.Pilgrims, e.Paladin, e.Beggar, e.Drunk, e.Shyster, e.Gambler, e.Aristocrat, e.TempleGuard, e.CivicOfficial, e.Harlot, e.Streetwalker, e.Heretic, e.Pickpocket, e.WinePeddler, e.FoodVendor, e.Shadowmasks, e.AdventuringBandWithDead ]}, // TODO add e.SpecialTG
+    "NW_D":{name:"North Wall (Day)", items:[e.Merchant, e.FoodVendor, e.WallWatcher, e.Caravan, e.Shyster, e.TrashCollector, e.Wheelwright, e.Pickpocket, e.Rake, e.Dandy, e.SculleryMaid, e.Fighter, e.ArcaneStudent, e.Artist, e.SculleryMaid, e.CivicOfficial, e.Pilgrims, e.Laborers, e.CivicOfficial, e.SpecialNW]},
+    "NW_N":{name:"North Wall (Night)", items:[e.Merchant, e.WinePeddler, e.WallWatcher, e.MerchantEncampment, e.Drunk, e.Harlot, e.Wheelwright, e.Burglar, e.Rake, e.Dandy, e.Gambler, e.Bard, e.Wizard, e.Aristocrat, e.LocalBully, e.CivicOfficial, e.Beggar, e.Streetwalker, sublists.Monster, e.SpecialNW ]},
+    "OT_D": {name:"Old Temple District (Day)", items:[ e.LyreguardPatrol, e.SheriffsPatrol, e.Cleric, e.Pilgrims,e.Paladin, e.WinePeddler, e.FoodVendor, e.Charlatan, e.Beggar, e.Aristocrat, e.Pickpocket, e.Heretic, e.TroupOfPerformers, e.CivicOfficial, e.TempleGuard, e.TrashCollector, e.Merchant, e.AdventuringBandWithDead, e.Laborers, e.SpecialOT ]},
+    "OT_N": {name:"Old Temple District (Night)", items:[e.SheriffsPatrol, e.Cleric, e.Pilgrims, e.Paladin, e.Beggar, e.Drunk, e.Shyster, e.Gambler, e.Aristocrat, e.TempleGuard, e.CivicOfficial, e.Harlot, e.Streetwalker, e.Heretic, e.Pickpocket, e.WinePeddler, e.FoodVendor, e.Shadowmasks, e.AdventuringBandWithDead, e.SpecialOT ]},
     "O_D":{name:"Outer Quarter (Day)", items:[e.Beggar, e.Merchant, e.Caravan, e.MercenaryBand, e.LocalWatchO, e.SheriffsPatrol, e.Barbarian, e.Pickpocket, e.StreetUrchin, e.MercenaryBand, e.Wizard, e.ArcaneStudent, e.WallWatcher, e.Cleric, e.FoodVendor, e.CivicOfficial, e.TrashCollector, e.TroupOfPerformers, e.WinePeddler]}, // TODO add e.SpecialO
     "O_N":{name:"Outer Quarter (Night)", items:[e.Beggar, e.Drunk, e.Harlot, e.Streetwalker, e.LocalWatchO, e.Pickpocket, e.Burglar, e.WallWatcher, e.StreetUrchin, e.MercenaryBand, e.Ghouls, e.Shyster, e.Fighter, e.Barbarian, e.CivicOfficial, e.Gambler, e.Wheelwright, e.Shadowmasks, e.BountyHunter]}, // TODO add e.SpecialO
     "Sewers":{name:"Sewers", items:[e.BanditGang, e.Beggar, e.SewerCleaner, e.Goblins, e.Ooze, e.Blockage, e.GiantRats, e.Shadowmasks, e.AdventuringBand, e.Ratmen, e.Kobolds, e.Lycanthrope, e.VampireSpawn, e.Ghouls, e.Skeletons, e.BatSwarm, e.Centipede, e.Spider, e.Choker ]}, // TODO add e.SpecialS
