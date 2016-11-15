@@ -1640,7 +1640,7 @@ var sublists = {
 }
 
 var enc = {
-    "All": { name:"All", items:[]},
+    "All": {hide:true, name:"All", items:[]},
     "BC_D":{name:"Bard's College (Day)",items:[e.CityWatch, e.LocalWatchBC, e.Merchant, e.TroupOfPerformers, e.Pickpocket, e.Rake, e.Dandy, e.Author, e.Artist, e.Carriage, e.Debutante, e.Bard, e.Gambler, e.FoodVendor, e.CivicOfficial, e.WinePeddler, e.Aristocrat, e.Scribe, e.Sage, e.SpecialBC ]},
     "BC_N":{name:"Bard's College (Night)",items:[e.TroupOfPerformers, e.LocalWatchBC, e.WinePeddler, e.CityWatch, e.FoodVendor, e.Rake, e.Dandy, e.Author, e.Shyster, e.Gambler, e.Pickpocket, e.Shadowmasks, e.CivicOfficial, e.Drunk, e.Carriage, e.Burglar, e.Bard, e.Streetwalker, e.Courtesan, e.SpecialBC ]},
     "BM":{name:"Black Market", items:[ e.Spellcaster, e.BlackMarketWheelwrightThugBand, e.BlackMarketShadowmaskBand, e.Slavers, e.RedBladeInitiate, e.TemporaryBlackMarketStall, e.TemporaryBlackMarketStall, e.FoodVendorBlackMarket, e.Gambler, e.BlackMarketHarlots, e.BlackMarketPickpocket, e.WinePeddler]},
