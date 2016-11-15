@@ -193,10 +193,10 @@ function onReady()
     // create enc.all list that includes all encounters
 
     var buttons = $('#button_list');
-    for (var key in e)
-        enc.All.items.push(e[key]);
-        for (var key in enc) {
-    if (enc[key].hide != true)
+    /*for (var key in e) // add all encounters to an 'All' list
+        enc.All.items.push(e[key]);*/
+    for (var key in enc) {
+        if (enc[key].hide != true)
         buttons.append('<button class="top_button" id="'+key+'">' + enc[key].name+'</button>');
     }
     $('.top_button').button().click(generate_encounter);
@@ -216,13 +216,13 @@ function onReady()
                 if (found)
                     break;
                 //console.log("against list " + encKey);
-                if (encKey != 'All') {
+                //if (encKey != 'All') {
                     for (var j=0; j<enc[encKey].items.length && !found; j++) {
                         if (enc[encKey].items[j] == e[eKey]) {
                             found = true;
                         }
                     }
-                }
+                //}
             }
             if (!found)
                 console.log("Encounter " + eKey + " is not used in any lists. Fix this.");
