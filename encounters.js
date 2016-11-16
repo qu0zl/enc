@@ -2,6 +2,8 @@
    This code may not be used without permission.
    If you'd like to use this for your own product then please ask and I'll swap you the rights to use it for that purpose in exchange for a signed copy of your product or some such. */
 var stat_blocks = {
+    Malo:"Malo Enzeger, Cleric of Orcus (Clr6): HP 25; AC 9[12]; Atk mace of terror (1d6+1); Move 12; Save 10; AL C; CL/XP 7/600;<br>Special: +2 save versus paralyzation and poison, spells (2/2/1/1), turn undead.<br>Spells: 1st—cause light wounds, protection from good; 2nd—bless, hold person; 3rd—cause disease; 4th—cause serious wounds.<br>Equipment: mace of terror (see Appendix C), ring of regeneration, ring of misdirected alignment (see Appendix C).",
+    NoriaVerilath:"Noria Verilath, Female Human (Asn6): HP 24; AC 5[14]; Atk +2 dagger (1d4+2) or poisoned daggers (1d4 plus poison); Move 12; Save 10; AL C; CL/XP 7/600;<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, backstab (x3), disguise, poison, thieving skills.<br>Thieving Skills: Climb 88%, Tasks/Traps 30%, Hear 4 in 6, Hide 25%, Silent 35%, Locks 25%.<br>Equipment: +1 leather armor, +2 dagger, 3 poisoned daggers, 8 doses of giant wasp poison, boots of speed, thieves' tools.",
     Aririn:"Aririn (Nymph): HD 3; HP 14; AC 9[10]; Atk none; Move 12; Save 14; AL N; CL/XP 5/240;<br>Special: sight causes blindness or death, siren song. (Monstrosities 351)",
     JenetteHolycraft:"Jenette Holycraft, Female Human (Pal7): HP 46; AC 1[18]; Atk +2 longsword (1d8+2); Move 12; Save 6; AL L; CL/XP 8/800;<br>Special: immune to disease, lay on hands (14hp), warhorse mount<br>Equipment: +2 plate mail, +2 longsword, silver holy symbol of Muir.",
     Fanr:"Fanr Flameson, Cleric of Moccavallo (Clr9): HP 38; AC 4[15]; Atk +2 heavy mace (1d6+2); Move 12; Save 7; AL C; CL/XP 11/1700;<br>Special: control undead, +2 save versus paralyzation and poison, spells (3/3/3/2/2).<br>Spells: 1st—cause light wounds, protection from good, light; 2nd—bless, hold person, silence 15ft radius; 3rd—disease, prayer, speak with dead; 4th—cure serious wounds, protection from good 10ft radius; 5th—commune, finger of death.<br>Equipment: +2 chainmail, +2 heavy mace, holy symbol of Moccavallo.",
@@ -1417,41 +1419,41 @@ var e = {
             {min:3, max:3, name:"Tuvio and guards (C2, pg. 170)", text:"Tuvio (Thf5) owns and runs 'The Blazing Bones' gambling den. He offers bets on almost anything from the mundane to the distasteful. He's generally honest, and pays up when he should. His three half-orc associates help ensure that others are as honest as he is."},
             {min:4, max:4, name:"Left Eye Lanny (C4, pg. 177)", text:"Lanny (Thf4) sports a black eye-patch over her right eye. She is reknowned for crafting the finest stabbing weapons, and is a tough negotiator."},
             {min:5, max:5, name:"Scolich (C5, pg. 177)", text:"A smiling, top-less, heavily muscled, tattoo and piereced barbarian from the Kurgan coast. He has happily gone native in Bard's Gate and runs the 'Loose Strand' tattoo parlor, barber shop and piercery."},
-            {min:6, max:6, name:"Asa (C6, pg. 177)", text:"Neutral female human druid 3. Asa is a  short-haired and boyish looking lady, with a permanently down-beat expression. She runs 'The White Wasp', masquerading as a herbalist while she really produces and sells poisons for the Shadow Masks. She has no choice in this matter."},
-            {min:7, max:7, name:"Rhora (C7, pg. 177)", text:""},
-            {min:8, max:8, name:"Valequinn (C8, pg. 178)", text:""},
-            {min:9, max:9, name:"Brin Zweischer (C9, pg. 178)", text:""},
-            {min:10, max:10, name:"Filthy Reebo (C10, pg. 178)", text:""},
-            {min:11, max:11, name:"Manky Mary (C11, pg. 178)", text:""},
-            {min:12, max:12, name:"Oswold (C12, pg. 179)", text:""},
-            {min:13, max:13, name:"Rolnüt Half-Axe (see The Hidden Huscarl, The Sea Bear)", text:""},
-            {min:14, max:14, name:"Lucius Gromp (C13, pg. 179)", text:""},
-            {min:15, max:15, name:"Piter Hagglesthorpe IV (BC3)", text:""},
-            {min:16, max:16, name:"F'arin Du'n (Appendix A)", text:""},
-            {min:17, max:17, name:"Noria Verilath (Chapter 3, The Red Blades)", text:""},
+            {min:6, max:6, name:"Asa (C6, pg. 177)", text:"Neutral female human druid 3. Asa is a short-haired and boyish looking lady, with a permanently down-beat expression. She runs 'The White Wasp', masquerading as a herbalist while she really produces and sells poisons for the Shadow Masks. She has no choice in this matter."},
+            {min:7, max:7, name:"Rhora (C7, pg. 177)", text:"Neutral female half-elf commoner 3 owns and runs the filthy \"Tick's Nest\" flophouse."},
+            {min:8, max:8, name:"Valequinn (C8, pg. 178)", text:"Chaotic male elf magic-user 3 runs a flower shop which acts as the front for his celestial ash den in the cellars below. He himself is an addict and may try get to get party addicted."},
+            {min:9, max:9, name:"Brin Zweischer (C9, pg. 178)", text:"Neutral male ftr6. A tall, bald, red-beared and unfriendly barbarian who owns the Brin Zwiescher brewery. The dwarves of the Stoneheart Brewery (O3) are his enemies, simply by dint of competing with their superior brews, which he publicly disdains."},
+            {min:10, max:10, name:"Filthy Reebo (C10, pg. 178)", text:"Chaotic male human commoner 3. Reebo runs the appaling flop-house, the 'Riverside Rooming House'. People near destitution, and criminals looking to hide out can be found here."},
+            {min:11, max:11, name:"Manky Mary (C11, pg. 178)", text:"Neutral female half-orc expert. Usually drunk, extremely fat, and generally unpleasant to her employees, Mary runs \"Manky Mary's Alehouse\"; a shack selling beer on the edge of the canal where it meets the Stoneheart river."},
+            {min:12, max:12, name:"Oswold (C12, pg. 179)", text:"Chaotic male thief 6. A run-of-the-mill looking slim man, who used to be an assassin for hire and now runs the 'Bar With No Name' where Red Blade assassins can be hired; if you know the right procedure."},
+            {min:13, max:13, name:"Rolnüt Half-Axe", text:"Rolnüt (neutral male human [Northlander] fighter 5) is looking  for his captain, Tvorji (see The Hidden Huscarl, pg. 356)"},
+            {min:14, max:14, name:"Lucius Gromp (C13, pg. 179)", text:"Neutral male thief 7 and guildmaster of the Beggars' Guild."},
+            {min:15, max:15, name:"Piter Hagglesthorpe IV (BC3, pg. 230)", text:"Neutral male human aristocrat 6. Dockworkers' Guild burgher and wealthy silk merchant, Piter is currently being black-mailed by Dulot Armitage (Appendix A, pg. 263)."},
+            {min:16, max:16, name:"F'arin Du'n (Appendix A, pg. 263)", text:"Chaotic male drow assassin 6. A despicable and skilled murderer. Perhaps he is stalking the party. He likes to observe his victims and then approach them in the guise of a close friend by use of his ring of <i>polymorph self</i>."},
+            {min:17, max:17, name:"Noria Verilath (Chapter 3, The Red Blades, pg. 83)", text:"Chaotic female human assassin 6 and part of the leadership of the Red Blades assassins' guild.", stats:["NoriaVerilath"]},
             {min:18, max:18, name:"Cylyria (disguised, Appendix A, pg. 262)", text:"Mayor and High Burgess of Bard's Gate. She is currently in disguise.", stats:["Cylyria"]},
             {min:19, max:19, name:"Manisool (Appendix A, pg. 265)", text:"A powerful agent for the cult of Orcus, Manisool masquerades as a shy and secretive magic-user pillar of Bard's Gate's ruling class.", stats:["Manisool"]},
             {min:20, max:20, name:"Tovan (Chapter 25, the Claw of Orcus, pg. 258)", text:"Member of the Cult of Orcus.", stats:["Tovan"]},
             ]
         }
     },
-    SpecialTH:{
-        name:"SpecialTH",
+    SpecialH:{
+        name:"SpecialH",
         extra:{
             total:12,
             chances:[
             {min:1, max:1, name:"Duloth or associates (Appendix A, pg. 263)", text:"Duloth, Burger of the Wheelwrights' Guild, Underworld Kingpin and a nimble but very obese, curly black haired, begoateed man, or one or more of his lieutenants.", stats:["Duloth","Zalatha","Tranda","Gorar"]},
             {min:2, max:2, name:"Imril (Appendix A, pg. 264)", text:"Leader of the Knights of the Griffin, hero of the city and partner of Cylyria. He may be leading a patrol, investigating strange goings on, or interviewing suspects in regards to an important matter.", stats:["Imril"]},
             {min:3, max:3, name:"Cylyria (Appendix A, pg. 262)", text:"Mayor and High Burgess of Bard's Gate.", stats:["Cylyria"]},
-            {min:4, max:4, name:"Borm Morgarm (G11)", text:""},
-            {min:5, max:5, name:"Petyr Nordin (H10)", text:""},
-            {min:6, max:6, name:"Lady Helon (H7)", text:""},
-            {min:7, max:7, name:"Evan or Naces Corseen (H4)", text:""},
-            {min:8, max:8, name:"Lisial Elmwish (H5)", text:""},
-            {min:9, max:9, name:"Whitus Platonus entourage (H6)", text:""},
-            {min:10, max:10, name:"Wynstyn or Meda Gallam (H2)", text:""},
+            {min:4, max:4, name:"Borm Morgarm (G11, pg. 146)", text:"Male Dwarf Fighter 6 and Burgher of the Gem Cutters and Jewelers' Guild. Usually to be seen his guild-house, he wears beautiful looking magical armor and wields an impressive battle-axe."},
+            {min:5, max:5, name:"Petyr Nordin (H10, pg. 191)", text:"Neutral male human commoner 3 and owner the of 'The Quiet Woman' inn. The Inn is haunted by a female phantom but if anything, she seems to aid his business."},
+            {min:6, max:6, name:"Lady Helon (H7, pg. 190)", text:"Lawful female elf magic-user 8, owner of the 'Fur and Velvet' clothes boutique and designer of the clothes there-in."},
+            {min:7, max:7, name:"Evan or Naees Corseen (H4, pg. 190)", text:"Evan ( Neutral male MU3) or his wife Naees Corseen (Neutral female human aristocrat 5). Evan was a bard until his voice failed him, and now he is a successful diplomatic for Bard's Gate despite being a generally unpleasant person to be around."},
+            {min:8, max:8, name:"Lisial Elmwish (H5, pg. 190)", text:"Neutral female half-elf fighter 4.. She is the daughter of a fallen Foerdewaith noble house and seeks to restore what remains of her family to their former glory. She is interested in hiring adventurers to that end."},
+            {min:9, max:9, name:"Whitus Platonus and entourage (H6, pg. 190)", text:"A large, bald toga-wearing man (Neutral male human aristocrat 4) from the city of Freegate. He runs the finest brothel in all of Bard's Gate, the 'Hall of Delights'"},
+            {min:10, max:10, name:"Wynstyn or Meda Gallam (H2)", text:"Wynstyn (Lawful male human aristocrat 6) is a famous, and now mostly retired hunter. Meda Gallam (Neutral human female expert 5), his wife is a skilled seamstress and helped stuff his trophies."},
             {min:11, max:11, name:"Brelliar (Appendix A, pg. 262)", text:"A friendly but confused elderly wizard. He does not realised it but he is under the effect of a cursed scroll, which causes his lack of mental clarity."},
-            {min:12, max:12, name:"Vermund Durnian (H3)", text:""}
+            {min:12, max:12, name:"Vermund Durnian (H3)", text:"Neutral male human aristocrat 4. A retired former mining magnate. Vermund is middle-aged and full of life."}
             ]
         }
     },
@@ -1461,13 +1463,13 @@ var e = {
             total:8,
             chances:[
             {min:1, max:1, name:"Manisool (Appendix A, pg. 265)", text:"A powerful agent for the cult of Orcus, Manisool masquerades as a shy and secretive magic-user pillar of Bard's Gate's ruling class.", stats:["Manisool"]},
-            {min:2, max:2, name:"Samos Kenthi (N2)", text:""},
+            {min:2, max:2, name:"Samos Kenthi (N2, pg. 200)", text:"Neutral male human expert 4 and owner of 'The Dancing Goblins' Inn."},
             {min:3, max:3, name:"Duloth and associates (Appendix A)", text:"Duloth, Burger of the Wheelwrights' Guild, Underworld Kingpin and a nimble but very obese, curly black haired, begoateed man, or one or more of his lieutenants.", stats:["Duloth","Zalatha","Tranda","Gorar"]},
             {min:4, max:4, name:"Cylyria and associates (in disguise, Appendix A, pg. 262)", text:"Mayor and High Burgess of Bard's Gate. She and her associates are currently in disguise.", stats:["Cylyria"]},
-            {min:5, max:5, name:"Ruvuldo (N3)", text:""},
-            {min:6, max:6, name:"Chango (N4)", text:""},
-            {min:7, max:7, name:"Justin Greenwood (N5)", text:""},
-            {min:8, max:8, name:"Malo Enzeger (N7)", text:""}
+            {min:5, max:5, name:"Ruvuldo (N3, pg. 201)", text:"Neutral male human commoner 3 and owner of \"The Flenser's Rest\". Ruvuldo is a former tannery worker who by dint of hard work and frugality came to open this Inn."},
+            {min:6, max:6, name:"Chango (N4, pg. 201)", text:"Neutral male halfling thief 3 and owner of Chango's Bar."},
+            {min:7, max:7, name:"Justin Greenwood (N5, pg. 202)", text:"A retired adventurer who now crafts arrows and bolts, including some magical ones. Perhaps he is stalking, or being stalked, by his former love and now vampire, Felicity Bigh.", stats:["JustinGreenwood","FelicityBigh"]},
+            {min:8, max:8, name:"Malo Enzeger (N7, pg. 204)", text:"Leading citizen of the North Wall district, reknowned benefactor of the poor, and secret high ranking member of the Cult of Orcus.", stats:["Malo"]}
             ]
         }
     },
@@ -1497,7 +1499,7 @@ var e = {
             total:12,
             chances:[
             {min:1, max:1, name:"Wilhelm Rovellar (BC2)", text:""},
-            {min:2, max:2, name:"Piter Hagglesthorpe IV (BC3)", text:""},
+            {min:2, max:2, name:"Piter Hagglesthorpe IV (BC3, pg. 230)", text:"Neutral male human aristocrat 6. Dockworkers' Guild burgher and wealthy silk merchant, Piter is currently being black-mailed by Dulot Armitage (Appendix A, pg. 263)."},
             {min:3, max:3, name:"Fathalir (BC4)", text:""},
             {min:4, max:4, name:"Wesley (BC4)", text:""},
             {min:5, max:5, name:"Cryndle (BC4)", text:""},
@@ -1642,8 +1644,8 @@ var enc = {
     "D_N": {name:"Docks (East & West, Night)", items:[e.Shadowmasks, e.Wheelwright, e.Gondolier, e.Drunk, e.Beggar, e.Harlot, e.Streetwalker, e.Pickpocket, e.LocalBully, e.Enforcer, e.Gambler, e.Sailor, e.AdventuringBand, e.BountyHunter, e.CanalWorker, e.Shyster, e.Riverfolk, e.BanditGang, sublists.Monsters, e.SpecialD]},
     "G_D": {name:"Guild District (Day)", items:[ e.SheriffsPatrol, e.LocalWatchG, e.LyreguardPatrol, e.Guildsman, e.Laborers, e.TrashCollector, e.CivicOfficial, e.Merchant, e.ArcaneStudent, e.Wizard, e.Fighter, e.Pickpocket, e.Aristocrat, e.Paladin, e.Cleric, e.SculleryMaid, e.Pilgrims, e.Bard, e.TroupOfPerformers, e.SpecialG]},
     "G_N": {name:"Guild District (Night)", items:[ e.AdventuringBand, e.LocalWatchG, e.Drunk, e.Harlot, e.Streetwalker, e.Shadowmasks, e.Aristocrat, e.Rake, e.Guildsman, e.Dandy, e.MercenaryBand, e.ArcaneStudent, e.Wizard, e.Cleric, e.Laborers, e.RedBladeInitiate, e.CivicOfficial, e.SheriffsPatrol, e.Pickpocket, e.SpecialG ]},
-    "TH_D":{name:"The Hill (Day)", items:[e.Merchant, e.LocalWatchTH, e.SculleryMaid, e.Valet, e.Guildsman, e.Dandy, e.Fighter, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.Aristocrat, e.CityWatch, e.Carriage, e.Butler, e.BodyGuard, e.Herald, e.Cleric, e.SpecialTH]},
-    "TH_N": {name:"The Hill (Night)", items:[e.LocalWatchTH, e.Aristocrat, e.Valet, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.CivicOfficial, e.Carriage, e.Butler, e.Herald, e.Dandy, e.Drunk, e.Bard, e.Debutante, e.Cleric, e.Burglar, e.Lovers, e.SpecialTH]},
+    "H_D":{name:"The Hill (Day)", items:[e.Merchant, e.LocalWatchTH, e.SculleryMaid, e.Valet, e.Guildsman, e.Dandy, e.Fighter, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.Aristocrat, e.CityWatch, e.Carriage, e.Butler, e.BodyGuard, e.Herald, e.Cleric, e.SpecialH]},
+    "H_N": {name:"The Hill (Night)", items:[e.LocalWatchTH, e.Aristocrat, e.Valet, e.Paladin, e.Wizard, e.ArcaneStudent, e.Rake, e.CivicOfficial, e.Carriage, e.Butler, e.Herald, e.Dandy, e.Drunk, e.Bard, e.Debutante, e.Cleric, e.Burglar, e.Lovers, e.SpecialH]},
     "K_D":{name:"The Keep (Day)",items:[e.CityWatch, e.LyreguardPatrol, e.FoodVendor, e.Merchant, e.Lawyer, e.CivicOfficial, e.Execution, e.Aristocrat, e.SheriffsPatrol, e.PrisonerWagon, e.Guildsman, e.Carriage, e.Herald, e.Paladin, e.Cleric, e.Wizard, e.ArcaneStudent, e.Fighter, e.Scribe, e.SpecialK]},
     "K_N":{name:"The Keep (Night)",items:[e.CityWatch, e.FoodVendor, e.Merchant, e.Lawyer, e.SheriffsPatrol, e.PrisonerWagon, e.CivicOfficial, e.Aristocrat, e.Guildsman, e.Carriage, e.Herald, e.Drunk, e.Beggar, e.Cleric, e.Scribe, e.Paladin, e.BountyHunter, e.MercenaryBand, e.Wizard, e.SpecialK]},
     "M_D": {name:"Market District (Day)", items:[ e.SheriffsPatrol, e.WallWatcher, e.LyreguardPatrol, e.LocalWatchM, e.WanderingMonk, e.FoodVendor, e.Grocer, e.WinePeddler, e.Pickpocket, e.TroupOfPerformers, e.Paladin, e.Fighter, e.ArcaneStudent, e.Merchant, e.SculleryMaid, e.CivicOfficial, e.Pilgrims, e.Laborers, e.TrashCollector, e.SpecialMD ]},
