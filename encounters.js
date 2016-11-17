@@ -2,6 +2,20 @@
    This code may not be used without permission.
    If you'd like to use this for your own product then please ask and I'll swap you the rights to use it for that purpose in exchange for a signed copy of your product or some such. */
 var stat_blocks = {
+    Estrellya:"Estrellya, Male Half-Elf (MU3): HP 11; AC 9[10]; Atk +1 dagger (1d4+1); Move 12; Save 13; AL N; CL/XP 4/120;<br>Special: +2 on saves vs. spells, darkvision 60ft, half-elf abilities, spells (3/1).<br>Spells: 1st—detect magic, light, read magic; 2nd—ESP.<br>Equipment: +1 dagger, robes, lute, spellbook.",
+    Acestrus:"Acestrus (MU3): HP 11; AC 8[11]; Atk +1 staff (1d6+1); Move 12; Save 12; AL N; CL/XP 4/120;<br>Special: +2 on saves vs. spells, spells (3/1).<br>Spells: 1st—magic missile x2, shield; 2nd—phantasmal force.<br>Equipment: robes, +1 staff, ring of protection +1, wand of hold person (2 charges), guitarra, spellbook.",
+    Beast:"Beast, Cleric of Bowbe (Clr6): HP 25; AC 2[17]; Atk +2 heavy mace (1d6+2); Move 12; Save 10; AL N; CL/XP 7/600;<br>Special: +2 save versus paralyzation and poison, spells (2/2/1/1), turn undead.<br>Spells: 1st—cure light wounds, light; 2nd—hold person, silence 15 ft radius; 3rd—cure disease; 4th—cure serious wounds.<br>Equipment: +1 plate mail, +2 heavy mace, wooden holy symbol of Bowbe.",
+    Gato:"Gato (Rgr4): HP 24; AC 6[13]; Atk short sword (1d6) or long- bow x2 (1d6); Move 12; Save 10; AL L; CL/XP 5/240;<br>Special: +4 to damage vs giants and goblinoids, alertness, tracking.<br>Equipment: leather armor, short sword, long bow, 20 arrows, ring of protection +1, drums.",
+    StrathianSilverspear:"Strathian Silverspear (Ftr4): HP 21; AC 4[15]; Atk +2 spear (1d6+3) or light crossbow (1d4+1); Move 12; Save 11; AL N; CL/XP 4/120;<br>Special: +1 to hit and damage strength bonus, multiple attacks (4) vs. creatures with 1 or fewer HD.<br>Equipment: chainmail, shield, +2 spear, light crossbow, 20 bolts.",
+    Gaulin:"Gaulin (Ftr3): HP 17; AC 4[15]; Atk battle axe (1d8) or light crossbow (1d4+1); Move 12; Save 12; AL N; CL/XP 3/60;<br>Special: +1 to hit and damage strength bonus, multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: chainmail, shield, battle axe, light cross- bow, 20 bolts.",
+    HenryPigSticker:"Henry Pig Sticker (Ftr3): HP 18; AC 4[15]; Atk spear (1d6+1) or heavy crossbow (1d6+1); Move 12; Save 12; AL N; CL/XP 3/60;<br>Special: +1 to hit and damage strength bonus, multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: chainmail, shield, spear, heavy crossbow, 20 bolts.",
+    Mallus:"Mallus (Ftr3): HP 17; AC 4[15]; Atk warhammer (1d4+2) or longbow x2 (1d6); Move 12; Save 12; AL N; CL/XP 3/60;<br>Special: +1 to hit and damage strength bonus, multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: chainmail, shield, warhammer, longbow, 20 arrows.",
+    Torthas:"Torthas (Ftr3): HP 18; AC 5[14]; Atk two-handed sword (1d10+2); Move 12; Save 12; AL N; CL/XP 3/60;<br>Special: +1 to hit and damage strength bonus, multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: chainmail, two-handed sword.",
+    TrudyRilling:"Trudy Rilling, Female Human (Ftr3): HP 16; AC 7[12]; Atk short sword (1d6) or shortbow x2 (1d6); Move 12; Save 12; AL N; CL/XP 3/60;<br>Special: multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, short sword, shortbow, 20 arrows.",
+    TopferBrighteye:"High Sheriff Topfer Brighteye, Male Hal ing (Ftr4): HP 19; AC 3[16]; Atk +1 longsword (1d8+2); Move 9; Save 11; AL L; CL/ XP 4/120;<br>Special: +1 bonus when using missile weapons, +1 to hit and damage strength bonus, +4 on saving throws against magic, halfling racial abilities, multiple attacks (4) vs. creatures with 1 or fewer HD.<br>Equipment: +1 chainmail, shield, +1 longsword.",
+    Kotchko:"Major Kotchko, Undersheriff (Ftr6): HP 30; AC 5[14]; Atk +1 bastard sword (1d8+2); Move 12; Save 9; AL N; CL/XP 6/400;<br>Special: +1 to hit and damage strength bonus, multiple attacks (6) vs. creatures with 1 or fewer HD.<br>Equipment: +1 ring mail, +1 bastard sword, 2 sets of manacles.",
+    GarridGarzag:"Garrid Garzag, Male Dwarf Chief of Constables (Ftr6): HP 32; AC 0[19]; Atk +1 warhammer (1d4+3); Move 9; Save 9; AL N; CL/XP 6/400;<br>Special: +1 to hit and damage strength bonus, darkvision 60ft, dwarf racial abilities, multiple attacks (6) vs. creatures with 1 or fewer HD.<br>Equipment: +1 plate mail, +1 shield, +1 warhammer.",
+   PthanTraklos:"Pthan Traklos, Constable Captain (Ftr6): HP 28; AC 4[15]; Atk short sword (1d6+1); Move 12; Save 9; AL N; CL/XP 6/400;<br>Special: +1 to hit and damage strength bonus, multiple attacks (6) vs. creatures with 1 or fewer HD.<br>Equipment: chainmail, shield, short sword",
     Malo:"Malo Enzeger, Cleric of Orcus (Clr6): HP 25; AC 9[12]; Atk mace of terror (1d6+1); Move 12; Save 10; AL C; CL/XP 7/600;<br>Special: +2 save versus paralyzation and poison, spells (2/2/1/1), turn undead.<br>Spells: 1st—cause light wounds, protection from good; 2nd—bless, hold person; 3rd—cause disease; 4th—cause serious wounds.<br>Equipment: mace of terror (see Appendix C), ring of regeneration, ring of misdirected alignment (see Appendix C).",
     NoriaVerilath:"Noria Verilath, Female Human (Asn6): HP 24; AC 5[14]; Atk +2 dagger (1d4+2) or poisoned daggers (1d4 plus poison); Move 12; Save 10; AL C; CL/XP 7/600;<br>Special: +1 to hit dexterity bonus, –1[+1] to AC dexterity bonus, backstab (x3), disguise, poison, thieving skills.<br>Thieving Skills: Climb 88%, Tasks/Traps 30%, Hear 4 in 6, Hide 25%, Silent 35%, Locks 25%.<br>Equipment: +1 leather armor, +2 dagger, 3 poisoned daggers, 8 doses of giant wasp poison, boots of speed, thieves' tools.",
     Aririn:"Aririn (Nymph): HD 3; HP 14; AC 9[10]; Atk none; Move 12; Save 14; AL N; CL/XP 5/240;<br>Special: sight causes blindness or death, siren song. (Monstrosities 351)",
@@ -1478,17 +1492,17 @@ var e = {
         extra:{
             total:12,
             chances:[
-            {min:1, max:1, name:"Garrid Garzag (K7)", text:""},
-            {min:2, max:2, name:"Pthan Traklos (K7)", text:""},
-            {min:3, max:3, name:"Chu'aine (K6)", text:""},
+            {min:1, max:1, name:"Chief of Constables Garrid Garzag (K7, pg. 217)", text:"Leader of the Constabulary for over ten years, Garrid is considered a trusted, hard-nosed pillar of the establishment. In reality Garrid is on Duloth (pg. 263) and the Wheelwrights' pay-roll.", stats:["GarridGarzag"]},
+            {min:2, max:2, name:"Captain Pthan Traklos (K7, pg. 217)", text:"Pthan is second in command of the Constabulary, under Chief of Constables Garrid Garzag (K7, pg. 217). He is an ernest, hard-working young officer with a lisp. He is desperate to join the Lyreguard.", stats:["PthanTraklos"]},
+            {min:3, max:3, name:"Great Speaker Chu'aine (K6, pg. 217)", text:"Neutral male half-elf aristocrat 6 and Burgher of the Barristers' and Solicitors' Guild."},
             {min:4, max:4, name:"Cylyria (Appendix A, pg. 262)", text:"Mayor and High Burgess of Bard's Gate.", stats:["Cylyria"]},
             {min:5, max:5, name:"Imril (Appendix A, pg. 264)", text:"Leader of the Knights of the Griffin, hero of the city and partner of Cylyria. He may be leading a patrol, investigating strange goings on, or interviewing suspects in regards to an important matter.", stats:["Imril"]},
-            {min:6, max:6, name:"Bofred (Appendix A, pg. 262. OT2 pg. 153)", text:"", stats:["Bofred"]},
+            {min:6, max:6, name:"Bofred (Appendix A, pg. 262. OT2 pg. 153)", text:"An orator in the fire and brimstome style, Bofred is keen to find volunteers to aid his crusade to return the great shrines of Thyr and Muir to the control of Law.", stats:["Bofred"]},
             {min:7, max:7, name:"Duloth (Appendix A, pg. 263)", text:"Duloth, Burger of the Wheelwrights' Guild, Underworld Kingpin and a nimble but very obese, curly black haired, begoateed man.", stats:["Duloth"]},
-            {min:8, max:8, name:"Topfer Brighteye (K5)", text:""},
-            {min:9, max:9, name:"Sergeant Major Kotchko (K5)", text:""},
-            {min:10, max:10, name:"Company of the Silver Spear (M8)", text:""},
-            {min:11, max:11, name:"The Accursed (BC6)", text:""},
+            {min:8, max:8, name:"High Sheriff Topfer Brighteye (K5, pg. 217)", text:"The elected High Sheriff for the last eight years. Topfer is is well respected and treats suspects fairly; though he is not push-over.", stats:["TopferBrighteye"]},
+            {min:9, max:9, name:"Undersheriff Kotchko (K5, pg. 217)", text:"Senior Sherriff, second in command of the Sheriffs only to High Sheriff Topfer Brighteye (K5, pg. 217)", stats:["Kotchko"]},
+            {min:10, max:10, name:"Company of the Silver Spear (M8, pg.126)", text:"A somewhat famous Lawful adventuring band, led by Strathian Silverspear and based out of the 'Inn of Six Candles' (M8, pg. 125). They will brag to anyone they meet of their great deeds, including expeditions into Rappan Athuk itself. There is little evidence of much of this.", stats:["StrathianSilverspear","Gaulin","HenryPigSticker","Mallus","Torthas","TrudyRilling"]},
+            {min:11, max:11, name:"The Accursed (BC6, pg. 231)", text:"A rough  and tumble band of Neutral adventurers from the barbaric far north. They wear leathers and animal skins and sport tribal facial tattoes. They perform thunderous concerts weekly in the 'High Note' tavern (BC6, pg. 231).", stats:["Estrellya","Acestrus","Beast","Gato"]},
             {min:12, max:12, name:"Tork (T5)", text:""}
             ]
         }
@@ -1506,7 +1520,7 @@ var e = {
             {min:6, max:6, name:"Carlis Pace (BC5)", text:""},
             {min:7, max:7, name:"Lottobus (BC6)", text:""},
             {min:8, max:8, name:"Osius (BC6)", text:""},
-            {min:9, max:9, name:"Estrellya (The Accursed, BC6)", text:""},
+            {min:9, max:9, name:"Estrellya (The Accursed, BC6, pg. 231)", text:"Slim of build, almost effeminate looking, with stars tattooed above his eyes and black kohl on his lips, Estrellya is the intelligent and charismatic leader of 'The Accursed (BC6, pg. 231)'; a Neutral adventuring party and musical band.", stats:["Estrellya"]},
             {min:10, max:10, name:"Geldin Lucan (BC7)", text:""},
             {min:11, max:11, name:"Umberto Deleon (BC8)", text:""},
             {min:12, max:12, name:"Ferdinand Kincaid (BC9)", text:""}
@@ -1571,8 +1585,8 @@ var e = {
             {min:5, max:5, name:"Rankir (Chapter 1, Longhunters)", text:""},
             {min:6, max:6, name:"Vol (Chapter 1, The Red Blades)", text:""},
             {min:7, max:7, name:"Brin Zwiescher (C9)", text:""},
-            {min:8, max:8, name:"The Accursed (BC6)", text:""},
-            {min:9, max:9, name:"Company of the Silver Spear (M8)", text:""}
+            {min:8, max:8, name:"The Accursed (BC6, pg. 231)", text:"A rough  and tumble band of Neutral adventurers from the barbaric far north. They wear leathers and animal skins and sport tribal facial tattoes. They perform thunderous concerts weekly in the 'High Note' tavern (BC6, pg. 231).", stats:["Estrellya","Acestrus","Beast","Gato"]},
+            {min:9, max:9, name:"Company of the Silver Spear (M8)", text:"A somewhat famous Lawful adventuring band, led by Strathian Silverspear and based out of the 'Inn of Six Candles' (M8, pg. 125). They will brag to anyone they meet of their great deeds, including expeditions into Rappan Athuk itself. There is little evidence of much of this.", stats:["StrathianSilverspear","Gaulin","HenryPigSticker","Mallus","Torthas","TrudyRilling"]}
             ]
         }
     },
