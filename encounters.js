@@ -2,6 +2,8 @@
    This code may not be used without permission.
    If you'd like to use this for your own product then please ask and I'll swap you the rights to use it for that purpose in exchange for a signed copy of your product or some such. */
 var stat_blocks = {
+    Johan:"Johan the Bastard, Male Half-Orc (Ftr4): HP 21; AC 6[13]; Atk +1 longsword (1d8+2) or heavy crossbow (1d6+1 plus poison); Move 12; Save 11; AL C; CL/XP 4/120;<br>Special: +1 to hit and damage strength bonus, darkvision 60ft, half-orc racial abilities, multiple attacks (4) vs. creatures with 1 or fewer HD.<br>Equipment: +1 leather armor, +1 longsword, heavy crossbow, 20 poisoned bolts.",
+    Zoey:"Zoey, Female Human Cleric of Freya (Clr8): HP 28; AC 3[16]; Atk +1 heavy mace (1d6+1); Move 9; Save 8; AL L; CL/XP 9/1100;<br>Special: +2 save versus paralyzation and poison, spells (2/2/2/2/2), turn undead.<br>Spells: 1st—cure light wounds, protection from evil; 2nd—bless, hold person; 3rd—prayer, remove curse; 4th—cure serious wounds, speak with plants; 5th—commune, raise dead.<br>Equipment: +1 chain mail, shield, +1 heavy mace, wand of cure serious wounds (6 charges), 6 vials of holy water, silver holy symbol of Freya.",
     Lottobus:"Lottobus (Ftr2): HP 12; AC 7[12]; Atk +1 club (1d4+2); Move 12; Save 13; AL N; CL/XP 2/30;<br>Special: +1 to hit and damage strength bonus, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, +1 club.",
     Osius:"Osius (Ftr2): HP 12; AC 6[13]; Atk heavy mace (1d6+1); Move 12; Save 13; AL N; CL/XP 2/30;<br>Special: +1 to hit and damage strength bonus, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, heavy mace.",
     FarinDun:"F’arin Du’n, Male Drow (Asn6): HP 27; AC 5[14]; Atk dagger (1d4 plus poison); Move 12; Save 10; AL C; CL/XP 5/240;<br>Special: +1 to hit dexterity bonus, -1[+1] to AC dexterity bonus, -2 to attack in sunlight, backstab (x3), 1 in 8 chance to be surprised, darkvision 60ft, disguise, drow racial abilities, magic resistance (50%), magical abilities, poison, thieving skills.<br>Magical Abilities: 1/day—darkness 15ft radius, ability to outline a target in faint light at a range of 60ft (all have +1 to hit the victim), and the ability to create lantern-like lights at a range of 60ft.<br>Thieving Skills: Climb 88%, Tasks/Traps 30%, Hear 4 in 6, Hide 40%, Silent 45%, Locks 25%.<br>Equipment: +1 leather armor, poisoned dagger (save at -2 or die), boots of elvenkind, cloak of elvenkind, thieves' tools.",
@@ -1507,7 +1509,7 @@ var e = {
             {min:9, max:9, name:"Undersheriff Kotchko (K5, pg. 217)", text:"Senior Sherriff, second in command of the Sheriffs only to High Sheriff Topfer Brighteye (K5, pg. 217)", stats:["Kotchko"]},
             {min:10, max:10, name:"Company of the Silver Spear (M8, pg.126)", text:"A somewhat famous Lawful adventuring band, led by Strathian Silverspear and based out of the 'Inn of Six Candles' (M8, pg. 125). They will brag to anyone they meet of their great deeds, including expeditions into Rappan Athuk itself. There is little evidence of much of this.", stats:["StrathianSilverspear","Gaulin","HenryPigSticker","Mallus","Torthas","TrudyRilling"]},
             {min:11, max:11, name:"The Accursed (BC6, pg. 231)", text:"A rough  and tumble band of Neutral adventurers from the barbaric far north. They wear leathers and animal skins and sport tribal facial tattoes. They perform thunderous concerts weekly in the 'High Note' tavern (BC6, pg. 231).", stats:["Estrellya","Acestrus","Beast","Gato"]},
-            {min:12, max:12, name:"Tork (T5, pg. 223)", text:"Dwarven assassin and member of the Red Blades, Tork is often found nursing a tankard in the 'Black Viper' inn (pg. 223). Maybe he is surveilling a future target, possibly even a member of the party, or observing comings and goings around the Sherrifs' Bailey.", stats:["Tork"]}
+            {min:12, max:12, name:"Tork (T5, pg. 223)", text:"Dwarven assassin and member of the Red Blades, Tork is often found nursing a tankard in the 'Black Viper' tavern (pg. 223). Maybe he is surveilling a future target, possibly even a member of the party, or observing comings and goings around the Sherrifs' Bailey.", stats:["Tork"]}
             ]
         }
     },
@@ -1536,17 +1538,17 @@ var e = {
         extra:{
             total:11,
             chances:[
-            {min:1, max:1, name:"Goled (B1)", text:""},
-            {min:2, max:2, name:"Jared Strann (B3)", text:""},
-            {min:3, max:3, name:"Tobias Dricken (B5)", text:""},
-            {min:4, max:4, name:"Zoey (B6)", text:""},
-            {min:5, max:5, name:"Mangus the Lawbreaker (B7)", text:""},
-            {min:6, max:6, name:"Levis Prochnov (B9)", text:""},
+            {min:1, max:1, name:"Goled (B1, pg. 206)", text:"Neutral male hill dwarf fighter 6, missing 3 fingers on his left hand, owner of the world famous 'Inn on the Bridge' (B1, pg. 206) and member of the Stonerworkers' Guild; who often hold their meetings in his Inn. Goled refuses to sell Brin Zwiescher Ale (C9, pg. 178) as he considers it muck; this may lead to him being the target of intimidation which the party could be witness to."},
+            {min:2, max:2, name:"High Harpist Jared Strann (B3, pg. 207)", text:"Cleric and head of the 'Auditorium of the Silver Harp', the Temple of Oghma. Oghma is likely the most popular god in all of Bard's Gate, and the 'Auditorium of the Silver Harp' acts as a performance venue as well as a major temple."},
+            {min:3, max:3, name:"Tobias Dricken (B5, pg. 212)", text:"Head of the temple of 'Bacchus-Dionysus', the god of wine and madness. Tobias is a hairy, black-beared man who looks only barely the right side of insanity."},
+            {min:4, max:4, name:"Zoey (B6, pg. 212)", text:"Head of the Temple of Freya, Zoey is a kind and brave young woman. She will occassionally adventure with worthy groups and has a burning hatred of the undead.", stats:["Zoey"]},
+            {min:5, max:5, name:"Mangus the Lawbreaker (B7, pg. 212)", text:"Neutral male Erskaelosi human cleric of Gromm 6 and leader of the Shrine of Gromm the Thunderer. On a stormy night, lightning strikes may outline the Shrine of Gromm, and perhaps Mangus himself."},
+            {min:6, max:6, name:"Levis Prochnov (B9, pg. 213)", text:"Neutral male human expert 2, owner of 'The Pearl Earring' jewelry store, identifier of magical items and some-time fence of stolen goods."},
             {min:7, max:7, name:"Duloth or associates (Appendix A)", text:"Duloth, Burger of the Wheelwrights' Guild, Underworld Kingpin and a nimble but very obese, curly black haired, begoateed man, or one or more of his lieutenants.", stats:["Duloth","Zalatha","Tranda","Gorar"]},
-            {min:8, max:8, name:"Brin Zwiescher (C9)", text:""},
-            {min:9, max:9, name:"Eldon (B10)", text:""},
-            {min:10, max:10, name:"Johan the Bastard (T5)", text:""},
-            {min:11, max:11, name:"Tuvio and bodyguards (C2)", text:""}
+            {min:8, max:8, name:"Brin Zwiescher (C9, pg. 178)", text:"Neutral male ftr6. A tall, bald, red-beared and unfriendly barbarian who owns the Brin Zwiescher brewery. The dwarves of the Stoneheart Brewery (O3) are his enemies, simply by dint of competing with their superior brews, which he publicly disdains."},
+            {min:9, max:9, name:"Eldon (B10, pg. 213)", text:"Neutral male halfling expert 5, owner of a small bookstore \"Eldon’s Residence\" and author of muck-racking biographies of heroes, bards and nobility. Perhaps Eldon would be interested in hiring the party to do some of his muck-racking for him, or perhaps he needs protection due to upsetting someone with the stories in one of his many books."},
+            {min:10, max:10, name:"Johan the Bastard (T5, pg. 223)", text:"A tale, dangerous looking half-orc. Johan is a member of the Red Blades assassins' guild and can often be found nursing a tankard in the 'Black Viper' tavern (T5, pg. 223). Maybe he is surveilling a future target, possibly even a member of the party, or observing the flow of people across the Bridge in the hope of finding his mark.", stats:["Johan"]},
+            {min:11, max:11, name:"Tuvio and guards (C2, pg. 170)", text:"Tuvio (Thf5) owns and runs 'The Blazing Bones' gambling den. He offers bets on almost anything from the mundane to the distasteful. He's generally honest, and pays up when he should. His three half-orc associates help ensure that others are as honest as he is."}
             ]
         }
     },
@@ -1555,7 +1557,7 @@ var e = {
         extra:{
             total:20,
             chances:[
-            {min:1, max:1, name:"Johan the Bastard (T5)", text:""},
+            {min:1, max:1, name:"Johan the Bastard (T5, pg. 223)", text:"A tale, dangerous looking half-orc. Johan is a member of the Red Blades assassins' guild and can often be found nursing a tankard in the 'Black Viper' tavern (T5, pg. 223). Maybe he is surveilling a future target, possibly even a member of the party, or observing the flow of people in the district in the hope of finding his mark.", stats:["Johan"]},
             {min:2, max:2, name:"Imbo the Undying (Appendix A, pg .264)", text:"An immortal vicious killer. He will attempt to appear friendly, non-threatening and may attempt to trick the party in order to more easily murder them.", stats:["Imbo"]},
             {min:3, max:3, name:"Gowan Mckean (O3)", text:""},
             {min:4, max:4, name:"Deng Lo Do (O21)", text:""},
@@ -1584,11 +1586,11 @@ var e = {
             chances:[
             {min:1, max:1, name:"Jadeyn Roan (SR3)", text:""},
             {min:2, max:2, name:"Knotaloke (SR4)", text:""},
-            {min:3, max:3, name:"Johan the Bastard (T5)", text:""},
+            {min:3, max:3, name:"Johan the Bastard (T5, pg. 223)", text:"A tale, dangerous looking half-orc. Johan is a member of the Red Blades assassins' guild and can often be found nursing a tankard in the 'Black Viper' tavern (T5, pg. 223). Maybe he is surveilling a future target, possibly even a member of the party, or observing the flow of people in the district in the hope of finding his mark.", stats:["Johan"]},
             {min:4, max:4, name:"Oberon Thanlaus (Chapter 1, Farseekers of Twilight)", text:""},
             {min:5, max:5, name:"Rankir (Chapter 1, Longhunters)", text:""},
             {min:6, max:6, name:"Vol (Chapter 1, The Red Blades)", text:""},
-            {min:7, max:7, name:"Brin Zwiescher (C9)", text:""},
+            {min:7, max:7, name:"Brin Zwiescher (C9, pg. 178)", text:"Neutral male ftr6. A tall, bald, red-beared and unfriendly barbarian who owns the Brin Zwiescher brewery. The dwarves of the Stoneheart Brewery (O3) are his enemies, simply by dint of competing with their superior brews, which he publicly disdains."},
             {min:8, max:8, name:"The Accursed (BC6, pg. 231)", text:"A rough  and tumble band of Neutral adventurers from the barbaric far north. They wear leathers and animal skins and sport tribal facial tattoes. They perform thunderous concerts weekly in the 'High Note' tavern (BC6, pg. 231).", stats:["Estrellya","Acestrus","Beast","Gato"]},
             {min:9, max:9, name:"Company of the Silver Spear (M8)", text:"A somewhat famous Lawful adventuring band, led by Strathian Silverspear and based out of the 'Inn of Six Candles' (M8, pg. 125). They will brag to anyone they meet of their great deeds, including expeditions into Rappan Athuk itself. There is little evidence of much of this.", stats:["StrathianSilverspear","Gaulin","HenryPigSticker","Mallus","Torthas","TrudyRilling"]}
             ]
@@ -1599,17 +1601,17 @@ var e = {
         extra:{
             total:12,
             chances:[
-            {min:1, max:1, name:"Fat Julie and bodyguards (T1)", text:""},
-            {min:2, max:2, name:"Chadwick (T2)", text:""},
+            {min:1, max:1, name:"Fat Julie and bodyguards (T1, pg. 221)", text:""},
+            {min:2, max:2, name:"Chadwick (T2, pg. 222)", text:""},
             {min:3, max:3, name:"Duloth and associates (Appendix A)", text:"Duloth, Burger of the Wheelwrights' Guild, Underworld Kingpin and a nimble but very obese, curly black haired, begoateed man, and one or more of his lieutenants.", stats:["Duloth","Zalatha","Tranda","Gorar"]},
-            {min:4, max:4, name:"Tomokos (T4)", text:""},
-            {min:5, max:5, name:"Chord (T3)", text:""},
-            {min:6, max:6, name:"Scars (T5)", text:""},
-            {min:7, max:7, name:"Natala (T5)", text:""},
-            {min:8, max:8, name:"Zarabeshe (T5)", text:""},
-            {min:9, max:9, name:"Rath Kata (T6)", text:""},
-            {min:10, max:10, name:"Old One Tooth (T8)", text:""},
-            {min:11, max:11, name:"Mistress Honeysuckle (T9)", text:""},
+            {min:4, max:4, name:"Tomokos (T4, pg. 223)", text:""},
+            {min:5, max:5, name:"Chord (T3, pg. 223)", text:""},
+            {min:6, max:6, name:"Scars (T5, pg. 223)", text:""},
+            {min:7, max:7, name:"Natala (T5, pg. 223)", text:""},
+            {min:8, max:8, name:"Zarabeshe (T5, pg. 223)", text:""},
+            {min:9, max:9, name:"Rath Kata (T6, pg. 223)", text:""},
+            {min:10, max:10, name:"Old One Tooth (T8, pg. 224)", text:""},
+            {min:11, max:11, name:"Mistress Honeysuckle (T9, pg. 224)", text:""},
             {min:12, max:12, name:"Cylyria (disguised, Appendix A, pg. 262)", text:"Mayor and High Burgess of Bard's Gate. She is currently in disguise.", stats:["Cylyria"]}
             ]
         }
