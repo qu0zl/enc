@@ -212,6 +212,8 @@ function onReady()
     }
     $('.top_button').button().click(generate_encounter);
     //debug = true;
+    /* Loops through all encounter tables and encounter entries and ensures there are no undefined encounters
+       or NPC statistics included. */
     if (debug == true) {
         for (var key in enc) {
             var table = enc[key].items;
@@ -221,19 +223,33 @@ function onReady()
             }
         }
         for (var eKey in e) {
+            if (e[eKey].stats) {
+                for (var j=0; j<e[eKey].stats.length; j++) {
+                    if (stat_blocks[e[eKey].stats[j]] == undefined) {
+                        console.log("Undefined stat entry " + j + ", " + e[eKey].stats[j] +", in " + eKey);
+                    }
+                }
+            }
+            if (e[eKey].extra && e[eKey].extra.chances) {
+                for (var i=0; i<e[eKey].extra.chances.length; i++) {
+                    if (e[eKey].extra.chances[i].stats) {
+                        for (var j=0; j<e[eKey].extra.chances[i].stats.length; j++) {
+                            if (stat_blocks[e[eKey].extra.chances[i].stats[j]] == undefined) {
+                                console.log("Undefined chances stat entry " + j + ", " + e[eKey].extra.chances[i].stats[j] +", in " + eKey);
+                            }
+                        }
+                    }
+                }
+            }
             var found = false;
-            //console.log("testing " + e[eKey].name);
             for (var encKey in enc) {
                 if (found)
                     break;
-                //console.log("against list " + encKey);
-                //if (encKey != 'All') {
-                    for (var j=0; j<enc[encKey].items.length && !found; j++) {
-                        if (enc[encKey].items[j] == e[eKey]) {
-                            found = true;
-                        }
+                for (var j=0; j<enc[encKey].items.length && !found; j++) {
+                    if (enc[encKey].items[j] == e[eKey]) {
+                        found = true;
                     }
-                //}
+                }
             }
             if (!found)
                 console.log("Encounter " + eKey + " is not used in any lists. Fix this.");

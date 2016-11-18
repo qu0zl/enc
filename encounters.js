@@ -2,6 +2,7 @@
    This code may not be used without permission.
    If you'd like to use this for your own product then please ask and I'll swap you the rights to use it for that purpose in exchange for a signed copy of your product or some such. */
 var stat_blocks = {
+    NurseMary:"Nurse Mary (Ftr2): HP 13; AC 7[12]; Atk +1 scalpel (1d3+1); Move 12; Save 13; AL N; CL/XP 2/30.<br>Special: multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather suit, +1 scalpel (small dagger), whip.",
     RathKata:"Rath Kata, Cleric of Zors (Clr5): HP 18; AC 4[15]; Atk +1 cane (1d4+1); Move 12; Save 11; AL N; CL/XP 6/400;<br>Special: +2 save versus paralyzation and poison, spells (2/2), turn undead.<br>Spells: 1st—detect magic, purify food and drink; 2nd—bless, hold person.<br>Equipment: bracers of defense AC 4[15], +1 cane (treat as club), 2 potions of healing, 4 vials of holy water, golden holy symbol of Zors, 50cp.",
     Vol:"Vol \"Twilight Man\" (MU5): HP 14; AC 3[16]; Atk poisoned dagger (1d4 plus poison); Move 12; Save 11; AL C; CL/XP 6/400.<br>Special: +2 on saves vs. spells, spells (4/2/1). Spells: 1st—charm person, magic missile, sleep; 2nd—invisibility, phantasmal force; 3rd—hold person.<br>Equipment: bracers of defense AC 4[15], 2 poisoned daggers (save at -1 or die), ring of protection +1, robe of blending, medallion of ESP, spellbook.",
     JadeynRoean:"Jadeyn \"Captain\" Roean (Ftr6): HP 24; AC 6[13]; Atk +1 longsword (1d8+2) or longbow x2 (1d6); Move 12; Save 9; AL N; CL/XP 6/400;<br>Special: +1 to hit and damage strength bonus, multiple attacks (6) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, shield, +1 longsword \"Mare\", longbow, 20 arrows.",
@@ -448,12 +449,6 @@ var e = {
         name:"Debutante",
         text:"This encounter is with the spoiled child (Neutral female aristocrat 3) of an aristocrat or noble. The debutant may be slumming in a bad part of town, or shopping on her parent's dime."
     },
-    DogSoldiers:
-    {
-        name:"Dog Soldiers",
-        text:"!d[1d4] dog soldiers examine the characters closely and watch them for trouble.",
-        stats:["DogSoldierSneak","DogSoldierWarrior","DogSoldierMU"]
-    },
     Druids:
     {
         name:"Druid",
@@ -767,7 +762,7 @@ var e = {
     {
         name:"Tent City Local Watch",
         text:"This encounter is with a patrol of Tent City's own privately funded and appointed guard - the Dog Soldiers. There are !d[1d4+2] local guards in the patrol.",
-        stats:["DogSoldiers","DogSoldierWarrior","DogSoldierMU"]
+        stats:["DogSoldierSneak","DogSoldierWarrior","DogSoldierMU"]
     },
     LocalWatchTH:
     {
@@ -898,7 +893,8 @@ var e = {
     NurseMary:
     {
         name:"Nurse Mary",
-        text:"C13-11a, pg. 184 Assistant and bodyguard to Doctor Karisk."
+        text:"C13-11a, pg. 184 Assistant and bodyguard to Doctor Karisk.",
+        stats:["NurseMary"]
     },
     WanderingMonk:
     {
@@ -954,7 +950,7 @@ var e = {
                 {min:3, max:3, append:true, stats:["GelatinousCube"]},
                 {min:4, max:4, append:true, stats:["Livestone"]},
                 {min:5, max:5, append:true, text:"An Ebon ooze if near sewers, or a stun jelly otherwise.", stats:["EbonOoze","StunJelly"]},
-                {min:6, max:6, append:true, stats:["Gray Ooze"]},
+                {min:6, max:6, append:true, stats:["GreyOoze"]},
                 {min:7, max:7, text:"A Black pudding has found its way out of the sewer. The city watch arrives in 1d6 x 4 rounds; Andrigor (pg. 262) arrives in !d[1d3] rounds.", stats:["BlackPudding","Andrigor"]},
                 {min:8, max:8, text:"A Jolly Jelly has found its way out of the sewers.", stats:["JollyJelly"]},
             ]
