@@ -2,6 +2,11 @@
    This code may not be used without permission.
    If you'd like to use this for your own product then please ask and I'll swap you the rights to use it for that purpose in exchange for a signed copy of your product or some such. */
 var stat_blocks = {
+    RathKata:"Rath Kata, Cleric of Zors (Clr5): HP 18; AC 4[15]; Atk +1 cane (1d4+1); Move 12; Save 11; AL N; CL/XP 6/400;<br>Special: +2 save versus paralyzation and poison, spells (2/2), turn undead.<br>Spells: 1st—detect magic, purify food and drink; 2nd—bless, hold person.<br>Equipment: bracers of defense AC 4[15], +1 cane (treat as club), 2 potions of healing, 4 vials of holy water, golden holy symbol of Zors, 50cp.",
+    Vol:"Vol \"Twilight Man\" (MU5): HP 14; AC 3[16]; Atk poisoned dagger (1d4 plus poison); Move 12; Save 11; AL C; CL/XP 6/400.<br>Special: +2 on saves vs. spells, spells (4/2/1). Spells: 1st—charm person, magic missile, sleep; 2nd—invisibility, phantasmal force; 3rd—hold person.<br>Equipment: bracers of defense AC 4[15], 2 poisoned daggers (save at -1 or die), ring of protection +1, robe of blending, medallion of ESP, spellbook.",
+    JadeynRoean:"Jadeyn \"Captain\" Roean (Ftr6): HP 24; AC 6[13]; Atk +1 longsword (1d8+2) or longbow x2 (1d6); Move 12; Save 9; AL N; CL/XP 6/400;<br>Special: +1 to hit and damage strength bonus, multiple attacks (6) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, shield, +1 longsword \"Mare\", longbow, 20 arrows.",
+    DengLoDo:"Deng Lo Do (Mnk6): HP 17; AC 3[16]; Atk weaponless strike x2 (1d12) or +2 dagger (1d4+5) or shuriken (1d3); Move 17; Save 9; AL C; CL/XP 8/800;<br>Special: +2 save versus paralyzation and poison, deadly strike, +3 damage with weapons (included above), mastery of mind, mastery of silence (1d6 x 60 min), speak with animals, slow falling (20ft), thieving skills.<br>Thieving Skills: Climb 90%, Tasks/Traps 40%, Hear 4 in 6, Hide 35%, Silent 45%, Locks 35%.<br>Equipment: +2 dagger, ring of protection +1, 5 shurikens (darts).",
+    Gowan:"Gowan McKean, Male Dwarf (Ftr5): HP 20; AC 3[16]; Atk +1 battleaxe (1d8+2); Move 9; Save 10; AL N; CL/XP 5/240;<br>Special: +1 to hit and damage strength bonus, darkvision 60ft, dwarf racial abilities, multiple attacks (5) vs. creatures with 1 or fewer HD.<br>Equipment: plate mail, +1 battleaxe, heavy crossbow, 20 bolts.",
     Johan:"Johan the Bastard, Male Half-Orc (Ftr4): HP 21; AC 6[13]; Atk +1 longsword (1d8+2) or heavy crossbow (1d6+1 plus poison); Move 12; Save 11; AL C; CL/XP 4/120;<br>Special: +1 to hit and damage strength bonus, darkvision 60ft, half-orc racial abilities, multiple attacks (4) vs. creatures with 1 or fewer HD.<br>Equipment: +1 leather armor, +1 longsword, heavy crossbow, 20 poisoned bolts.",
     Zoey:"Zoey, Female Human Cleric of Freya (Clr8): HP 28; AC 3[16]; Atk +1 heavy mace (1d6+1); Move 9; Save 8; AL L; CL/XP 9/1100;<br>Special: +2 save versus paralyzation and poison, spells (2/2/2/2/2), turn undead.<br>Spells: 1st—cure light wounds, protection from evil; 2nd—bless, hold person; 3rd—prayer, remove curse; 4th—cure serious wounds, speak with plants; 5th—commune, raise dead.<br>Equipment: +1 chain mail, shield, +1 heavy mace, wand of cure serious wounds (6 charges), 6 vials of holy water, silver holy symbol of Freya.",
     Lottobus:"Lottobus (Ftr2): HP 12; AC 7[12]; Atk +1 club (1d4+2); Move 12; Save 13; AL N; CL/XP 2/30;<br>Special: +1 to hit and damage strength bonus, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, +1 club.",
@@ -999,7 +1004,7 @@ var e = {
         extra:{
             total:100,
             chances:[
-            {min:1, max:1, append:true, text:"<b>Oberon Thanalaus, master of the Farseekers of Twilight is encountered.</b>", stats:["OberonThanalaus"]}
+            {min:1, max:1, append:true, text:"<b>Oberon Thanalaus (Chapter 1, Farseekers of Twilight, pg. 79), master of the Farseekers of Twilight is encountered.</b>", stats:["OberonThanalaus"]}
             ]
         }
     },
@@ -1559,24 +1564,24 @@ var e = {
             chances:[
             {min:1, max:1, name:"Johan the Bastard (T5, pg. 223)", text:"A tale, dangerous looking half-orc. Johan is a member of the Red Blades assassins' guild and can often be found nursing a tankard in the 'Black Viper' tavern (T5, pg. 223). Maybe he is surveilling a future target, possibly even a member of the party, or observing the flow of people in the district in the hope of finding his mark.", stats:["Johan"]},
             {min:2, max:2, name:"Imbo the Undying (Appendix A, pg .264)", text:"An immortal vicious killer. He will attempt to appear friendly, non-threatening and may attempt to trick the party in order to more easily murder them.", stats:["Imbo"]},
-            {min:3, max:3, name:"Gowan Mckean (O3)", text:""},
-            {min:4, max:4, name:"Deng Lo Do (O21)", text:""},
-            {min:5, max:5, name:"Reingolde Tumsen (O1)", text:""},
-            {min:6, max:6, name:"Hener Roundshield (O2)", text:""},
-            {min:7, max:7, name:"Luc O'Toole (O4)", text:""},
+            {min:3, max:3, name:"Gowan Mckean (O3, pg. 252)", text:"A retired soldier and refugee from the sealing of the Stoneheart clan mountain halls, Gowan came to Bard's Gate 10 years ago with 20 of his followers and founded the 'Stoneheart Mountain Distillery'. Business is going well, though Brin Zwiescher (C9, pg. 178) continues to plot to sabotage him.", stats:["Gowan"]},
+            {min:4, max:4, name:"Deng Lo Do (O21, pg. 254)", text:"Properitor of 'The Rising Dragon' restaurant which sells exotic fare from the far west. In reality Deng Log Do is more interested in his slave trading and worship of Set.", stats:["DengLoDo"]},
+            {min:5, max:5, name:"Reingolde Tumsen (O1, pg .250)", text:"Neutral male human fighter 4 and owner of \"Reingolder's Bar\". Reingolde is a retired soldier and conisseur of alcohols. He may challenge the party to take his 'Reingolde Challenge', a famously tough drinking challenge, or he may wish to hire the party to source him difficult to obtains alcohols."},
+            {min:6, max:6, name:"Hener Roundshield (O2, pg. 251)", text:"Neutral male human fighter 2, owner of 'The Brass Shield' and craftsman of fine wooden bucklers and small shields."},
+            {min:7, max:7, name:"Luc O'Toole (O4, pg .252)", text:"Neutral male Daanite human fighter 4. A frightening sight in blood stained smock and carrying a huge cleaver, this large and pleasant man is a butcher and owner of \"Koole’s Butcher Shop.\""},
             {min:8, max:8, name:"Utello (TW10)", text:""},
-            {min:9, max:9, name:"Horton McKaigh (O7)", text:""},
-            {min:10, max:10, name:"Shylor (O8)", text:""},
-            {min:11, max:11, name:"Dubois Montagno (O9)", text:""},
+            {min:9, max:9, name:"Horton McKaigh (O7, pg. 252)", text:"Neutral male halfling expert 2, owner of 'A little off the top' barbershop specialising in Dwarves and Halflings. Horton will also pull teeth with the aid of his two halfling assistants."},
+            {min:10, max:10, name:"Shylor the Augurer (O8, pg. 252)", text:"Neutral male human commoner 3 and accurate foreteller of the future through haruspicy, the study of animal entrails. Shylor charges 200 GP for the equivalent of a <i>Legend Lore</i> spell, but prefers not to interpret the results of his visions himself."},
+            {min:11, max:11, name:"Dubois Montagno (O9, pg. 253)", text:"Neutral male human aristocrat 4, major fur-trader, and secret spy for the imperial court of the Kingdoms of Foere in Courghais."},
             {min:12, max:12, name:"Lasker (Night, M9, pg. 128)", text:"Chaotic male dwarf thief 3 and a renknowned pie-maker. Unbeknownst to all, his pies often contain abducted children and he is stalking the night hunting them now.", stats:["Lasker"]},
-            {min:13, max:13, name:"Vagn (O12)", text:""},
-            {min:14, max:14, name:"Hauk (O14)", text:""},
-            {min:15, max:15, name:"Gramma Poppy (O15)", text:""},
-            {min:16, max:16, name:"Caagrah (O16)", text:""},
-            {min:17, max:17, name:"Ka'Zic (O18)", text:""},
-            {min:18, max:18, name:"Renald and Jorgan (O19)", text:""},
-            {min:19, max:19, name:"Mistress Wu (O20)", text:""},
-            {min:20, max:20, name:"Garret the Wanderer (O22)", text:""}]
+            {min:13, max:13, name:"Vagn (O12, pg. 253)", text:"Chaotic male human cleric of Orcus 3, and well regarded crafter of paper and vellum. Only his trusted associates in the Cult of Orcus know his real leanings and he is at pains to keep them secret."},
+            {min:14, max:14, name:"Hauk (O14, pg. 253)", text:"Neutral male half-orc fighter 4, former miner, and expert in demolition of buildings via undermining. He has been threatened by Bogdan Rockroot (UH5, pg. 194) of the Underbuilders Union who does not appreciate the competition."},
+            {min:15, max:15, name:"Gramma Poppy (O15, pg. 253)", text:"Neutral female halfling adept 1, and head of a family of halflings who render conifer trees into tar and pitch for use by boatmen and roofers. She does not know but one of her new clients is an evil wizard who intends to create a tar golem with their product."},
+            {min:16, max:16, name:"Caagrah (O16, pg. 253)", text:"Chaotic male halfling [former goblin] expert 1. Transformed by a curse and unable to return home to his goblin kin, Caagrah trains intelligent and vicious dogs and wolves for sale."},
+            {min:17, max:17, name:"Ka'Zic (O18, pg. 253)", text:"Lawful male human ranger 5 and famous - in certain circles - tracker of fugitives and the missing. Ka'Zic is missing his right ear and his face is heavily scared. He often aids the Lyreguard in their search for criminals."},
+            {min:18, max:18, name:"Renald \"The Falcon\" Corering (Lawful male human ranger 6) and Jorgan Corering (Neutral male human druid 7) (O19, pg. 254)", text:"twin brothers who run 'The Feathered Herald' avian messenger service."},
+            {min:19, max:19, name:"Mistress Wu (Neutral female Xi'en human monk 6, O20, pg. 254)", text:"Owner of the 'Dreams of Feng' steam-bath and spa, which is a front for her sale of blue lotus blossom. She also sells her more vulnerable patrons into slavery."},
+            {min:20, max:20, name:"Garret the Wanderer (Neutral male halfling expert 4, O22, pg. 254)", text:"Owner of the 'Quarter House' shop specialising in correctly sized goods for Halflings and Dwarves."}]
         }
     },
     SpecialSR:{
@@ -1584,12 +1589,12 @@ var e = {
         extra:{
             total:9,
             chances:[
-            {min:1, max:1, name:"Jadeyn Roan (SR3)", text:""},
-            {min:2, max:2, name:"Knotaloke (SR4)", text:""},
+            {min:1, max:1, name:"Jadeyn Roan (SR3, pg. 118)", text:"Retired Waymarch cavalry officer and now head of the Street Thugs Gang; a simple group of thugs who shake-down the business of Stable Row and rob its citizens.", stats:["JadeynRoean"]},
+            {min:2, max:2, name:"Knotaloke (SR4, pg. 119)", text:"Knotaloke is encountered. She is willing to hire characters to help her move wild horses to her stables. She also sells the finest horses in Bard's Gate.", stats:["Knotaloke"]},
             {min:3, max:3, name:"Johan the Bastard (T5, pg. 223)", text:"A tale, dangerous looking half-orc. Johan is a member of the Red Blades assassins' guild and can often be found nursing a tankard in the 'Black Viper' tavern (T5, pg. 223). Maybe he is surveilling a future target, possibly even a member of the party, or observing the flow of people in the district in the hope of finding his mark.", stats:["Johan"]},
-            {min:4, max:4, name:"Oberon Thanlaus (Chapter 1, Farseekers of Twilight)", text:""},
-            {min:5, max:5, name:"Rankir (Chapter 1, Longhunters)", text:""},
-            {min:6, max:6, name:"Vol (Chapter 1, The Red Blades)", text:""},
+            {min:4, max:4, name:"Oberon Thanlaus (Chapter 1, Farseekers of Twilight, pg. 79)", text:"Oberon Thanalaus, master of the Farseekers of Twilight is encountered", stats:["OberonThanalaus"]},
+            {min:5, max:5, name:"Rankir (Chapter 1, Longhunters, pg. 80)", text:"Rankir, Master Hunter of the Longhunters is encountered.", stats:["Rankir"]},
+            {min:6, max:6, name:"Vol (Chapter 1, The Red Blades, pg. 83)", text:"Part of the leadership of the Red Blades assassins' guild.", stats:["Vol"]},
             {min:7, max:7, name:"Brin Zwiescher (C9, pg. 178)", text:"Neutral male ftr6. A tall, bald, red-beared and unfriendly barbarian who owns the Brin Zwiescher brewery. The dwarves of the Stoneheart Brewery (O3) are his enemies, simply by dint of competing with their superior brews, which he publicly disdains."},
             {min:8, max:8, name:"The Accursed (BC6, pg. 231)", text:"A rough  and tumble band of Neutral adventurers from the barbaric far north. They wear leathers and animal skins and sport tribal facial tattoes. They perform thunderous concerts weekly in the 'High Note' tavern (BC6, pg. 231).", stats:["Estrellya","Acestrus","Beast","Gato"]},
             {min:9, max:9, name:"Company of the Silver Spear (M8)", text:"A somewhat famous Lawful adventuring band, led by Strathian Silverspear and based out of the 'Inn of Six Candles' (M8, pg. 125). They will brag to anyone they meet of their great deeds, including expeditions into Rappan Athuk itself. There is little evidence of much of this.", stats:["StrathianSilverspear","Gaulin","HenryPigSticker","Mallus","Torthas","TrudyRilling"]}
@@ -1601,17 +1606,17 @@ var e = {
         extra:{
             total:12,
             chances:[
-            {min:1, max:1, name:"Fat Julie and bodyguards (T1, pg. 221)", text:""},
-            {min:2, max:2, name:"Chadwick (T2, pg. 222)", text:""},
+            {min:1, max:1, name:"Fat Julie and bodyguards (T1, pg. 220)", text:"Halfling owner of the thieves' quarter \"Fortune's Fool\" gambling establishment, and some of his many half-orc bouncers, casino rogues or magic using thugs."},
+            {min:2, max:2, name:"Chadwick (Neutral male human expert 5, T2, pg. 222)", text:"Owner of 'The Silver Serpent' Inn in the thieves' quarter. A heavy-set man who has seen much but knows not to talk about most of it. He can be a great source of information if well paid."},
             {min:3, max:3, name:"Duloth and associates (Appendix A)", text:"Duloth, Burger of the Wheelwrights' Guild, Underworld Kingpin and a nimble but very obese, curly black haired, begoateed man, and one or more of his lieutenants.", stats:["Duloth","Zalatha","Tranda","Gorar"]},
-            {min:4, max:4, name:"Tomokos (T4, pg. 223)", text:""},
-            {min:5, max:5, name:"Chord (T3, pg. 223)", text:""},
-            {min:6, max:6, name:"Scars (T5, pg. 223)", text:""},
-            {min:7, max:7, name:"Natala (T5, pg. 223)", text:""},
-            {min:8, max:8, name:"Zarabeshe (T5, pg. 223)", text:""},
-            {min:9, max:9, name:"Rath Kata (T6, pg. 223)", text:""},
-            {min:10, max:10, name:"Old One Tooth (T8, pg. 224)", text:""},
-            {min:11, max:11, name:"Mistress Honeysuckle (T9, pg. 224)", text:""},
+            {min:4, max:4, name:"Tomokos (Neutral male high elf thief 5, T4, pg. 223)", text:"Manager of 'The Hidden Lady' Inn and secret safe-house for the Shadow Masks."},
+            {min:5, max:5, name:"Chord (T3, pg. 223)", text:"An imposing former wrestler and bouncer at 'The Bloody Boar' Inn. Along with his boss, the Inn's owner Vig One-Tusk, Chord keeps things somewhat peaceful at the Inn."},
+            {min:6, max:6, name:"Scars (Neutral male human thief 6, T5, pg. 223)", text:"Manager of 'The Black Viper' tavern (pg. 223) on behalf of the Red Blades. Scars doesn't ask any questions and doesn't like people who do."},
+            {min:7, max:7, name:"Natala (Neutral female human assassin 4, T5, pg. 223)", text:"Beautiful and deadly, Natala is a barmaid at 'The Black Viper' (pg. 223) tavern and also a Red Blade assassin."},
+            {min:8, max:8, name:"Zarabeshe (Neutral female human assassin 4, T5, pg. 223)", text:"Beautiful and deadly, Zarabeshe is a barmaid at 'The Black Viper' (pg. 223) tavern and also a Red Blade assassin."},
+            {min:9, max:9, name:"Rath Kata (T6, pg. 223)", text:"High Priest of Zors' temple, the \"Shrine of Suffering's Ease\", Rath Kata is a weather-beaten, thin old man in decrepit robes. He is a champion of civil rights and does his best with the little income from his number's racket (C13, area 8, pg. 183).", stats:["RathKata"]},
+            {min:10, max:10, name:"Old One Tooth (Neutral female human commoner 1, T8, pg. 224)", text:"Owner of 'The Inn of the Fallen Tree'. A decrepit old lady, with only one remaining tooth. She may complain about her strange guest, Krants (pg. 224), who won't leave his room and the constant stench of garlic that surrounds it."},
+            {min:11, max:11, name:"Mistress Honeysuckle (Neutral female Xi'en human expert 5, T9, pg. 224)", text:"Owner of 'The Cta of Nine' shop, crafter of fine whips, and exemplar in their use."},
             {min:12, max:12, name:"Cylyria (disguised, Appendix A, pg. 262)", text:"Mayor and High Burgess of Bard's Gate. She is currently in disguise.", stats:["Cylyria"]}
             ]
         }
