@@ -1245,12 +1245,12 @@ var e = {
     Wizard:
     {
         name:"Wizard",
-        text:"A Wizard's Apprentice has been sent out on an appointment to collect magical ingredients or seek out the owner of a scroll that possesses a new spell for them to learn.",
+        text:"A Wizard's Apprentice has been sent out on an appointment to collect magical ingredients or seek out the owner of a scroll that possesses a new spell to learn.",
         stats:["WizardsApprentice"],
         extra:{
             total:10,
             chances:[
-                   {min:1, max:1, text:"A master Wizard has gone out to collect magical ingredients or seek out the owner of a scroll that possesses a new spell for them to learn. They did not send an apprentice as they wish to stretch their legs.", stats:["Wizard"]}
+                   {min:1, max:1, text:"A master Wizard has gone out to collect magical ingredients or seek out the owner of a scroll that possesses a new spell to learn. They did not send an apprentice as they wish to stretch their legs.", stats:["Wizard"]}
             ]
         }
     },
