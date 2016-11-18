@@ -2,6 +2,10 @@
    This code may not be used without permission.
    If you'd like to use this for your own product then please ask and I'll swap you the rights to use it for that purpose in exchange for a signed copy of your product or some such. */
 var stat_blocks = {
+    Lottobus:"Lottobus (Ftr2): HP 12; AC 7[12]; Atk +1 club (1d4+2); Move 12; Save 13; AL N; CL/XP 2/30;<br>Special: +1 to hit and damage strength bonus, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: leather armor, +1 club.",
+    Osius:"Osius (Ftr2): HP 12; AC 6[13]; Atk heavy mace (1d6+1); Move 12; Save 13; AL N; CL/XP 2/30;<br>Special: +1 to hit and damage strength bonus, multiple attacks (2) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, heavy mace.",
+    FarinDun:"F’arin Du’n, Male Drow (Asn6): HP 27; AC 5[14]; Atk dagger (1d4 plus poison); Move 12; Save 10; AL C; CL/XP 5/240;<br>Special: +1 to hit dexterity bonus, -1[+1] to AC dexterity bonus, -2 to attack in sunlight, backstab (x3), 1 in 8 chance to be surprised, darkvision 60ft, disguise, drow racial abilities, magic resistance (50%), magical abilities, poison, thieving skills.<br>Magical Abilities: 1/day—darkness 15ft radius, ability to outline a target in faint light at a range of 60ft (all have +1 to hit the victim), and the ability to create lantern-like lights at a range of 60ft.<br>Thieving Skills: Climb 88%, Tasks/Traps 30%, Hear 4 in 6, Hide 40%, Silent 45%, Locks 25%.<br>Equipment: +1 leather armor, poisoned dagger (save at -2 or die), boots of elvenkind, cloak of elvenkind, thieves' tools.",
+    Tork:"Tork, Male Dwarf (Ftr3): HP 16; AC 6[13]; Atk heavy mace (1d6+1); Move 9; Save 12; AL C; CL/XP 3/60;<br>Special: +1 to hit and damage strength bonus, darkvision 60ft, dwarf racial abilities, multiple attacks (3) vs. creatures with 1 or fewer HD.<br>Equipment: ring mail, heavy mace.",
     Estrellya:"Estrellya, Male Half-Elf (MU3): HP 11; AC 9[10]; Atk +1 dagger (1d4+1); Move 12; Save 13; AL N; CL/XP 4/120;<br>Special: +2 on saves vs. spells, darkvision 60ft, half-elf abilities, spells (3/1).<br>Spells: 1st—detect magic, light, read magic; 2nd—ESP.<br>Equipment: +1 dagger, robes, lute, spellbook.",
     Acestrus:"Acestrus (MU3): HP 11; AC 8[11]; Atk +1 staff (1d6+1); Move 12; Save 12; AL N; CL/XP 4/120;<br>Special: +2 on saves vs. spells, spells (3/1).<br>Spells: 1st—magic missile x2, shield; 2nd—phantasmal force.<br>Equipment: robes, +1 staff, ring of protection +1, wand of hold person (2 charges), guitarra, spellbook.",
     Beast:"Beast, Cleric of Bowbe (Clr6): HP 25; AC 2[17]; Atk +2 heavy mace (1d6+2); Move 12; Save 10; AL N; CL/XP 7/600;<br>Special: +2 save versus paralyzation and poison, spells (2/2/1/1), turn undead.<br>Spells: 1st—cure light wounds, light; 2nd—hold person, silence 15 ft radius; 3rd—cure disease; 4th—cure serious wounds.<br>Equipment: +1 plate mail, +2 heavy mace, wooden holy symbol of Bowbe.",
@@ -1443,7 +1447,7 @@ var e = {
             {min:13, max:13, name:"Rolnüt Half-Axe", text:"Rolnüt (neutral male human [Northlander] fighter 5) is looking  for his captain, Tvorji (see The Hidden Huscarl, pg. 356)"},
             {min:14, max:14, name:"Lucius Gromp (C13, pg. 179)", text:"Neutral male thief 7 and guildmaster of the Beggars' Guild."},
             {min:15, max:15, name:"Piter Hagglesthorpe IV (BC3, pg. 230)", text:"Neutral male human aristocrat 6. Dockworkers' Guild burgher and wealthy silk merchant, Piter is currently being black-mailed by Dulot Armitage (Appendix A, pg. 263)."},
-            {min:16, max:16, name:"F'arin Du'n (Appendix A, pg. 263)", text:"Chaotic male drow assassin 6. A despicable and skilled murderer. Perhaps he is stalking the party. He likes to observe his victims and then approach them in the guise of a close friend by use of his ring of <i>polymorph self</i>."},
+            {min:16, max:16, name:"F'arin Du'n (Appendix A, pg. 263)", text:"Chaotic male drow assassin 6. A despicable and skilled murderer. Perhaps he is stalking the party. He likes to observe his victims and then approach them in the guise of a close friend by use of his ring of <i>polymorph self</i>.", stats:["FarinDun"]},
             {min:17, max:17, name:"Noria Verilath (Chapter 3, The Red Blades, pg. 83)", text:"Chaotic female human assassin 6 and part of the leadership of the Red Blades assassins' guild.", stats:["NoriaVerilath"]},
             {min:18, max:18, name:"Cylyria (disguised, Appendix A, pg. 262)", text:"Mayor and High Burgess of Bard's Gate. She is currently in disguise.", stats:["Cylyria"]},
             {min:19, max:19, name:"Manisool (Appendix A, pg. 265)", text:"A powerful agent for the cult of Orcus, Manisool masquerades as a shy and secretive magic-user pillar of Bard's Gate's ruling class.", stats:["Manisool"]},
@@ -1503,7 +1507,7 @@ var e = {
             {min:9, max:9, name:"Undersheriff Kotchko (K5, pg. 217)", text:"Senior Sherriff, second in command of the Sheriffs only to High Sheriff Topfer Brighteye (K5, pg. 217)", stats:["Kotchko"]},
             {min:10, max:10, name:"Company of the Silver Spear (M8, pg.126)", text:"A somewhat famous Lawful adventuring band, led by Strathian Silverspear and based out of the 'Inn of Six Candles' (M8, pg. 125). They will brag to anyone they meet of their great deeds, including expeditions into Rappan Athuk itself. There is little evidence of much of this.", stats:["StrathianSilverspear","Gaulin","HenryPigSticker","Mallus","Torthas","TrudyRilling"]},
             {min:11, max:11, name:"The Accursed (BC6, pg. 231)", text:"A rough  and tumble band of Neutral adventurers from the barbaric far north. They wear leathers and animal skins and sport tribal facial tattoes. They perform thunderous concerts weekly in the 'High Note' tavern (BC6, pg. 231).", stats:["Estrellya","Acestrus","Beast","Gato"]},
-            {min:12, max:12, name:"Tork (T5)", text:""}
+            {min:12, max:12, name:"Tork (T5, pg. 223)", text:"Dwarven assassin and member of the Red Blades, Tork is often found nursing a tankard in the 'Black Viper' inn (pg. 223). Maybe he is surveilling a future target, possibly even a member of the party, or observing comings and goings around the Sherrifs' Bailey.", stats:["Tork"]}
             ]
         }
     },
@@ -1512,18 +1516,18 @@ var e = {
         extra:{
             total:12,
             chances:[
-            {min:1, max:1, name:"Wilhelm Rovellar (BC2)", text:""},
+            {min:1, max:1, name:"Maestro Wilhelm Rovellar (BC2, pg. 230)", text:"Male Half-Elf (MU3) and manager of 'The Masque and Lute' theatre, Bard's Gate's finest theatre. Wilhelm may look hagard and drawn as he has been haunted by the ghost of a murder victim of the drow assassin F'arin Du'n (Appendix A, pg. 263) for some time now."},
             {min:2, max:2, name:"Piter Hagglesthorpe IV (BC3, pg. 230)", text:"Neutral male human aristocrat 6. Dockworkers' Guild burgher and wealthy silk merchant, Piter is currently being black-mailed by Dulot Armitage (Appendix A, pg. 263)."},
-            {min:3, max:3, name:"Fathalir (BC4)", text:""},
-            {min:4, max:4, name:"Wesley (BC4)", text:""},
-            {min:5, max:5, name:"Cryndle (BC4)", text:""},
-            {min:6, max:6, name:"Carlis Pace (BC5)", text:""},
-            {min:7, max:7, name:"Lottobus (BC6)", text:""},
-            {min:8, max:8, name:"Osius (BC6)", text:""},
+            {min:3, max:3, name:"Fathalir (BC4, pg. 231)", text:"Neutral male MU5 mastercraftsman of stringed instruments and owner of 'The Silver Harp' shop. A charming man in his late forties, he is unlikely to agree to craft an instrument for a player character unless they can prove themselves worthy of an instrument of such quality."},
+            {min:4, max:4, name:"Wesley (BC4, pg. 231)", text:"Neutral male human magic-user 1 and apprentice to Fathalir (BC4, pg. 231), mastercraftsman of stringed instruments. Wesley is himself an accomplished crafter of stringed instruments."},
+            {min:5, max:5, name:"Cryndle (BC4, pg. 231)", text:"Neutral female half-elf magic-user 1 and apprentice to Fathalir (BC4, pg. 231), mastercraftsman of stringed instruments. Cryndle is herself an accomplished crafter of stringed instruments."},
+            {min:6, max:6, name:"Carlis Pace (BC5, pg. 231)", text:"Neutral male human magic-user 3 and craftsman of fine wind instruments. 'The Clarion Call' is his shop."},
+            {min:7, max:7, name:"Lottobus (BC6, pg. 231)", text:"One of the two bouncers at 'The High Note' Inn (BC6, pg. 231). Lottobus is a wild looking, hairy, but friendly soul.", stats:["Lottobus"]},
+            {min:8, max:8, name:"Osius (BC6, pg. 231)", text:"One of the two bouncers at 'The High Note' Inn (BC6, pg. 231). Osius is a smiley, friendly soul with dark skin and a penchant for painting and drawing.", stats:["Osius"]},
             {min:9, max:9, name:"Estrellya (The Accursed, BC6, pg. 231)", text:"Slim of build, almost effeminate looking, with stars tattooed above his eyes and black kohl on his lips, Estrellya is the intelligent and charismatic leader of 'The Accursed (BC6, pg. 231)'; a Neutral adventuring party and musical band.", stats:["Estrellya"]},
-            {min:10, max:10, name:"Geldin Lucan (BC7)", text:""},
-            {min:11, max:11, name:"Umberto Deleon (BC8)", text:""},
-            {min:12, max:12, name:"Ferdinand Kincaid (BC9)", text:""}
+            {min:10, max:10, name:"Geldin Lucan (BC7, pg. 232)", text:"Neutral male human magic-user 5 and chief librarian of 'The Written Note' musical library. Geldin has long red hair, shining eyes and look of wisdom. "},
+            {min:11, max:11, name:"Umberto Deleon (BC8, pg. 233)", text:"Neutral male half-elf magic-user 2. Umberto is a reknowned painter of frescos, murals and canvas paintings. He is distracted, dishevelled looking, spotted with paint and with a paint brush lost behind an ear."},
+            {min:12, max:12, name:"Ferdinand Kincaid (BC9, pg. 233)", text:"Neutral male halfling expert 4. Ferdinand is  a slim, nervous looking halfling who writes heroic tales about the fictional knight <i>Sir Glanic</i>. This has made him much money and some personal dissatisfaction. He may wish to hire an adventurer to pretend to be <i>Sir Glanic</i>, or GM's descretion, he may wish to arrange the death of someone while they impersonate <i>Sir Glanic</i> in an attempt to finally rid himself of his literary mill-stone."}
             ]
         }
     },
